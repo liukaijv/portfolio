@@ -1,0 +1,814 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>千净家政</title>
+
+<meta name="Author" content=" " />
+<meta name="copyright" content=" " />
+<meta name="description" content=" " />
+<meta name="keywords" content=" " />
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="js/iepngfix_tilebg.js" type="text/javascript"></script>
+<script src="js/jquery.KinSlideshow-1.2.1.min.js" type="text/javascript"></script>
+<script src="js/jquery-ui-1.8.22.custom.min.js"></script>
+<script src="js/slides.min.jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".slides").KinSlideshow({
+			moveStyle:"right",
+			titleBar:{titleBar_height:0,titleBar_bgColor:"#fff",titleBar_alpha:0},			
+			btn:{btn_bgColor:"#000",btn_bgHoverColor:"red",btn_fontColor:"#fff",btn_fontHoverColor:"#fff",btn_borderColor:"#e0bb73",btn_borderHoverColor:"#e0bb73",btn_borderWidth:0}
+	});
+	
+$( "#accordion" ).accordion({
+		event: "mouseover"
+	});
+
+$("#tabs").tabs();
+	
+$(function() {
+	var sWidth = $("#focus").width(); 
+	var len = $("#focus ul li").length; 
+	var index = 0;
+	var picTimer;	
+	var btn = "<div class='btnBg'></div><div class='btn'>";
+	var aa=new Array();
+		aa[0]="我和你";
+		aa[1]="我和你";
+		aa[2]="我和你";
+		aa[3]="我和你";
+	for(var i=0; i < len; i++) {
+		btn += "<span>" + aa[i] + "</span>";
+	}
+	btn += "</div>"
+	$("#focus").append(btn);
+	$("#focus .btnBg").css("opacity",0.5);	
+	$("#focus .btn span").mouseenter(function() {
+		index = $("#focus .btn span").index(this);
+		showPics(index);
+	}).eq(0).trigger("mouseenter");
+	$("#focus ul").css("width",sWidth * (len + 1));		
+	$("#focus ul li div").hover(function() {
+		$(this).siblings().css("opacity",1);
+	},function() {
+		$("#focus ul li div").css("opacity",1);
+	});	
+	$("#focus").hover(function() {
+		clearInterval(picTimer);
+	},function() {
+		picTimer = setInterval(function() {
+			if(index == len) { 
+				showFirPic();
+				index = 0;
+			} else {
+				showPics(index);
+			}
+			index++;
+		},3000); 
+	}).trigger("mouseleave");	
+	function showPics(index) { 
+		var nowLeft = -index*sWidth; 
+		$("#focus ul").stop(true,false).animate({"left":nowLeft},500); 
+		$("#focus .btn span").removeClass("on").eq(index).addClass("on"); 
+	}	
+	function showFirPic() { 
+		$("#focus ul").append($("#focus ul li:first").clone());
+		var nowLeft = -len*sWidth; 
+		$("#focus ul").stop(true,false).animate({"left":nowLeft},500,function() {			
+			$("#focus ul").css("left","0");
+			$("#focus ul li:last").remove();
+		}); 
+		$("#focus .btn span").removeClass("on").eq(0).addClass("on"); 
+	}
+});
+});
+</script>
+
+</head>
+
+<body>
+
+<div class="top_bg">
+	<div class="header">
+    	<div class="logo_box">
+       	  <div class="logo"><a href="#"><img src="images/logo.png" width="480" height="80" /></a></div>
+            <div class="logo_r">
+            	<dl>
+            		<dd><a href="#">加入收藏</a> | <a href="#">设为首页</a> | <a href="#">联系我们</a></dd>
+                    <dt></dt>         	
+                </dl>
+            </div>
+            <div class="clr"></div>
+        </div>
+        <div class="nav">
+        	<ul>
+            	<li><a href="#">网站首页</a></li>
+                <li><a href="#" class="nav_focus">网站首页</a></li>
+                <li><a href="#">网站首页</a></li>
+                <li><a href="#">网站首页</a></li>
+                <li><a href="#">网站首页</a></li>
+                <li><a href="#">网站首页</a></li>
+                <li><a href="#">网站首页</a></li>
+            </ul>
+            <span class="time">2012年07年23日 星期二</span>
+        </div>
+        <div  class="slides">
+        	<a href="#"><img src="images/slide_img.gif" width="1003" height="300" /></a>
+            <a href="#"><img src="images/slide_img.gif" width="1003" height="300" /></a>
+            <a href="#"><img src="images/slide_img.gif" width="1003" height="300" /></a>     	
+        </div>        
+    </div>
+</div>
+<div class="clr"></div>
+
+<div id="container">
+
+<div class="wrap_box1">
+<div class="bar_tit">
+<h4>热销新品推荐</h4><span>Popularity products recommended</span>
+<a href="#" class="more">更多>></a>
+</div>
+
+<div class="banner" id="J_banner_show" style="margin:0 auto;">
+	<div class="banner-img">
+        <div class="banner-explain">        
+            <dl>
+            	<dd><img src="images/pro_slide_img.gif" height="310" width="310" /></dd>
+                <dt>
+                	<table>
+                        	<tr>
+                            	<td class="blod" width="80" valign="top" align="right">产品名称：</td>
+                                <td width="570">成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">信息标题：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">产品型号：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">外尺寸：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">内尺寸：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">其它参数：</td>
+                                <td >
+                                    <div class="normal_line">
+                                        我们四川成都蓉益塑料制品有限公司是一家非常专业从事塑料托盘、塑料周转箱、塑料周转箩、塑
+                                        料环卫垃圾桶、塑料水箱、水塔、塑料耐酸碱容器、塑料栈板、塑料垫板、塑料地台板、塑料卡板
+                                        、塑料箱、塑料筐、食品箱、塑料盒、塑料桶、塑料筛、零件箱、零件盒、零件柜、零件整理柜、
+                                        元件柜、防酸桶、耐酸碱桶等工业塑料产品生产、销售为一体的大型企业。我们公司拥有多台先进
+                                        的大型注塑成型设备，技术力量雄厚，产品质量好，美观、耐用。
+                                        工具周转箱成都塑料零件盒/物料盒/塑料工具周转箱成都塑料零件盒/物料盒/塑料工具周转箱
+                                    </div>
+                              </td>                                
+                            </tr>
+                  </table>
+                </dt>
+                <div class="clr"></div>
+            </dl>
+            <div class="clr"></div>		
+        </div>
+        
+       <div class="banner-explain">        
+           <dl>
+            	<dd><img src="images/pro_slide_img.gif" height="310" width="310" /></dd>
+                <dt>
+                	<table>
+                        	<tr>
+                            	<td class="blod" width="80" valign="top" align="right">产品名称：</td>
+                                <td width="570">成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">信息标题：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">产品型号：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">外尺寸：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">内尺寸：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">其它参数：</td>
+                                <td >
+                                    <div class="normal_line">
+                                        我们四川成都蓉益塑料制品有限公司是一家非常专业从事塑料托盘、塑料周转箱、塑料周转箩、塑
+                                        料环卫垃圾桶、塑料水箱、水塔、塑料耐酸碱容器、塑料栈板、塑料垫板、塑料地台板、塑料卡板
+                                        、塑料箱、塑料筐、食品箱、塑料盒、塑料桶、塑料筛、零件箱、零件盒、零件柜、零件整理柜、
+                                        元件柜、防酸桶、耐酸碱桶等工业塑料产品生产、销售为一体的大型企业。我们公司拥有多台先进
+                                        的大型注塑成型设备，技术力量雄厚，产品质量好，美观、耐用。
+                                        工具周转箱成都塑料零件盒/物料盒/塑料工具周转箱成都塑料零件盒/物料盒/塑料工具周转箱
+                                    </div>
+                              </td>                                
+                            </tr>
+                  </table>
+                </dt>
+                <div class="clr"></div>
+          </dl>
+            <div class="clr"></div>			
+        </div>
+        
+        <div class="banner-explain">        
+            <dl>
+            	<dd><img src="images/pro_slide_img.gif" height="310" width="310" /></dd>
+                <dt>
+                	<table>
+                        	<tr>
+                            	<td class="blod" width="80" valign="top" align="right">产品名称：</td>
+                                <td width="570">成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">信息标题：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">产品型号：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">外尺寸：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">内尺寸：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">其它参数：</td>
+                                <td >
+                                    <div class="normal_line">
+                                        我们四川成都蓉益塑料制品有限公司是一家非常专业从事塑料托盘、塑料周转箱、塑料周转箩、塑
+                                        料环卫垃圾桶、塑料水箱、水塔、塑料耐酸碱容器、塑料栈板、塑料垫板、塑料地台板、塑料卡板
+                                        、塑料箱、塑料筐、食品箱、塑料盒、塑料桶、塑料筛、零件箱、零件盒、零件柜、零件整理柜、
+                                        元件柜、防酸桶、耐酸碱桶等工业塑料产品生产、销售为一体的大型企业。我们公司拥有多台先进
+                                        的大型注塑成型设备，技术力量雄厚，产品质量好，美观、耐用。
+                                        工具周转箱成都塑料零件盒/物料盒/塑料工具周转箱成都塑料零件盒/物料盒/塑料工具周转箱
+                                    </div>
+                              </td>                                
+                            </tr>
+                  </table>
+                </dt>
+                <div class="clr"></div>
+          </dl>
+            <div class="clr"></div>		
+        </div>
+        
+        <div class="banner-explain">
+        	 <dl>
+            	<dd><img src="images/pro_slide_img.gif" height="310" width="310" /></dd>
+                <dt>
+                	<table>
+                        	<tr>
+                            	<td class="blod" width="80" valign="top" align="right">产品名称：</td>
+                                <td width="570">成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">信息标题：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">产品型号：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">外尺寸：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">内尺寸：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">其它参数：</td>
+                                <td >
+                                    <div class="normal_line">
+                                        我们四川成都蓉益塑料制品有限公司是一家非常专业从事塑料托盘、塑料周转箱、塑料周转箩、塑
+                                        料环卫垃圾桶、塑料水箱、水塔、塑料耐酸碱容器、塑料栈板、塑料垫板、塑料地台板、塑料卡板
+                                        、塑料箱、塑料筐、食品箱、塑料盒、塑料桶、塑料筛、零件箱、零件盒、零件柜、零件整理柜、
+                                        元件柜、防酸桶、耐酸碱桶等工业塑料产品生产、销售为一体的大型企业。我们公司拥有多台先进
+                                        的大型注塑成型设备，技术力量雄厚，产品质量好，美观、耐用。
+                                        工具周转箱成都塑料零件盒/物料盒/塑料工具周转箱成都塑料零件盒/物料盒/塑料工具周转箱
+                                    </div>
+                              </td>                                
+                            </tr>
+                  </table>
+                </dt>
+                <div class="clr"></div>
+            </dl>
+            <div class="clr"></div>	
+        </div>
+        <div class="banner-explain">
+        	 <dl>
+            	<dd><img src="images/pro_slide_img.gif" height="310" width="310" /></dd>
+                <dt>
+                	<table>
+                        	<tr>
+                            	<td class="blod" width="80" valign="top" align="right">产品名称：</td>
+                                <td width="570">成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">信息标题：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">产品型号：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">外尺寸：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">内尺寸：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">其它参数：</td>
+                                <td >
+                                    <div class="normal_line">
+                                        我们四川成都蓉益塑料制品有限公司是一家非常专业从事塑料托盘、塑料周转箱、塑料周转箩、塑
+                                        料环卫垃圾桶、塑料水箱、水塔、塑料耐酸碱容器、塑料栈板、塑料垫板、塑料地台板、塑料卡板
+                                        、塑料箱、塑料筐、食品箱、塑料盒、塑料桶、塑料筛、零件箱、零件盒、零件柜、零件整理柜、
+                                        元件柜、防酸桶、耐酸碱桶等工业塑料产品生产、销售为一体的大型企业。我们公司拥有多台先进
+                                        的大型注塑成型设备，技术力量雄厚，产品质量好，美观、耐用。
+                                        工具周转箱成都塑料零件盒/物料盒/塑料工具周转箱成都塑料零件盒/物料盒/塑料工具周转箱
+                                    </div>
+                              </td>                                
+                            </tr>
+                  </table>
+                </dt>
+                <div class="clr"></div>
+            </dl>
+            <div class="clr"></div>	
+        </div>
+        <div class="banner-explain">
+        	 <dl>
+            	<dd><img src="images/pro_slide_img.gif" height="310" width="310" /></dd>
+                <dt>
+                	<table>
+                        	<tr>
+                            	<td class="blod" width="80" valign="top" align="right">产品名称：</td>
+                                <td width="570">成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">信息标题：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">产品型号：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">外尺寸：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">内尺寸：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">其它参数：</td>
+                                <td >
+                                    <div class="normal_line">
+                                        我们四川成都蓉益塑料制品有限公司是一家非常专业从事塑料托盘、塑料周转箱、塑料周转箩、塑
+                                        料环卫垃圾桶、塑料水箱、水塔、塑料耐酸碱容器、塑料栈板、塑料垫板、塑料地台板、塑料卡板
+                                        、塑料箱、塑料筐、食品箱、塑料盒、塑料桶、塑料筛、零件箱、零件盒、零件柜、零件整理柜、
+                                        元件柜、防酸桶、耐酸碱桶等工业塑料产品生产、销售为一体的大型企业。我们公司拥有多台先进
+                                        的大型注塑成型设备，技术力量雄厚，产品质量好，美观、耐用。
+                                        工具周转箱成都塑料零件盒/物料盒/塑料工具周转箱成都塑料零件盒/物料盒/塑料工具周转箱
+                                    </div>
+                              </td>                                
+                            </tr>
+                  </table>
+                </dt>
+                <div class="clr"></div>
+            </dl>
+            <div class="clr"></div>	
+        </div>
+        <div class="banner-explain">
+        	 <dl>
+            	<dd><img src="images/pro_slide_img.gif" height="310" width="310" /></dd>
+                <dt>
+                	<table>
+                        	<tr>
+                            	<td class="blod" width="80" valign="top" align="right">产品名称：</td>
+                                <td width="570">成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">信息标题：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">产品型号：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">外尺寸：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">内尺寸：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">其它参数：</td>
+                                <td >
+                                    <div class="normal_line">
+                                        我们四川成都蓉益塑料制品有限公司是一家非常专业从事塑料托盘、塑料周转箱、塑料周转箩、塑
+                                        料环卫垃圾桶、塑料水箱、水塔、塑料耐酸碱容器、塑料栈板、塑料垫板、塑料地台板、塑料卡板
+                                        、塑料箱、塑料筐、食品箱、塑料盒、塑料桶、塑料筛、零件箱、零件盒、零件柜、零件整理柜、
+                                        元件柜、防酸桶、耐酸碱桶等工业塑料产品生产、销售为一体的大型企业。我们公司拥有多台先进
+                                        的大型注塑成型设备，技术力量雄厚，产品质量好，美观、耐用。
+                                        工具周转箱成都塑料零件盒/物料盒/塑料工具周转箱成都塑料零件盒/物料盒/塑料工具周转箱
+                                    </div>
+                              </td>                                
+                            </tr>
+                  </table>
+                </dt>
+                <div class="clr"></div>
+            </dl>
+            <div class="clr"></div>	
+        </div>
+        <div class="banner-explain">
+        	 <dl>
+            	<dd><img src="images/pro_slide_img.gif" height="310" width="310" /></dd>
+                <dt>
+                	<table>
+                        	<tr>
+                            	<td class="blod" width="80" valign="top" align="right">产品名称：</td>
+                                <td width="570">成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">信息标题：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">产品型号：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">外尺寸：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">内尺寸：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">其它参数：</td>
+                                <td >
+                                    <div class="normal_line">
+                                        我们四川成都蓉益塑料制品有限公司是一家非常专业从事塑料托盘、塑料周转箱、塑料周转箩、塑
+                                        料环卫垃圾桶、塑料水箱、水塔、塑料耐酸碱容器、塑料栈板、塑料垫板、塑料地台板、塑料卡板
+                                        、塑料箱、塑料筐、食品箱、塑料盒、塑料桶、塑料筛、零件箱、零件盒、零件柜、零件整理柜、
+                                        元件柜、防酸桶、耐酸碱桶等工业塑料产品生产、销售为一体的大型企业。我们公司拥有多台先进
+                                        的大型注塑成型设备，技术力量雄厚，产品质量好，美观、耐用。
+                                        工具周转箱成都塑料零件盒/物料盒/塑料工具周转箱成都塑料零件盒/物料盒/塑料工具周转箱
+                                    </div>
+                              </td>                                
+                            </tr>
+                  </table>
+                </dt>
+                <div class="clr"></div>
+            </dl>
+            <div class="clr"></div>	
+        </div>
+        <div class="banner-explain">
+        	 <dl>
+            	<dd><img src="images/pro_slide_img.gif" height="310" width="310" /></dd>
+                <dt>
+                	<table>
+                        	<tr>
+                            	<td class="blod" width="80" valign="top" align="right">产品名称：</td>
+                                <td width="570">成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">信息标题：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">产品型号：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">外尺寸：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">内尺寸：</td>
+                                <td>成都塑料零件盒/物料盒/塑料工具周转箱</td>                                
+                            </tr>
+                            <tr>
+                            	<td class="blod" valign="top" align="right">其它参数：</td>
+                                <td >
+                                    <div class="normal_line">
+                                        我们四川成都蓉益塑料制品有限公司是一家非常专业从事塑料托盘、塑料周转箱、塑料周转箩、塑
+                                        料环卫垃圾桶、塑料水箱、水塔、塑料耐酸碱容器、塑料栈板、塑料垫板、塑料地台板、塑料卡板
+                                        、塑料箱、塑料筐、食品箱、塑料盒、塑料桶、塑料筛、零件箱、零件盒、零件柜、零件整理柜、
+                                        元件柜、防酸桶、耐酸碱桶等工业塑料产品生产、销售为一体的大型企业。我们公司拥有多台先进
+                                        的大型注塑成型设备，技术力量雄厚，产品质量好，美观、耐用。
+                                        工具周转箱成都塑料零件盒/物料盒/塑料工具周转箱成都塑料零件盒/物料盒/塑料工具周转箱
+                                    </div>
+                              </td>                                
+                            </tr>
+                  </table>
+                </dt>
+                <div class="clr"></div>
+            </dl>
+            <div class="clr"></div>	
+        </div>
+           
+     </div>
+    <div id=J_banner_action_panel class=banner-icon></div>				
+</div>
+<SCRIPT type=text/javascript charset=utf-8 src="js/xixi.js"></SCRIPT>
+<SCRIPT type=text/javascript charset=utf-8 src="js/index.js"></SCRIPT>
+<SCRIPT type=text/javascript>
+(function() {
+E.onDOMReady(function() {
+//BANNER区域图片数据初始化
+var bannerImg = [	
+	{
+		'title': '',
+		'banner': '',
+		'dlClass': '',
+		'icon':'images/logo.png'
+	},
+	{
+		'title': '',
+		'banner': '',
+		'dlClass': '',
+		'icon':'images/lit_pic.gif'
+	},
+	{
+		'title': '',
+		'banner': '',
+		'dlClass': '',
+		'icon':'images/lit_pic.gif'
+	},
+	{
+		'title': '',
+		'banner': '',
+		'dlClass': '',
+		'icon':'images/lit_pic.gif'
+	},
+	{
+		'title': '',
+		'banner': '',
+		'dlClass': '',
+		'icon':'images/lit_pic.gif'
+	},
+	{
+		'title': '',
+		'banner': '',
+		'dlClass': '',
+		'icon':'images/lit_pic.gif'
+	},
+	{
+		'title': '',
+		'banner': '',
+		'dlClass': '',
+		'icon':'images/lit_pic.gif'
+	},
+	{
+		'title': '',
+		'banner': '',
+		'dlClass': '',
+		'icon':'images/lit_pic.gif'
+	},	
+	{
+		'title': '',
+		'banner': '',
+		'dlClass': '',
+		'icon':'images/lit_pic.gif'
+	}			
+];
+new AP.pk.pa.slideshowIndex({banners: '.banner-explain',delay : 10000},bannerImg);
+});
+})();
+</SCRIPT>
+</div>
+
+<div class="ad_box"><a href="#"><img src="images/ad.gif" height="82" width="997" /></a></div>
+
+<div class="wrapper">
+
+	<div id="focus">
+		<ul>	
+			<li>
+				<div style="left:0; top:0; width:1005px; height:290px; ">
+                	<table class="table1" >
+                    <tr>
+                        <td width="195" height="180" ><a href="#"><img src="images/pro_panel_img.gif" height="150" width="150" /></a></td>
+                        <td width="195"><a href="#"><img src="images/pro_panel_img.gif" height="150" width="150" /></a></td>
+                        <td width="195"><a href="#"><img src="images/pro_panel_img.gif" height="150" width="150" /></a></td>
+                        <td width="195"><a href="#"><img src="images/pro_panel_img.gif" height="150" width="150" /></a></td>
+                        <td width="195"><a href="#"><img src="images/pro_panel_img.gif" height="150" width="150" /></a></td>                      
+                    </tr>
+                    <tr>
+                        <td width="195"  >
+                        	<table width="195" class="table2">
+                            	<tr >
+                                	<td colspan="2" class="center"><a href="#">成都塑料托盘/叉车塑料托盘供应贵阳地区</a></td>
+                                </tr>
+                                <tr>
+                                	<td class="blod" width="75">产品型号：</td><td class="red">C1210G</td>
+                                </tr>
+                                <tr>
+                                	<td class="blod">产品规格：</td><td class="red">1200*1000*165mm</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="195" >
+                        	<table width="195" class="table2">
+                            	<tr >
+                                	<td colspan="2" class="center"><a href="#">成都塑料托盘/叉车塑料托盘供应贵阳地区</a></td>
+                                </tr>
+                                <tr>
+                                	<td class="blod" width="80">产品型号：</td><td class="red">C1210G</td>
+                                </tr>
+                                <tr>
+                                	<td class="blod">产品规格：</td><td class="red">1200*1000*165mm</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="195" >
+                        	<table width="195" class="table2">
+                            	<tr >
+                                	<td colspan="2" class="center"><a href="#">成都塑料托盘/叉车塑料托盘供应贵阳地区</a></td>
+                                </tr>
+                                <tr>
+                                	<td class="blod" width="80">产品型号：</td><td class="red">C1210G</td>
+                                </tr>
+                                <tr>
+                                	<td class="blod">产品规格：</td><td class="red">1200*1000*165mm</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="195" >
+                        	<table width="195" class="table2">
+                            	<tr >
+                                	<td colspan="2" class="center"><a href="#">成都塑料托盘/叉车塑料托盘供应贵阳地区</a></td>
+                                </tr>
+                                <tr>
+                                	<td class="blod" width="80">产品型号：</td><td class="red">C1210G</td>
+                                </tr>
+                                <tr>
+                                	<td class="blod">产品规格：</td><td class="red">1200*1000*165mm</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="195" >
+                        	<table width="195" class="table2">
+                            	<tr >
+                                	<td colspan="2" class="center"><a href="#">成都塑料托盘/叉车塑料托盘供应贵阳地区</a></td>
+                                </tr>
+                                <tr>
+                                	<td class="blod" width="80">产品型号：</td><td class="red">C1210G</td>
+                                </tr>
+                                <tr>
+                                	<td class="blod">产品规格：</td><td class="red">1200*1000*165mm</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>                               
+                </table>
+                </div>
+			</li>
+			<li>
+				<div style="left:0; top:0; width:1005px; height:290px; ">
+                	
+                </div>
+			</li>		
+			<li>
+				<div style="left:0; top:0; width:1005px; height:290px; ">
+       
+                </div>
+			</li>
+            <li>
+				<div style="left:0; top:0; width:1005px; height:290px; ">
+                		
+                </div>
+			</li>
+		</ul>
+	</div>
+    
+</div><!--end wraper-->
+
+<div class="wrap_box3">
+	<div class="wrap_box3_l">
+    	<div class="bar_tit">
+        <h4>行业新闻</h4><span>News</span>
+        <a href="#" class="more">更多>></a>
+        </div>
+        <div class="in_news_list" id="accordion">
+        	<ul>
+            	<li><a href="#">四川成都蓉益塑料托盘制造...</a><span>7/25</span><div class="clr"></div></li>
+                <li><a href="#">四川成都蓉益塑料托盘制造...</a><span>7/25</span><div class="clr"></div></li>
+                <li><a href="#">四川成都蓉益塑料托盘制造...</a><span>7/25</span><div class="clr"></div></li>
+                <li><a href="#">四川成都蓉益塑料托盘制造...</a><span>7/25</span><div class="clr"></div></li>
+                <li><a href="#">四川成都蓉益塑料托盘制造...</a><span>7/25</span><div class="clr"></div></li>
+                <li><a href="#">四川成都蓉益塑料托盘制造...</a><span>7/25</span><div class="clr"></div></li>
+                <li><a href="#">四川成都蓉益塑料托盘制造...</a><span>7/25</span><div class="clr"></div></li>
+                <li><a href="#">四川成都蓉益塑料托盘制造...</a><span>7/25</span><div class="clr"></div></li>
+                <li><a href="#">四川成都蓉益塑料托盘制造...</a><span>7/25</span><div class="clr"></div></li>
+                <li><a href="#">四川成都蓉益塑料托盘制造...</a><span>7/25</span><div class="clr"></div></li>
+                <li><a href="#">四川成都蓉益塑料托盘制造...</a><span>7/25</span><div class="clr"></div></li>
+            </ul>        	       
+        </div>
+    </div>
+    
+    <div class="wrap_box3_r">
+    	<div class="bar_tit">
+        	<h4>最新供应</h4><span>The latest supply</span>
+        	<div class="tab">            	
+                	<a href="#">塑料托盘</a> | <a href="#">塑料托盘</a> | <a href="#">塑料托盘</a> | <a href="#">塑料托盘</a>
+            </div>
+        </div>
+        <div class="in_pro_list" id="marqueebox1">
+        	<ul>
+            	<li><a href="#"><img src="images/in_pro_img.gif" height="160" width="160"  /></a><h5>四川成都蓉益塑料托</h5></li>
+                <li><a href="#"><img src="images/in_pro_img.gif" height="160" width="160" /></a><h5>四川成都蓉益塑料托</h5></li>
+                <li><a href="#"><img src="images/in_pro_img.gif" height="160" width="160" /></a><h5>四川成都蓉益塑料托</h5></li>
+                <li><a href="#"><img src="images/in_pro_img.gif" height="160" width="160" /></a><h5>四川成都蓉益塑料托</h5></li>
+                <li><a href="#"><img src="images/in_pro_img.gif" height="160" width="160" /></a><h5>四川成都蓉益塑料托</h5></li>
+                <li><a href="#"><img src="images/in_pro_img.gif" height="160" width="160" /></a><h5>四川成都蓉益塑料托</h5></li>
+                <li><a href="#"><img src="images/in_pro_img.gif" height="160" width="160" /></a><h5>四川成都蓉益塑料托</h5></li>
+                <li><a href="#"><img src="images/in_pro_img.gif" height="160" width="160" /></a><h5>四川成都蓉益塑料托</h5></li>
+                <div class="clr"></div>
+            </ul>
+            <ul>
+            	<li><a href="#"><img src="images/in_pro_img.gif" height="160" width="160"  /></a><h5>四川成都蓉益塑料托</h5></li>
+                <li><a href="#"><img src="images/in_pro_img.gif" height="160" width="160" /></a><h5>四川成都蓉益塑料托</h5></li>
+                <li><a href="#"><img src="images/in_pro_img.gif" height="160" width="160" /></a><h5>四川成都蓉益塑料托</h5></li>
+                <li><a href="#"><img src="images/in_pro_img.gif" height="160" width="160" /></a><h5>四川成都蓉益塑料托</h5></li>
+                <li><a href="#"><img src="images/in_pro_img.gif" height="160" width="160" /></a><h5>四川成都蓉益塑料托</h5></li>
+                <li><a href="#"><img src="images/in_pro_img.gif" height="160" width="160" /></a><h5>四川成都蓉益塑料托</h5></li>
+                <li><a href="#"><img src="images/in_pro_img.gif" height="160" width="160" /></a><h5>四川成都蓉益塑料托</h5></li>
+                <li><a href="#"><img src="images/in_pro_img.gif" height="160" width="160" /></a><h5>四川成都蓉益塑料托</h5></li>
+                <div class="clr"></div>
+            </ul>
+            <ul>
+            	<li><a href="#"><img src="images/in_pro_img.gif" height="160" width="160"  /></a><h5>四川成都蓉益塑料托</h5></li>
+                <li><a href="#"><img src="images/in_pro_img.gif" height="160" width="160" /></a><h5>四川成都蓉益塑料托</h5></li>
+                <li><a href="#"><img src="images/in_pro_img.gif" height="160" width="160" /></a><h5>四川成都蓉益塑料托</h5></li>
+                <li><a href="#"><img src="images/in_pro_img.gif" height="160" width="160" /></a><h5>四川成都蓉益塑料托</h5></li>
+                <li><a href="#"><img src="images/in_pro_img.gif" height="160" width="160" /></a><h5>四川成都蓉益塑料托</h5></li>
+                <li><a href="#"><img src="images/in_pro_img.gif" height="160" width="160" /></a><h5>四川成都蓉益塑料托</h5></li>
+                <li><a href="#"><img src="images/in_pro_img.gif" height="160" width="160" /></a><h5>四川成都蓉益塑料托</h5></li>
+                <li><a href="#"><img src="images/in_pro_img.gif" height="160" width="160" /></a><h5>四川成都蓉益塑料托</h5></li>
+                <div class="clr"></div>
+            </ul>
+            <div class="clr"></div>
+        </div>     
+    </div>
+    <div class="clr"></div>
+</div>  
+
+<div  id="link_box">
+	<div class="link_tit">友情链接</div>
+    <div class="links">
+    	<a href="#">中国塑料模具网</a>
+        <a href="#">中国塑料模具网</a>
+        <a href="#">中国塑料模具网</a>
+        <a href="#">中国塑料模具网</a>
+        <a href="#">中国塑料模具网</a>
+        <a href="#">中国塑料模具网</a>
+        <a href="#">中国塑料模具网</a>
+        <a href="#">中国塑料模具网</a>
+        <a href="#">中国塑料模具网</a>
+        <a href="#">中国塑料模具网</a>
+    </div>
+    <div class="clr"></div>
+</div>
+
+</div><!--end container-->
+
+<div id="footer">
+	<div class="foot_box">
+    	版权所有：成都蓉益塑料制品有限公司 蜀ICP备08009025号  邮编：610000<br /> 
+地址:成都市金牛区天回镇蓉都大道天回路1005号  电话：028-83578802  13881930931 电子邮件:1312310688@qq.com 网站建设：<a href="http://www.scbofan.com/">泊凡科技</a>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+
+

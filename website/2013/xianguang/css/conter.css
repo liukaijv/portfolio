@@ -1,0 +1,422 @@
+@charset "utf-8";
+/* CSS Document */
+/*about*/
+.about{
+	width:690px;
+	margin:0 auto;
+	margin-top:20px;
+}
+.aboutName{
+	text-align:center;
+	font-size:18px;
+	color:#3a3a3a;
+}
+.aboutTxt{
+	margin-top:15px;
+	font-size:12px;
+	color:#737373;
+	line-height:20px;
+}
+
+/*新闻*/
+.NewsUnder{
+	width:700px;
+	margin:20px 0 0 10px;
+}
+.NewsUnderLi{
+	width:700px;
+	height:25px;
+	line-height:25px;
+	border-bottom:#878787 1px dotted;
+	background:url(../img/newtu.jpg) no-repeat;
+	margin-top:2px;
+}
+.NewsUnderLi a{
+	margin-left:10px;
+	color:#464646;
+	font-size:12px;
+	margin-right:5px;
+}
+.NewsUnderLi a:hover{
+	text-decoration:underline;
+}
+.fy{
+	width:290px;
+	margin:0 auto;
+	height:22px;
+	margin-top:30px;
+	font-size:12px;
+}
+.fy li{
+	height:22px;
+	line-height:22px;
+	width:22px;
+	border:#bcbcbc 1px solid;
+	margin-right:3px;
+	float:left;
+	display:inline-block;
+	_display:inline;
+	text-align:center;
+}
+.fy li a{
+	width:22px;
+	height:22px;
+	line-height:22px;
+	vertical-align:middle;
+	display:block;
+	color:black;
+}
+.fy li a:hover{
+	width:22px;
+	height:22px;
+	background-color:#0074b8;
+	color:#fff;
+}
+
+
+/*图片*/
+.Video{
+	width:700px;
+	display:inline-block;
+}
+.VideoConter{
+	width:199px;
+	float:left;
+	display:inline-block;
+	_display:inline;
+	margin-right:13px;
+	margin-left:20px;
+	margin-top:15px;
+}
+
+.videoimg{
+	background-image:url(../img/conterimgbg.jpg);
+	width:199px;
+	height:149px;
+	text-align:center;
+}
+.videoimg img{
+	margin-top:4px;
+	width:189px;
+	height:126px;
+}
+.videoTxt{
+	font-size:12px;
+	text-align:center;
+	width:199px;
+}
+.videoTxt a{
+	color:#909090;
+}
+
+/*友情连接*/
+.conterlink{
+	width:653px;
+	margin:0 auto;
+	margin-top:30px;
+}
+.linkTop{
+	background:url(../img/linktop.jpg) no-repeat;
+	width:653px;
+	height:1px;
+	line-height:1px;
+	font-size:0px;
+}
+.linkUnder{
+	background:url(../img/linkunder.jpg) no-repeat;
+	width:653px;
+	height:54px;
+}
+.linkUnder li{
+	margin-left:1px;
+	float:left;
+	display:inline-block;
+	_display:inline;
+	height:53px;
+	width:162px;
+}
+
+/*会员中心*/
+
+.Member{
+	width:422px;
+	margin:0 auto;
+	margin-top:40px;
+	background:url(../img/zcbgct.jpg);
+}
+.memberTop{
+	background:url(../img/zcbg.jpg) no-repeat;
+	width:422px;
+	height:17px;
+}
+.menberUnder{
+	background:url(../img/zcunder.jpg) no-repeat;
+	height:24px;
+	width:422px;
+}
+
+.menberOne{
+	margin-top:20px;
+	height:24px;
+}
+.menberOneTxt{
+	float:left;
+	_display:inline;
+	width:90px;
+	text-align:right;
+	margin-right:10px;
+	font-size:12px;
+	height:24px;
+	line-height:22px;
+	color:#7b8b9a;
+}
+.menberOneInput{
+	display:inline-block;
+	height:24px;
+	width:265px;
+}
+.menberOneInput input{
+	width:260px;
+}
+
+#test select{
+		width:70px;
+		margin-right:20px;
+	}
+
+.menberOneInput select{
+	width:70px;
+	margin-right:13px;
+}
+.menberLook{
+	height:24px;
+	font-size:12px;
+	float:left;
+	display:inline-block;
+	_display:inline;
+	margin:10px 50px 0 70px;
+}
+.menberLook a{
+	text-decoration:underline;
+	color:#7b8b9a;
+}
+.tj{
+	height:37px;
+	display:inline-block;
+}
+.menberTow{
+	margin-bottom:30px;
+}
+/*登录*/
+.memberThere1{
+	background:url(../img/zh.jpg) no-repeat;
+	width:325px;
+	height:36px;
+	margin:0 auto;
+	margin-top:20px;
+}
+.memberThere2{
+	background:url(../img/mm.jpg) no-repeat;
+	width:325px;
+	height:36px;
+	margin:0 auto;
+	margin-top:20px;
+}
+.memberThere3{
+	width:325px;
+	height:37px;
+	margin:30px auto 30px;
+}
+.ThereName{
+	text-align:LEFT;
+	width:40px;
+	line-height:36px;
+	height:36px;
+	margin-left:10px;
+	float:left;
+	_display:inline;
+	color:#7b8b9a;
+	font-size:12px;
+}
+.ThereInput{
+	 display:inline-block;
+	 width:220px;
+}
+.ThereInput input{
+	width:220px;
+	border:0 none;
+	margin-top:8px;
+	color:#7b8b9a;
+}
+.menberjz{
+	height:24px;
+	font-size:12px;
+	float:left;
+	display:inline-block;
+	_display:inline;
+	margin:10px 50px 0 0px;
+	color:#7b8b9a;
+	width:100px;
+}
+.dl{
+	width:91px;
+	height:37px;
+	float:right;
+	display:inline-block;
+	_display:inline;
+}
+.lookings{
+	float:left;
+	margin-right:5px;
+	_margin-right:2px;
+	_display:inline;
+}
+.jz{
+	display:inline-block;
+	margin-top:3px;
+}
+
+/*修改密码*/
+.memberFore{
+	background:url(../img/xg.jpg) no-repeat;
+	width:325px;
+	height:36px;
+	margin:0 auto;
+	margin-top:20px;
+}
+.foreName{
+	text-align:LEFT;
+	width:60px;
+	line-height:36px;
+	height:36px;
+	margin-left:10px;
+	float:left;
+	_display:inline;
+	font-size:12px;
+}
+/*访客留言*/
+.leftLifk{
+	display:inline-block;
+	margin:20px 0 20px;
+	text-align:justify;
+	font-size:12px;
+	line-height:20px;
+}
+.leavediv{
+	margin-top:20px;
+	display:inline-block;
+}
+.conterleftTow{
+	background:none;
+}
+.memberCt2{
+	display:inline-block;
+}
+.menberOneTxt2{
+	float:left;
+	_display:inline;
+	width:70px;
+	text-align:right;
+	margin-right:10px;
+	_margin-right:5px;
+	font-size:12px;
+	height:24px;
+	line-height:22px;
+}
+.menberOneInput2{
+	width:295px;
+	display:inline-block;
+}
+.menberOneInput2 input{
+	width:295px;
+}
+.leaveTow{
+	width:210px;
+	float:left;
+	display:inline-block;
+	_display:inline;
+	_margin-right:-3px;
+}
+.menberOneTxt3{
+	float:left;
+	_display:inline;
+	width:30px;
+	text-align:right;
+	margin-right:10px;
+	font-size:12px;
+	height:24px;
+	line-height:22px;
+	_margin-right:7px;
+}
+.menberOneInput3{
+	width:125px;
+	display:inline-block;
+}
+
+.menberOneInput3 input{
+	width:125px;
+}
+.menberOneTxt4{
+	width:200px;
+	font-size:12px;
+	height:24px;
+	line-height:22px;
+	margin-left:10px;
+	color:#7b8b9a;
+	display:inline-block;
+}
+.menberOneInput4{
+	display:inline-block;
+	width:295px;
+}
+.menberOneInput4 textarea{
+	width:295px;
+	overflow:auto;
+	height:115px;
+	text-align:justify;
+	line-height:20px;
+}
+.jj{
+	float:right;
+	margin-right:50px;
+	_display:inline;
+}
+
+/*留言回复*/
+.Reply{
+	width:585px;
+	margin:0 auto;
+	margin-top:40px;
+}
+.ReplyOver{
+	width:585px;
+	margin-bottom:30px;
+}
+.ReplyOne{
+	font-size:12px;
+	line-height:20px;
+}
+.lines{
+	border-bottom:#a8c9fa 1px dotted;
+	height:1px;
+	line-height:1px;
+	font-size:1px;
+	margin:5px 0;
+}
+.ReplyOne a{
+	color:#4164a0;
+}
+.ReplyTow{
+	font-size:12px;
+	line-height:20px;
+}
+.ReplyTow a{
+	color:#6b9ae6;
+}
+
+
+
+
+
+
+

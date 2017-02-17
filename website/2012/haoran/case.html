@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>浩然家具</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="Author" content=" " />
+<meta name="copyright" content=" " />
+<meta name="description" content=" " />
+<meta name="keywords" content=" " />
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<link href="css/skin.css" type="text/css" rel="stylesheet" />
+<link href="css/jquery.jscrollpane.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="js/iepngfix_tilebg.js" type="text/javascript"></script>
+<script src="js/jquery.jcarousel.js" type="text/javascript"></script>
+<script src="js/iepngfix_tilebg.js" type="text/javascript"></script>
+<script src="js/jquery.roundabout.js" type="text/javascript"></script>
+<script src="js/jquery.roundabout-shapes.js" type="text/javascript"></script>
+<script src="js/jquery.jscrollpane.min.js"></script>
+<script src="js/jquery.jscrollpane.min.js"></script>
+<script src="js/mwheelIntent.js"></script>
+<script src="js/jquery.mousewheel.js"></script>
+<script>
+$(function(){
+	var ww=$(window).width();
+	var tabw=0;
+		$tab=$('.tabw');
+	var count=$tab.size();
+		$tab.each(function(i){
+		tabw+=$tab.eq(i).width();		
+		})
+		if(tabw<ww){
+		//
+		}else{
+		$('#carousel').jcarousel({
+			auto: 3, 
+			scroll: 1,
+			animation: '800',
+			wrap: 'circular',
+			initCallback: carousel_init
+			});
+		}
+	$('.gllery ul').roundabout({		
+		minOpacity: 0,
+		maxOpacity: 1.0,
+		minScale: 0.1,
+		maxScale: 0.9,		
+		btnNext: '.next',	
+		btnPrev: '.prev',		
+		easing: "swing",		
+		shape: "lazySusan"
+	
+	});
+	$('.next,.prev').css({filter:"alpha(opacity=40)",opacity:0.4});
+	$('.next,.prev').hover(function(){
+		$(this).css({filter:"alpha(opacity=100)",opacity:100});							
+	},function(){
+		$(this).css({filter:"alpha(opacity=40)",opacity:0.4});	
+		});	
+	
+	if($.browser.msie&&$.browser.version=='6.0'){		
+		$('.nav ul li:first').find('a').css({'border-left':'1px solid #6f6f6f'});
+	}else{
+		$('.scroll_aa').jScrollPane(
+		{		
+			verticalDragMaxHeight: 100			
+		}						  
+		);
+	}
+	$('.scroll_aa').jScrollPane(
+		{		
+			verticalDragMaxHeight: 100			
+		}						  
+		);
+	$('.gllery ul').roundabout({		
+		minOpacity: 0,
+		maxOpacity: 1.0,
+		minScale: 0.1,
+		maxScale: 0.9,		
+		btnNext: '.next',	
+		btnPrev: '.prev',		
+		easing: "swing",		
+		shape: "lazySusan"
+	
+	});
+	$('.next,.prev').css({filter:"alpha(opacity=40)",opacity:0.4});
+	$('.next,.prev').hover(function(){
+		$(this).css({filter:"alpha(opacity=100)",opacity:100});							
+	},function(){
+		$(this).css({filter:"alpha(opacity=40)",opacity:0.4});	
+		});
+	
+		$('.scroll-pane').jScrollPane(
+			{
+				verticalDragMinHeight: 100,
+				verticalDragMaxHeight: 100,
+				horizontalDragMinWidth: 100,
+				horizontalDragMaxWidth: 100
+			}						  
+		);	
+	function carousel_init(jcarousel)
+	{
+		$('#carousel').hover(
+			function(){                                    
+				jcarousel.stopAuto();
+			},function(){
+				jcarousel.startAuto();
+			}
+		);
+	}
+});
+</script>
+</head>
+
+<body>
+
+<div id="header_box">
+	<div class="header">
+    	<div class="logo"><a href="#" title=""><img src="images/logo.gif" height="79" width="130" /></a></div>
+        <div class="nav" >
+        	<ul>
+            	<li><a href="#">关于浩然</a></li>
+                <li><a href="#">服务项目</a></li>
+                <li><a href="#" class="nav_focus">团队展示</a></li>
+                <li><a href="#">浩然动态</a></li>
+                <li><a href="#">人才招聘</a></li>
+                <li><a href="#">在线留言</a></li>
+                <li><a href="#">联系我们</a></li>               
+            </ul>
+        </div>
+        <div class="clr"></div>
+    </div>
+</div>
+
+<div id="contianer">
+	<div class="content" > 
+		<ul id="carousel" class="jcarousel-skin-tango">        	
+            <li>
+            	<table class="tabw">
+                	<tr>
+                    	<td valign="top"><img src="images/case_pic.gif" height="280" width="245" /></td>
+                        <td valign="top">
+                            <div>
+                                <div class="case_intro">
+                                    <h3 class="main_tit">浩然动态</h3>
+                                    <div style="height:500px;">                                
+        无尘级氢氧化锂技术交流无尘级氢氧化锂技术交流无尘级氢氧化锂技术交流无尘级氢
+    锂技术交流无尘级氢氧化锂技术交流无尘级氢氧化锂技术交流无尘级氢氧化锂技术交流无
+        尘级氢氧化锂技术交流无尘级氢氧化锂技术交流无尘级氢氧化锂技术交流无尘级氢氧
+    化锂技术交流无尘级氢氧化锂技术交流无尘级氢氧化锂技术交流无尘级氢氧化锂技术交流
+    无尘级氢氧化锂技术交流无尘级氢氧化锂技术交流无尘级氢氧化锂技术交流.
+                                    </div>                  
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>                	
+           	</li>            
+          	 <li>
+            	<table class="tabw">
+                	<tr>
+                    	<td valign="top"><img src="images/case_pic.gif" height="280" width="245" /></td>
+                        <td valign="top">
+                            <div>
+                                <div class="case_intro">
+                                    <h3 class="main_tit">浩然动态</h3>
+                                    <div style="height:500px;">                                
+        无尘级氢氧化锂技术交流无尘级氢氧化锂技术交流无尘级氢氧化锂技术交流无尘级氢
+    锂技术交流无尘级氢氧化锂技术交流无尘级氢氧化锂技术交流无尘级氢氧化锂技术交流无
+        尘级氢氧化锂技术交流无尘级氢氧化锂技术交流无尘级氢氧化锂技术交流无尘级氢氧
+    化锂技术交流无尘级氢氧化锂技术交流无尘级氢氧化锂技术交流无尘级氢氧化锂技术交流
+    无尘级氢氧化锂技术交流无尘级氢氧化锂技术交流无尘级氢氧化锂技术交流.
+                                    </div>                  
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>                	
+           	</li>            
+        	<li>
+            	<table class="tabw">
+                	<tr>
+                    	<td valign="top"><img src="images/case_pic.gif" height="280" width="380" /></td>
+                        <td valign="top">
+                            <div>
+                                <div class="case_intro">
+                                    <h3 class="main_tit">浩然动态</h3>
+                                    <div style="height:500px;">                                
+        无尘级氢氧化锂技术交流无尘级氢氧化锂技术交流无尘级氢氧化锂技术交流无尘级氢
+    锂技术交流无尘级氢氧化锂技术交流无尘级氢氧化锂技术交流无尘级氢氧化锂技术交流无
+        尘级氢氧化锂技术交流无尘级氢氧化锂技术交流无尘级氢氧化锂技术交流无尘级氢氧
+    化锂技术交流无尘级氢氧化锂技术交流无尘级氢氧化锂技术交流无尘级氢氧化锂技术交流
+    无尘级氢氧化锂技术交流无尘级氢氧化锂技术交流无尘级氢氧化锂技术交流.
+                                    </div>                  
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>                	
+           	</li>            
+        </ul>        
+    </div>
+        
+    <div class="sub_wrap">
+    	<div class="sub_nav">
+        	<ul>
+            	<li><a href="#">关于浩然</a></li>
+                <li><a href="#">服务项目</a></li>
+                <li><a href="#">团队展示</a></li>
+                <li><a href="#" class="focus">浩然动态</a></li>
+                <li><a href="#">人才招聘</a></li>
+                <li><a href="#">在线留言</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+        <div class="sub_nav">
+        	<ul>
+            	<li><a href="#">浩然简介</a></li>
+                <li><a href="#">公司文化</a></li>                
+                <li><a href="#" class="focus">公司荣誉</a></li>               
+            </ul>
+        </div>
+        <div class="sub_nav case_list">
+        	<ul>
+            	<li><a href="#">美国仟游软件软件公司室内...</a></li>
+             	<li><a href="#">徐州云龙会会所</a></li>
+                <li><a href="#">美国仟游软件软件公司室内...</a></li>
+                <li><a href="#">美国仟游软件软件公司室内...</a></li>
+                <li><a href="#">徐州云龙会会所</a></li>
+                <li><a href="#">美国仟游软件软件公司室内...</a></li>                
+            </ul>
+        </div>
+         <div class="sub_nav case_list">
+        	<ul>
+            	<li><a href="#">美国仟游软件软件公司室内...</a></li>
+             	<li><a href="#">徐州云龙会会所</a></li>                              
+            </ul>
+        </div>
+        <div class="clr"></div>        
+       
+    </div>
+</div>
+
+<div id="footer">
+© 2012 成都浩然家具设计公司 Copyright  蜀ICP030173号        Technical support：<a href="http://www.scbofan.com">scbofan</a> 
+</div>
+</body>
+</html>
+
+
+
+

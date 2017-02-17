@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>浩然家具</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="Author" content=" " />
+<meta name="copyright" content=" " />
+<meta name="description" content=" " />
+<meta name="keywords" content=" " />
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<link href="css/jquery.jscrollpane.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="js/iepngfix_tilebg.js" type="text/javascript"></script>
+<script src="js/jquery.roundabout.js" type="text/javascript"></script>
+<script src="js/jquery.roundabout-shapes.js" type="text/javascript"></script>
+<script src="js/jquery.jscrollpane.min.js"></script>
+<script src="js/mwheelIntent.js"></script>
+<script src="js/jquery.mousewheel.js"></script>
+<script type="text/javascript">
+</script>
+<script>
+$(function(){	
+	$('.gllery ul').roundabout({		
+		minOpacity: 0,
+		maxOpacity: 1.0,
+		minScale: 0.1,
+		maxScale: 0.9,		
+		btnNext: '.next',	
+		btnPrev: '.prev',		
+		easing: "swing",		
+		shape: "lazySusan"
+	
+	});
+	$('.next,.prev').css({filter:"alpha(opacity=40)",opacity:0.4});
+	$('.next,.prev').hover(function(){
+		$(this).css({filter:"alpha(opacity=100)",opacity:100});							
+	},function(){
+		$(this).css({filter:"alpha(opacity=40)",opacity:0.4});	
+		});	
+	$('.scroll-pane').jScrollPane(
+		{
+			verticalDragMinHeight: 100,
+			verticalDragMaxHeight: 100,
+			horizontalDragMinWidth: 100,
+			horizontalDragMaxWidth: 100
+		}						  
+	);
+
+});
+</script>
+</head>
+
+<body>
+
+<div id="header_box">
+	<div class="header">
+    	<div class="logo"><a href="#" title=""><img src="images/logo.gif" height="79" width="130" /></a></div>
+        <div class="nav">
+        	<ul>
+            	<li><a href="#">关于浩然</a></li>
+                <li><a href="#">服务项目</a></li>
+                <li><a href="#" class="nav_focus">团队展示</a></li>
+                <li><a href="#">浩然动态</a></li>
+                <li><a href="#">人才招聘</a></li>
+                <li><a href="#">在线留言</a></li>
+                <li><a href="#">联系我们</a></li>               
+            </ul>
+        </div>
+        <div class="clr"></div>
+    </div>
+</div>
+
+<div id="contianer">
+	<div class="content ">
+    	<div class="left_ad"><a href="#"><img src="images/left_ad.gif" /></a></div>
+        <div class="scroll_box">
+            <div class="scroll-pane">      	    	
+                <div class="feed_box">
+                	<h3 class="main_tit">在线留言</h3>
+                   	<table>
+                    	<tr>
+                        	<td>你的称呼：</td><td colspan="2"><input type="text" class="sty_input" maxlength="30" /></td>
+                        </tr>
+                        <tr>
+                        	<td>你的邮箱：</td><td colspan="2"><input type="text" class="sty_input" maxlength="30" /></td>
+                        </tr>
+                        <tr>
+                        	<td>你的留言：</td><td colspan="2"><textarea class="sty_text"  ></textarea></td>
+                        </tr>
+                         <tr>
+                        	<td>验&nbsp;证&nbsp;码：</td>
+                            <td>
+                            	<table>
+                                	<tr>
+                                    	<td width="100"><input type="text" class="sty_input sty1" maxlength="15" /></td>
+                                        <td align="left"><img src="images/check.gif" class="check" /></td>
+                                    </tr>
+                                </table>
+                            </td>                            
+                        </tr>
+                        <tr>
+                        	<td>&nbsp;</td>
+                            <td>
+                            	<table>
+                                	<tr>
+                                    	<td width="100"><input type="submit" class="sty_sub" value="提交" /></td>
+                                        <td align="left"><input type="submit" class="sty_sub" value="重置" /></td>
+                                    </tr>
+                                </table>
+                            </td>                            
+                        </tr>
+                    </table>
+                </div> 
+            </div>
+        </div>
+        <div class="rigth2"><a href="#"><img src="images/right_ad.gif" /></a></div>
+        <div class="clr"></div>
+        </div>
+        
+    <div class="sub_wrap">
+    	<div class="sub_nav">
+        	<ul>
+            	<li><a href="#">关于浩然</a></li>
+                <li><a href="#">服务项目</a></li>
+                <li><a href="#">团队展示</a></li>
+                <li><a href="#" class="focus">浩然动态</a></li>
+                <li><a href="#">人才招聘</a></li>
+                <li><a href="#">在线留言</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>       
+        <div class="clr"></div>         
+       
+    </div>
+</div>
+
+<div id="footer">
+© 2012 成都浩然家具设计公司 Copyright  蜀ICP030173号        Technical support：<a href="http://www.scbofan.com">scbofan</a> 
+</div>
+</body>
+</html>
+
+
+
+

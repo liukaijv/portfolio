@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+#example {
+	width:660px;
+	height:300px;
+	position:relative;
+}
+#slides {
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:100;
+}
+.slides_container {
+	width:660px;
+	overflow:hidden;
+	position:relative;
+	display:none;
+}
+.slides_container a {
+	width:660px;
+	height:300px;
+	display:block;
+}
+
+.slides_container a img {
+	display:block;
+}
+#slides .prev1 {
+	position:absolute;
+	top:130px;
+	left:-25px;
+	width:18px;
+	height:30px;
+	display:block;
+	z-index:101;
+}
+#slides .next1{
+	position:absolute;
+	top:130px;
+	right:-30px;
+	width:18px;
+	height:30px;
+	display:block;
+	z-index:101;
+}
+#slides .next1 span{	
+	width:18px;
+	height:30px;;
+	display:block;
+	z-index:102;	
+	cursor:pointer;
+}
+#slides .prev1 span{width:18px;
+	height:30px;
+	width:18px;
+	display:block;
+	z-index:102;	
+	cursor:pointer;
+}
+
+#slides .next1{
+	right:-25px;
+}
+

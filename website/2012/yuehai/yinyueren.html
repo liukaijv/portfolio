@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+*{ margin:0; padding:0;}
+ul{ list-style:none;}
+img{ border:none;}
+.clr{ clear:both;}
+.slide{ width:640px; margin:0 auto;}
+.slide_img{ width:638px; height:300px; position:relative; margin-bottom:10px;}
+.slide_tit{ position:absolute; height:30px; width:100%; text-indent:5px; line-height:30px; left:0; bottom:0; background:#000; color:#fff;filter:alpha(opacity=30); -moz-opacity:0.3; opacity:0.3; }
+.slide_wrap{ height:100px; width:640px; position:relative;}
+.slide_list{ width:590px; margin:0 auto;}
+.prev,.next{ width:30px; height:70px; position:absolute; left:0; top:15px; background:url(images/prev.gif) no-repeat; cursor:pointer; z-index:9999}
+.next{ left:615px;background:url(images/next.gif) no-repeat;}
+.slide_list ul li{ float:left; padding-left:11px; height:100px; width:134px; overflow:hidden; text-align:center;}
+.slide_list ul li img{cursor:pointer;}
+.hover{ border:1px solid #6F6;}
+
+.tab_wrap{ width:150px; margin:0 auto; height:320px; overflow:hidden; position:relative; }
+.left,.right{ height:18px; width:18px; position:absolute; top:10px; left:110px; cursor:pointer; background:url(images/trun_icos.gif) -17px 0 no-repeat;}
+.right{ left:130px; background:#f00; background:url(images/trun_icos.gif) no-repeat;}
+.tab_wrap h4{ height:40px; border-bottom:1px dashed #CCC; line-height:40px;}
+.tab_list ul li{ float:left; width:150px; height:320px;}
+</style>
+<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="js/jcarousellite_1.0.1.min.js" type="text/javascript"></script>
+<script>
+$(function() {		
+    $(".slide_list").jCarouselLite({
+        btnNext: ".prev",
+        btnPrev: ".next",
+		speed:200,		
+		visible:4,		
+		scroll:1		
+    });	 
+		$('.slide_list li img').click(function(){
+		$('.slide_list li img').removeClass('hover');
+		$(this).addClass('hover');
+		$('.slide_img img').attr('src',$(this).attr('src'));
+		$('.slide_tit').html($(this).attr('title'));
+		});
+		
+	$(".tab_list").jCarouselLite({
+        btnNext: ".left",
+        btnPrev: ".right",
+		speed:200,		
+		visible:1,		
+		scroll:1		
+    });	
+	
+});
+	
+</script>
+</head>
+
+<body>
+<div class="slide">
+	<div class="slide_img">
+	  <img src="#" height="300" width="640" />
+	  <div class="slide_tit"></div>
+  </div>
+<div class="slide_wrap">
+    	<div class="prev"></div>
+        <div class="next"></div>
+        <div class="slide_list">
+          <ul>
+                <li><img src="images/yinyue_img.gif" height="98" width="132" title="12343434" /></li>
+                <li><img src="images/yinyue_img.gif" height="98" width="132" title="我是哈俣" /></li>
+                <li><img src="images/yinyue_img.gif" height="98" width="132"  title="234343"/></li>
+                <li><img src="images/yinyue_img.gif" height="98" width="132"  title="87017404"/></li>
+          </ul>
+        <div class="clr"></div>
+      	</div>
+    </div>
+</div>
+
+<div class="tab_wrap">
+<div class="left"></div>
+<div class="right"></div>
+<h4>在线问答</h4>
+<div class="tab_list">
+	<ul>
+    	<li>
+        	<dl>
+            	<dd>问：说说说……<br />答：啊啊啊……</dd>
+                <dt>问：说说说……<br />答：啊啊啊……</dt>
+            </dl>
+        </li>
+        <li>
+        	<dl>
+            	<dd>问：说说说……<br />答：啊啊啊……</dd>
+                <dt>问：说说说……<br />答：啊啊啊……</dt>
+            </dl>
+        </li>        
+        <li>
+        	<dl>
+            	<dd>问：说说说……<br />答：啊啊啊……</dd>
+                <dt>问：说说说……<br />答：啊啊啊……</dt>
+            </dl>
+        </li>               
+    </ul>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>假日新娘</title>
+<!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />-->
+<meta name="Author" content=" " />
+<meta name="copyright" content=" " />
+<meta name="description" content=" " />
+<meta name="keywords" content=" " />
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<link href="css/jquery.jscrollpane.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="js/jquery.jscrollpane.min.js"></script>
+<script src="js/emotion.js"></script>
+<!--<script src="js/iepngfix_tilebg.js" type="text/javascript"></script>-->
+
+<script type="text/javascript">
+$(function(){
+	$('#big').hover(function(){				
+		$(this).stop().animate({width:'220px',height:'250px',left:'-5px',top:'-5px',opacity:1.0},400);		
+	},function(){
+		var w=$(this).width();				
+		$(this).stop().animate({left:'0', top:'0px',width:'210px',height:'240px',opacity:0.9},300);		
+	});
+	
+	$('.chang_big').hover(function(){				
+		$(this).stop().animate({width:'232px',height:'250px',left:'-5px',top:'-5px',opacity:1.0},400);		
+	},function(){
+		var w=$(this).width();				
+		$(this).stop().animate({left:'0', top:'0px',width:'222px',height:'240px',opacity:0.9},300);		
+	});
+	
+	$('#ct_big').hover(function(){				
+		$(this).stop().animate({width:'347px',height:'250px',left:'-5px',top:'-5px',opacity:1.0},400);		
+	},function(){
+		var w=$(this).width();				
+		$(this).stop().animate({left:'0', top:'0px',width:'337px',height:'240px',opacity:0.9},300);		
+	});
+	
+	$('#bt_big').hover(function(){				
+		$(this).stop().animate({width:'582px',height:'250px',left:'-5px',top:'-5px',opacity:1.0},400);		
+	},function(){
+		var w=$(this).width();				
+		$(this).stop().animate({left:'0', top:'0px',width:'572px',height:'240px',opacity:0.9},300);		
+	});
+	
+	/*$('.chang_big').hover(function(){				
+		bigimg(this,10,10);
+		},function(){
+		nonimg(this);	
+	})
+
+	function bigimg(obj,w,h){
+		var _obj=$(obj);
+		var _h=_obj.height()+h;		
+		var _w=_obj.width()+w;
+		var _l=w/2;		
+		var _t=h/2;
+		_obj.stop().animate({left:'-'+_l+'px',top:'-'+_t+'px',width:_w+'px',height:_h+'px'},500);		
+	}
+	function nonimg(obj){
+		var _obj=$(obj);
+		var _h=_obj.height()-10;		
+		var _w=_obj.width()-10;
+		_obj.stop().animate({left:'0px',top:'0px',width:_w+'px',height:_h+'px'},500);	
+	}*/
+	$('.share_detail').jScrollPane(
+		{			
+		verticalDragMaxHeight: 80			
+		}						  
+	);	
+	$('.biaoqing').click(function(){
+		$('.emotion_wrap').toggle();
+		return false;
+	});
+		var str='';	
+	$.each(emotions,function(k,v){
+		var arr=new Array;
+		arr=v.split("#");
+		str+='<img src="'+arr[1]+'" title="'+arr[0]+'" />';
+		$('.emotion_wrap').html(str);			
+	})	
+	$('.emotion_wrap img').click(function(){
+		var title=$(this).attr('title');		
+		if(title){
+		 $('.edit_area').focus();
+		 var val=$('.edit_area').val();		
+		 $('.edit_area').attr('value',val+title);
+		 $('.emotion_wrap').hide();
+		}				
+	});	
+});
+</script>
+
+</head>
+
+<body>
+
+<!--容器开始-->
+<div id="container">
+
+<!--侧边-->
+<div class="bar">
+	<div class="logo"><a href="#"><!--<img src="images/logo.png" height="142" width="210" />--></a></div>
+    
+    <div class="bar_nav">
+    	<h3><a href="#">首页</a></h3>
+        <h3><a href="#" class="focus">婚纱</a></h3>
+        <ul>
+        	<li><a href="#">时尚系列</a></li>
+            <li><a href="#" class="focus">璀璨系列</a></li>
+            <li><a href="#">设计师系列</a></li>
+            <li><a href="#">国际品牌</a></li>
+            <li><a href="#">时尚伸展台</a></li>
+        </ul>
+        <h3><a href="#">晚礼服</a></h3>
+        <ul>
+        	<li><a href="#">精选礼服系列</a></li>
+            <li><a href="#">晚宴礼服精选</a></li>
+            <li><a href="#">伴娘礼服精选</a></li>           
+        </ul>
+        <h3><a href="#">晚礼服</a></h3>
+        <ul>
+        	<li><a href="#">店面预约</a></li>
+            <li><a href="#">在线预约</a></li>
+            <li><a href="#">最新活动</a></li>
+            <li><a href="#">VIP 贵宾</a></li>
+            <li><a href="#">嫁日分享</a></li>
+            <li><a href="#">嫁日祝福</a></li>
+        </ul>
+        <h3><a href="#">晚礼服</a></h3>
+        <ul>
+        	<li><a href="#">企业介绍</a></li>
+            <li><a href="#">人才招聘</a></li>
+            <li><a href="#">在线留言</a></li>           
+        </ul>
+    </div>
+    
+    <div class="bar_contact">
+    	<ul>
+        	<li><a href="#"><img src="images/qq1.jpg" height="25" width="85" /></a></li>
+            <li><a href="#"><img src="images/qq2.jpg" height="25" width="85" /></a></li>
+            <li><a href="#"><img src="images/qq3.jpg" height="25" width="85" /></a></li>
+            <li><a href="#"><img src="images/qq4.jpg" height="25" width="85" /></a></li>
+        </ul>
+    </div>
+    
+</div>
+
+<!--主内容-->
+<div class="main">
+	<div class="main_banner"><a href="#"><img src="images/share_banner.jpg" height="203" width="790" /></a></div>
+    <div class="article_main share_conten">
+    	<div class="share_bar">
+        	<h3>假日分享</h3>
+            <ul>
+            	<li><a href="#">2012(12)</a></li>
+                <li><a href="#" class="focus">2012(12)</a></li>
+                <li><a href="#">2012(12)</a></li>
+                <li><a href="#">2012(12)</a></li>
+            </ul>
+        </div>            	
+        <div class="share_main_view">      	 
+             <div class="share_main_view_top">
+             	<h2 class="art_tit">2012年秋季活动正式开始啦！</h2>
+            	<span class="art_author">更新时间：2012-9-18  浏览人数：33人</span>
+                <div class="share_detail">
+                	<p style="text-indent:2em; height:1000px">
+                    　  公司在年底将在成都春熙路开分店，到时候有更多的优惠等着您，欢迎大家的光临。礼服的灵魂来自独
+有的设计，嫁日新娘对高品质的追求是一种生活态度的体现。我们推行现代主义风格，浪漫、感性、优雅。
+我们采用"选衣预约制"，将"一对一"的精致服务理念贯彻到底。在注重婚纱礼服品质的同时，我们更关
+注新娘们选衣的"私密性"，独立试衣空间，专业的礼服顾问及设计师，都将为您提供热情而贴心的服务。
+嫁日新娘致力于给每位新娘带去VIP式的尊贵独享，以您的嫁日之美为追求，以您的嫁日之美为追求，以您的
+嫁日幸福为荣幸。嫁日新娘，专注打造嫁日当天最美的您！</p>
+                </div>
+               <div id="share_to1">
+                   <!-- Baidu Button BEGIN -->
+           <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+                <span class="bds_more">分享到：</span>
+                <a class="bds_qzone"></a>
+                <a class="bds_tsina"></a>
+                <a class="bds_tqq"></a>
+                <a class="bds_renren"></a>
+                <a class="shareCount"></a>
+            </div>
+        <script type="text/javascript" id="bdshare_js" data="type=tools" ></script>
+        <script type="text/javascript" id="bdshell_js"></script>
+        <script type="text/javascript">
+            document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
+        </script>
+        <!-- Baidu Button END -->
+            	</div>           
+            </div>
+            <div class="share_msg">
+            	<dl>
+                	<dd>
+                        <table>
+                            <tr>
+                                <td align="left" width="525">
+                                    <table>
+                                        <tr>
+                                            <th width="75" valign="top" align="right">留言内容：</th><td>很期待即将开的分店</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td align="right" valign="top">2012-9-13</td>
+                            </tr>
+                          </table>
+                     </dd>
+                     <dt> 
+                          <table>
+                            <tr>
+                                <td align="left" width="525">
+                                    <table>
+                                        <tr>
+                                            <th width="75" valign="top" align="right">回复：</th><td>很期待即将开的分店</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td align="right" valign="top">2012-9-13</td>
+                            </tr>
+                        </table>
+                     </dt>
+                  </dl>
+                  <dl>
+                	<dd>
+                        <table>
+                            <tr>
+                                <td align="left" width="525">
+                                    <table>
+                                        <tr>
+                                            <th width="75" valign="top" align="right">留言内容：</th><td>很期待即将开的分店</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td align="right" valign="top">2012-9-13</td>
+                            </tr>
+                          </table>
+                     </dd>
+                     <dt> 
+                          <table>
+                            <tr>
+                                <td align="left" width="525">
+                                    <table>
+                                        <tr>
+                                            <th width="75" valign="top" align="right">回复：</th><td>很期待即将开的分店</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td align="right" valign="top">2012-9-13</td>
+                            </tr>
+                        </table>
+                     </dt>
+                  </dl>              
+                  <dl>
+                	<dd>
+                        <table>
+                            <tr>
+                                <td align="left" width="525">
+                                    <table>
+                                        <tr>
+                                            <th width="75" valign="top" align="right">留言内容：</th><td>很期待即将开的分店</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td align="right" valign="top">2012-9-13</td>
+                            </tr>
+                          </table>
+                     </dd>
+                     <dt> 
+                          <table>
+                            <tr>
+                                <td align="left" width="525">
+                                    <table>
+                                        <tr>
+                                            <th width="75" valign="top" align="right">回复：</th><td>很期待即将开的分店</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td align="right" valign="top">2012-9-13</td>
+                            </tr>
+                        </table>
+                     </dt>
+                  </dl>                            
+            </div> 
+            <div class="page3">
+              	<a href="#" >首页</a>
+                <a href="#">上一页</a>
+                <a href="#" class="page_lise">1</a><a href="#" class="page_lise focus">2</a><a href="#" class="page_lise">3</a>
+                <a href="#">下一页</a>
+                <a href="#">末页</a>      
+              </div> 
+              <div class="post_msg">
+              		<h3>我要留言：</h3>
+                    <div class="post_top">
+                    	<a href="#" class="biaoqing"></a><a href="#" class="edit"></a>
+                        <div class="emotion_wrap">                      	
+                        </div>
+                    </div>
+                    <textarea class="edit_area"></textarea>                    
+              </div>
+              <input type="submit" class="edit_btn" value=""/>                           
+        </div>
+        <div class="clr"></div>        
+    </div>
+</div>
+<!--主内容完-->
+
+<div class="clr"></div>
+</div>
+<!--容器完-->
+<div id="links">
+	<h3>友情链接：</h3>
+    <a href="#">成都婚姻</a>
+    <a href="#">成都婚姻</a>
+    <a href="#">成都婚姻</a>
+    <a href="#">成都婚姻</a>
+    <a href="#">成都婚姻</a>
+    <a href="#">成都婚姻</a>  
+</div>
+
+<div id="footer">
+版权所有：成都嫁日新娘婚礼服定制 Copyright © 2011-2012 蜀ICP备11025697号<br />
+邮编：610000 咨询热线：400-028-3080、028-86646556 传真：028-86646556 网址：www.cdjrxn   网站建设：<a href="#">泊凡科技</a> 
+</div>
+
+</body>
+</html>
+
+
+
+
+<strong></strong>

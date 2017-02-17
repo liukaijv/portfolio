@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>泰自由</title>
+<link href="css/main.css" rel="stylesheet" />
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery.pngFix.pack.js"></script>
+<script src="js/main.js"></script>
+<script src="js/scrollable.js"></script>
+<style>
+.image_nav{ background:#fdf2d6; padding:10px; margin:10px; width:928px; height:80px;}
+.image_nav a{ display:block; width:16px; background:url(images/prev_btn.png); float:left; height:29px; margin-top:25px; margin-right:8px; cursor:pointer;}
+.image_nav a.next{ background:url(images/next_btn.png); float:left; margin-left:6px; margin-right:0;}
+.scrollable{ width:880px; overflow:hidden; height:80px; float:left; margin:0 auto; position:relative;}
+.items{ width:2000em; height:75px; position:absolute;}
+.items div{ float:left;}
+.items img{float:left; margin-right:10px; border:1px solid #ddd; padding:2px; cursor:pointer;}
+.disabled{ opacity:.2; filter:alpha(opacity=50);}
+.items img.active{ padding:0; border:3px solid #fe9f47;}
+.image_wrap{ width:790px;margin:0 auto; padding:5px 0; text-align:center;}
+</style>
+<script>
+$(function(){
+	$(".scrollable").scrollable(); 
+	$('.items img').click(function(){
+		if($(this).hasClass('.active')){
+			return;	
+		}
+		var tit=$(this).attr('title');
+		var url=$(this).attr('src');
+		var wrap=$('.image_wrap').fadeTo(200,0.5);
+		var img=new Image();
+		img.onload = function(){
+			wrap.fadeTo('fast',1);
+			wrap.find('img').attr('src',url);
+		}
+		img.src=url;
+		$('.image_tit').html(tit);
+		$('.items img').removeClass('active');
+		$(this).addClass('active');
+	}).filter(':first').click();
+});
+</script>
+</head>
+
+<body>
+
+<div id="container">
+
+<div id="header">
+    <a href="#"><img src="images/logo.jpg" class="pa"></a>
+    <div class="nav">
+        <a href="#">走进曼谷</a>
+        <a href="#">沙美</a>
+        <a href="#">七岩</a>
+        <a href="#">喀比</a>
+        <a href="#">象岛</a>
+        <a href="#">苏梅岛</a>
+        <a href="#">定制</a>
+        <a href="#">相册</a>
+    </div>
+</div>
+
+<div class="b mb8">
+    	<div class="tit"><h4 class="ff orange">经典相册</h4></div>
+        <div class="image_nav">
+        	<a  class="prev"></a>
+            <div class="scrollable" id="scrollable">
+            	<div class="items">
+                	<div>
+                    	<img src="images/img2.png" height="75" width="95" title="我是1">
+                       	<img src="images/img01.png" height="75" width="95" title="我是2">
+                        <img src="images/img01.png" height="75" width="95" title="我是3">
+                        <img src="images/img01.png" height="75" width="95" title="我是4">
+                        <img src="images/img01.png" height="75" width="95" title="我是5">
+                        <img src="images/img01.png" height="75" width="95" title="我是5">
+                        <img src="images/img01.png" height="75" width="95" title="我是7">
+                        <img src="images/img01.png" height="75" width="95" title="我是8">
+                    </div>
+                    <div>
+                    	<img src="images/img01.png" height="75" width="95" title="我是1">
+                       	<img src="images/img01.png" height="75" width="95" title="我是2">
+                        <img src="images/img01.png" height="75" width="95" title="我是3">
+                        <img src="images/img01.png" height="75" width="95" title="我是4">
+                        <img src="images/img01.png" height="75" width="95" title="我是5">
+                        <img src="images/img01.png" height="75" width="95" title="我是5">
+                        <img src="images/img01.png" height="75" width="95" title="我是7">
+                        <img src="images/img01.png" height="75" width="95" title="我是8">
+                    </div>
+                    <div>
+                    	<img src="images/img01.png" height="75" width="95" title="我是1">
+                       	<img src="images/img01.png" height="75" width="95" title="我是2">
+                        <img src="images/img01.png" height="75" width="95" title="我是3">
+                        <img src="images/img01.png" height="75" width="95" title="我是4">
+                        <img src="images/img01.png" height="75" width="95" title="我是5">
+                        <img src="images/img01.png" height="75" width="95" title="我是5">
+                        <img src="images/img01.png" height="75" width="95" title="我是7">
+                        <img src="images/img01.png" height="75" width="95" title="我是8">
+                    </div>
+                </div>
+            </div>
+            <a class="next"></a>
+        </div>
+        <div class="image_wrap">
+        	<img src="">
+        </div>
+        <div class="image_tit orange tac mb8">
+        
+        </div>
+    </div>  
+<div class="fill_dash">我的占位的别管我</div>
+
+<div class="links">
+友情连接：<a href="#" class="grayDark">中国建材网</a><a href="#" class="grayDark">中国建材网</a><a href="#" class="grayDark">中国建材网</a><a href="#" class="grayDark">中国建材网</a>
+</div>
+
+<div class="footer">
+<strong>地址：</strong>成都市成华区建设路2号首创爱这城<br>
+<strong>咨询电话:</strong>028-65337795 13908028858  传真:028-65337795<br>   
+<strong>版权所有：</strong>Copyright © 2012 taiziyou. All Rights Reserved. 网站建设：<a href="#" class="grayDark">泊凡科技</a>
+
+</div>
+
+</div>
+
+</body>
+</html>

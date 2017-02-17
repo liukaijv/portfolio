@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>Untitled Page</title>
+<link rel="Stylesheet" type="text/css" href="Result-Css/reset/reset-min.css" />
+<style type="text/css">
+.w_con{ width:400px; height:160px; overflow:hidden; border:1px solid #333;}
+#w_slid{ width:100%;}
+#w_slid li{ width:100%; height:40px;}
+
+</style>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+<div class="w_con" id="w_con">
+<ul id="w_slid">
+<li class="a">1</li>
+<li class="b">2</li>
+<li class="c">3</li>
+<li class="d">4</li>
+<li class="e">5</li>
+</ul>
+</div>
+<script type="text/javascript">
+function slide() {
+var $w_slid = $('#w_con');
+console.log($w_slid);
+var Timer;
+$w_slid.hover(function(){
+clearInterval(Timer);
+},function(){
+Timer = setInterval(function(){
+slideFadeIn($w_slid);
+},1000);
+}).trigger("mouseleave");
+}
+function slideFadeIn(obj) {
+var $self = obj.find('ul:first');
+var $height = $self.find('li:first').height();
+console.log($height);
+$self.animate({
+'marginTop':+$height+'px',
+}, 1000, function () {
+$self.css({ marginTop: 0 }).find("li:first").appendTo($self);
+$self.find("li:first").hide();
+$self.find("li:first").fadeIn("slow");
+});
+}
+$(function () {
+slide();
+});
+</script>
+<script type="text/javascript">
+$(function() {
+$(window).scroll(function() {
+var top = $(window).scrollTop()+200;
+var left= $(window).scrollLeft()+320;
+$("#editInfo").css({ left:left + "px", top: top + "px" });
+});
+});
+</script>
+
+<div id="editInfo" style="float:left;width:300px;background-color:#ccc;position:absolute;top:200px;">
+<div>用户名：<input type="text" /></div>
+<div>密码：<input type="text" /></div>
+<div>年龄：<input type="text" /></div>
+<div>备注：<input type="text" /></div>
+<div><input type="button" value="保存" /></div>
+</div>
+<div style="height:1500px"></div> 
+</body>
+</html> 

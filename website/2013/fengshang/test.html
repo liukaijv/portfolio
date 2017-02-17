@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<script>
+var arr = [1,2,3,4,5,6,7,8,9];
+document.write('<ul>');
+for(var i=1 ; len =arr.length+1, i<len; i++){	
+	document.write('<li>'+arr[i-1]+'</li>');
+	if(i%3 ==0 && i!=len - 1){
+		document.write('</ul><ul>');
+	}	
+}
+document.write('</ul>');
+</script>
+</body>
+</html>

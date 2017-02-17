@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>爱国韵</title>
+<!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />-->
+<meta name="Author" content=" " />
+<meta name="copyright" content=" " />
+<meta name="description" content=" " />
+<meta name="keywords" content=" " />
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="js/iepngfix_tilebg.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+$(function(){	 
+	// 背景滚动
+	/*var pos=0;	
+	setInterval(function(){
+		$('.scroll_bg').css('backgroundPosition','-1px -'+pos+'px');		
+		pos++;		
+	},10);		*/
+	
+	//导航li背景控制
+	$('#nav>ul>li:first').css('background','url(images/li_first.gif) no-repeat');
+	$('#nav>ul>li:last').css('background','url(images/li_last.gif) no-repeat top right');	
+	/*$('#nav>ul>li>a').hover(function(){
+		$(this).parent('li').find('ul').show();							 
+	},function(){
+		$(this).parent('li').find('ul').hide();	
+	})*/
+	
+	//导航下拉
+	$('#nav ul li').hover(function(){
+		$(this).find('ul').show();
+		$(this).find('a:first').addClass('hover');		
+	},function(){
+		$(this).find('ul').hide();
+		$(this).find('a:first').removeClass('hover');
+	});
+	
+	//首页收索框
+	$('#select_div p span').click(function(){
+		$('#select_div ul').stop().slideDown();									
+	});
+	$('#select_div ul li').click(function(){
+		$('#select_div p span').html($(this).text());
+		$('#select_div ul').slideUp('fast');
+	});
+	$('#select_div').mouseleave(function(){
+		$(this).find('ul').delay(500).slideUp();										
+	})
+	
+	//首页列表布局
+	$('.search_text').blur();
+	$('.item1 ul li').eq(2).css('borderRight','none').end().eq(5).css('borderRight','none');
+	$('.item2 ul li').eq(2).css('borderRight','none').end().eq(5).css('borderRight','none');
+	$('.item3 ul li').eq(2).css('borderRight','none').end().eq(5).css('borderRight','none');
+	$('.item3 ul li:gt(2)').css('borderBottom','none');
+	
+});
+</script>
+
+</head>
+
+<body>
+
+<!--头部背景大图-->
+<div id="up_wrap">
+
+<!--容器-->
+<div class="contianer">
+
+<!--头部-->
+<div id="header">
+	<div class="top">
+    	<dl>
+        	<dd>欢迎来到爱国韵！</dd>
+            <dt>
+            	<a href="#">注册</a><span>|</span>
+            	<a href="#">帮助</a><span>|</span>
+                <a href="#">简体</a><span>|</span>
+                <a href="#">繁体</a>            	
+            </dt>
+            <div class="clr"></div>
+        </dl>
+    </div>
+    <div class="logo_wrap">
+    	<dl>
+        	<dd><a href="#"><img src="images/logo1.png" height="70" width="210" /></a></dd>
+            <dt>
+            	<table>
+                	<tr>
+                        <td>
+                        	<input type="text" class="search_text" maxlength="45" onfocus="if(this.value=='输入相关类别名称或关键词'){this.value=''}" onblur="if(this.value==''){this.value='输入相关类别名称或关键词'}" />
+                        </td>
+                        <td>
+                            <div id="select_div">
+                                <p><span>请选择</span></p>
+                                <ul>
+                                    <li>我是一</li>
+                                    <li>我是二</li>
+                                    <li>我是三</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                        	<input type="submit" value="" class="search_sub" />
+                        </td>
+                    </tr>
+                </table>
+            </dt>
+            <div class="clr"></div>
+        </dl>    	
+    </div>
+</div>
+
+<!--边框-->
+<div class="sub_boder">
+
+<!--导航-->
+<div id="nav">
+	<ul>
+    	<li><a href="#">返回首页</a></li>
+        <li><a href="#">神话传说</a>
+        	<ul>
+            	<li><a href="#">上古神话</a></li>
+                <li><a href="#">民间传说</a></li>
+                <li><a href="#">节日传说</a></li>
+                <li><a href="#">神兽传说</a></li>
+            </ul>
+        </li>
+        <li><a href="#"  class="focus">古人古事</a></li>
+        <li><a href="#">民俗风情</a></li>
+        <li><a href="#">国粹经典</a></li>
+        <li><a href="#"><span>大好河山</span></a></li>
+        <li><a href="#">趣味中华</a></li>
+    </ul>
+</div>
+
+<!--个人中心内容-->
+<div class="sub_wrap">
+	<div class="sub_bar">
+    	<div class="sub_bar_tit"></div>
+        <div class="sub_bar_content">
+        
+        	<p>
+            <img src="images/head_ico.jpg" height="62" width="62" />
+            <span class="blue blod">怪物的眼泪</span><br />
+            <span class="red">LV:贡士</span><br />
+            科举分：<span class="red">15690</span>分
+            </p>
+            
+            <dl>
+            	<dd><span class="blue">12309<br />广播</span></dd>
+                <dd><span class="blue">26<br />关注</span></dd>
+                <dt><span class="blue">9<br />粉丝</span></dt>
+            </dl>
+            
+             <ul>
+            	<li class="li1"><a href="#"  class="focus">主页</a></li>
+                <li class="li2"><a href="#">我的文章</a><span class="bar_action_btn">发表</span></li>
+                <li class="li3"><a href="#" >图集</a><span class="bar_action_btn">上传</span></li>
+                <li class="li4"><a href="#">消息</a><span class="dynamic_tip">23</span><span class="bar_action_btn">查看</span></li>          
+            	<li class="li5"><a href="#">好友</a><span class="bar_action_btn">互动</span></li>
+                <li class="li6"><a href="#">活动</a><span class="bar_action_btn">参加</span></li>
+                <li class="li7"><a href="#">分享</a><span class="bar_action_btn">阅读</span></li>
+                <li class="li8"><a href="#">礼物</a><span class="bar_action_btn">兑换</span></li>      
+            	<li class="li9"><a href="#">资料</a><span class="bar_action_btn">完善</span></li>
+                <li class="li10"><a href="#">等级</a><span class="bar_action_btn">详细</span></li>
+                <li class="li11"><a href="#">意见</a><span class="bar_action_btn">投递</span></li>             
+
+            <!--	<li class="li12"><a href="#">个人资料</a></li>
+                <li class="li13"><a href="#">我的相册</a></li>
+                <li class="li14"><a href="#">更改密码</a></li>
+                <li class="li15"><a href="#">意见投递</a></li>-->
+            </ul>
+            
+            
+        </div>
+        <div class="sub_bar_bottom"></div>
+    </div>
+    <div class="sub_mian">
+    	<div class="sub_main_tit">
+        	<ul class="tab tab_photo">
+        	<li><a href="#">我的文章</a></li>
+            <li><a href="#" class="focus">好友文章</a></li>
+            <li><a href="#">热门文章</a></li>  
+             <li><a href="#">文章活动</a></li>              
+        </ul>
+        <span class="sub_main_tit_r_meun">
+        	<a href="#"><span class="blue">草稿</span></a><a href="#">回收站</a><a href="#">关注</a>
+        </span>
+        <div class="clr"></div>
+        </div>
+        <div class="sub_main_content">
+        <p style="padding:12px 0 15px 20px"><a href="#" class="main_action_btn">发表文章</a><a href="#" class="main_action_btn1">发表文章活动</a></p>
+        	<div class="sub_main_art_list1">                       	
+                <ul>
+                	<li>
+                    	<p>今天天气好晴朗，处处好风光呀好风光...<a href="#" class="fr">管理</a></p>
+                        <p>2012-10-12  阅读（10） 喜欢（333）</p>
+                    </li>
+                    <li>
+                    	<p>今天天气好晴朗，处处好风光呀好风光...<a href="#" class="fr">管理</a></p>
+                        <p>2012-10-12  阅读（10） 喜欢（333）</p>
+                    </li>
+                    <li>
+                    	<p>今天天气好晴朗，处处好风光呀好风光...<a href="#" class="fr">管理</a></p>
+                        <p>2012-10-12  阅读（10） 喜欢（333）</p>
+                    </li>
+                     <li>
+                    	<p>今天天气好晴朗，处处好风光呀好风光...<a href="#" class="fr">管理</a></p>
+                        <p>2012-10-12  阅读（10） 喜欢（333）</p>
+                    </li>
+                     <li>
+                    	<p>今天天气好晴朗，处处好风光呀好风光...<a href="#" class="fr">管理</a></p>
+                        <p>2012-10-12  阅读（10） 喜欢（333）</p>
+                    </li>
+                     <li>
+                    	<p>今天天气好晴朗，处处好风光呀好风光...<a href="#" class="fr">管理</a></p>
+                        <p>2012-10-12  阅读（10） 喜欢（333）</p>
+                    </li>
+                     <li>
+                    	<p>今天天气好晴朗，处处好风光呀好风光...<a href="#" class="fr">管理</a></p>
+                        <p>2012-10-12  阅读（10） 喜欢（333）</p>
+                    </li>
+                </ul>
+ 				 <div class="page">
+                    <a href="#" >上一页</a>
+                    <a href="#" >1</a>
+                    <a href="#" class="p_focus">2</a>
+                    <a href="#" >3</a>
+                    <a href="#" >4</a>
+                    <a href="#" >5</a>
+                    <a href="#" >6</a>
+                    <a href="#" >7</a>
+                    <a href="#" >10</a>
+                    <a href="#" >下一页</a>
+                </div>
+            </div>
+           			
+        </div>
+        <div class="sub_main_bottom"></div>
+    </div>
+    <div class="clr"></div>
+</div>
+
+</div>
+<!--边框完-->
+<div class="fill"></div>
+
+</div>
+<!--容器完-->
+</div>
+<!--头部背景完-->
+
+<!--底部-->
+<div id="footer">
+Copyright © 2006-2012法律声明：本站所有图片 文字未经允许不得转载或镜像 违者将追究其法律责任　技术支持：<a href="#">泊凡科技</a>    
+</div>
+
+</body>
+</html>
+
+
+
+

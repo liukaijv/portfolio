@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">	
+<title>Slides, A Slideshow Plugin for jQuery</title>	
+<style>
+*{ padding:0; margin:0;}
+#slides {
+	width:680px;
+	height:380px;
+	position:absolute;
+	top:15px;
+	left:4px;
+	z-index:100;
+}
+.slides_container {
+	width:680px;
+	overflow:hidden;
+	position:relative;
+	display:none;
+}
+.slides_container div.slide {
+	width:680px;
+	height:380px;
+	display:block;
+}
+.pagination {
+	position:absolute;	
+	right:0;
+	bottom:10px;	
+	margin:26px auto 0;
+	width:160px;
+	z-index:99999;
+}
+.pagination li {
+	float: left;
+	margin:0 1px;
+	list-style:none;
+}
+.pagination li a {
+	display:block;
+	width:24px;
+	height:20px;
+	background:url(images/slide_icos.png) -30px bottom no-repeat;
+	color:#fff;
+	font-weight:bold;
+	font-size:12px;
+	float:left;
+	padding-top:8px;	
+	margin-left:5px;
+	text-align:center;	
+	text-decoration:none;
+}
+.pagination li.current a {
+	text-decoration:none;
+	background:url(images/slide_icos.png) 0  bottom no-repeat;
+}
+.caption {
+	z-index:500;
+	position:absolute;
+	bottom:-35px;
+	left:0;
+	height:45px;
+	background:url(images/silide_tit_bg.png) repeat-x;
+	line-height:45px;
+	width:680px;
+	font-size:14px;	 
+	color:#fff;
+	font-weight:bold;
+	text-indent:5px;
+}
+</style>
+	
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/slides.min.jquery.js"></script>
+<script>
+$(function(){
+	$('#slides').slides({
+		preload: true,
+		preloadImage: 'img/loading.gif',
+		effect: 'fade',
+		play: 5000,
+		pause: 2500,
+		fadeSpeed:200,
+		hoverPause: true,
+		animationStart: function(current){
+			$('.caption').animate({
+				bottom:-35
+			},100);
+			if (window.console && console.log) {						
+				console.log('animationStart on slide: ', current);
+			};
+		},
+		animationComplete: function(current){
+			$('.caption').animate({
+				bottom:0
+			},200);
+			if (window.console && console.log) {						
+				console.log('animationComplete on slide: ', current);
+			};
+		},
+		slidesLoaded: function() {
+			$('.caption').animate({
+				bottom:0
+			},200);
+		}
+	});
+});
+</script>
+</head>
+<body>				
+<div id="slides">
+    <div class="slides_container">
+        <div class="slide">
+            <img src="images/ad_img.gif" width="980" height="380" >
+            <div class="caption">图片1</div>					
+        </div>
+        <div class="slide">
+            <img src="images/ad_img.gif" width="980" height="380" >
+           <div class="caption">图片2</div>				
+        </div>
+        <div class="slide">
+            <img src="images/ad_img.gif" width="980" height="380" >
+           <div class="caption">图片3</div>				
+        </div>
+        <div class="slide">
+           <img src="images/ad_img.gif" width="980" height="380" >
+           <div class="caption">图片4</div>				
+        </div>
+        <div class="slide">
+            <img src="images/ad_img.gif" width="980" height="380" >
+           <div class="caption">图片5</div>				
+        </div>
+    </div>				
+</div>		
+
+</body>
+</html>

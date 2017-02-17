@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery-1.7.2.min.js" type="text/javascript" language="javascript"></script>
+<script src="js/jquery.tools.min.js" type="text/javascript"></script>
+<script src="js/jcarousellite_1.0.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--IE6导航效果-->
+$(document).ready(function(){
+	$('.ulitem>li').mouseover(function(){
+		$(this).find('ul').eq(0).css('display','block');		
+		$(this).find('span').eq(0).css('display','block');	
+	}).mouseout(function(){
+		$(this).find('ul').eq(0).css('display','none');
+		$(this).find('span').eq(0).css('display','none');	
+	});
+	
+});
+<!--图片滚动-->
+$(function() {
+    $(".gallery_wrap").jCarouselLite({
+        btnNext: ".up",
+        btnPrev: ".next",
+		speed:200,		
+		visible:6,		
+		scroll:3
+    });
+});
+
+</script>
+</head>
+
+<body>
+<!--容器-->
+<div id="container">
+<!--头部-->
+<div id="header">
+	<div class="logo"><a href="#"><img src="images/logo.gif" alt="#" /></a></div>
+    <div class="header_r">
+    	<div class="header_r_top">
+        	<a href="#"></a>
+        </div>
+    </div>   
+    <div class="clr"></div>
+</div>
+<!--导航-->
+<div id="menu">
+	<div class="nav">
+    	<ul class="ulitem">
+            <li><a href="#">网站首页<span>Home</span></a></li>
+            <li><a href="#">关于我们<span>About us</span></a></li>
+            <li><a href="#">新闻中心<span>News</span></a>
+                <ul>
+                    <li><a href="#">健康工程</a><span>|</span></li>
+                    <li><a href="#">健康工程</a><span>|</span></li>
+                    <li><a href="#">健康工程</a><span>|</span></li>
+                    <li><a href="#">健康工程</a></li>                
+                </ul>              
+            </li>
+            <li><a href="#">产品中心<span>Products</span></a>
+                <ul>
+                    <li><a href="#">健康工程</a><span>|</span></li>
+                    <li><a href="#">健康工程</a><span>|</span></li>
+                    <li><a href="#">健康工程</a><span>|</span></li>
+                    <li><a href="#">健康工程</a></li>                
+                </ul>              
+            </li>
+            <li><a href="#">健康养身<span>Health</span></a></li>
+            <li><a href="#">招商加盟<span>Business</span></a></li>
+            <li><a href="#">人才加盟<span>Join us</span></a>
+            	<ul class="nav5">
+                    <li><a href="#">招贤纳士</a><span>|</span></li>
+                    <li><a href="#">人才理念</a><span>|</span></li>
+                    <li><a href="#">员工培训</a><span>|</span></li>
+                    <li><a href="#">薪资福利</a></li>                
+                </ul>              
+            </li>
+            <li><a href="#">联系我们<span>Contact us</span></a>
+            	<ul class="nav6">
+                    <li><a href="#">联系我们</a><span>|</span></li>
+                    <li><a href="#">在线留言</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="sub_nav"></div>
+</div>
+<!--幻灯片-->
+<div class="slides">
+  <embed width="1002" height="320" src="images/in.swf" play="true" loop="true" quality="high"></embed>
+</div>
+<div class="fill"></div>
+<!--内容-->
+
+<div class="wrap">
+    <div class="left">
+    	<div class="col_tit">
+       	  <div class="col_tit_l_l"></div>
+            <a href="#" class="more"></a>
+            <div class="clr"></div>
+        </div>
+        <div class="ad"><a href="#"><img src="images/ad.gif" /></a></div>
+        <div class="left_content">        	
+           &nbsp;&nbsp;四川三个一健康管理有限公司是由四川省直属机关老龄委联合四川省老干部局于2005年在成都岷山饭店成立的健康 服务机构，为全省中老年朋友提供健康教育、健康监测、健康评估、健康咨询、健康管理等各项可信赖的贴心服务。
+         	<a href="#">[了解更多]</a>
+        </div>
+    </div>      
+    <div class="center">
+    	<div class="col_tit">
+       	  <div class="col_tit_l_c"></div>
+            <a href="#" class="more"></a>
+            <div class="clr"></div>
+        </div>
+        <div class="center_content">
+        	<div class="center_top">
+            	<dl>
+                	<dd><a href="#"><img src="images/news_pic.gif" width="96" height="60" /></a></dd>
+                    <dt>
+                    	<h3>人老健康才是福</h3>
+                        <p>全省中老年朋友提供健康教育、健康监测、健康评估、健康咨询、健康管理等各项可信赖的贴心服务。</p>
+                    </dt>
+                    <div class="clr"></div>
+                </dl>
+            </div>
+            <div class="center_main">            	
+            	<ul>
+                	<li><a href="#">百年工程第四次全国代表大会获奖征文通报</a><span class="time">2012-06-30</span><div class="clr"></div></li>
+                    <li><a href="#">“百年工程”第四次全国代表大会获奖征文通报</a><span class="time">2012-06-30</span><div class="clr"></div></li>
+                    <li><a href="#">“百年工程”第四次全国代表大会获奖征文通报</a><span class="time">2012-06-30</span><div class="clr"></div></li>
+                    <li><a href="#">“百年工程”第四次全国代表大会获奖征文通报</a><span class="time">2012-06-30</span><div class="clr"></div></li>
+                    <li><a href="#">“百年工程”第四次全国代表大会获奖征文通报</a><span class="time">2012-06-30</span><div class="clr"></div></li>
+                </ul>            
+            </div>
+        </div>
+    </div>
+    <div class="right">
+    	<div class="col_tit">
+       	  <div class="col_tit_l_r"></div>
+            <a href="#" class="more"></a>
+            <div class="clr"></div>
+        </div>
+        <div class="right_content">
+        	<img src="images/video.gif" />
+        </div>
+    </div>
+    <div class="clr"></div>       
+</div>
+
+<div class="gallery">
+	<div class="up"><a href="#"></a></div>
+    <div class="gallery_wrap">
+    	<ul>
+            <li>
+                <a href="#"><img src="images/products.gif" width="136" height="101" /></a>
+                <span class="pro_tit">视清复明中药香熏</span>
+            </li>
+            <li>
+                <a href="#"><img src="images/products.gif" /></a>
+                <span class="pro_tit">视清复明中药香熏</span>
+            </li>
+            <li>
+                <a href="#"><img src="images/products.gif" /></a>
+                <span class="pro_tit">视清复明中药香熏</span>
+            </li>
+            
+            <li>
+                <a href="#"><img src="images/products.gif" /></a>
+                <span class="pro_tit">视清复明中药香熏</span>
+            </li>
+            <li>
+                <a href="#"><img src="images/products.gif" /></a>
+                <span class="pro_tit">视清复明中药香熏</span>
+            </li>
+            <li>
+                <a href="#"><img src="images/products.gif" /></a>
+                <span class="pro_tit">视清复明中药香熏</span>
+            </li>
+      	</ul>
+      	<div class="clr"></div>
+    </div>
+    <div class="next"><a href="#"></a></div>
+    <div class="clr"></div>
+</div>    
+
+<div id="friend">
+	<a href="#">聪明点网上购物</a><span>|</span>
+    <a href="#">聪明点网上购物</a><span>|</span>
+    <a href="#">聪明点网上购物</a><span>|</span>
+    <a href="#">聪明点网上购物</a><span>|</span>
+    <a href="#">聪明点网上购物</a><span>|</span>
+    <a href="#">聪明点网上购物</a><span>|</span>
+    <a href="#">聪明点网上购物</a><span>|</span>
+    <a href="#">聪明点网上购物</a><span>|</span>
+    <a href="#">聪明点网上购物</a><span>|</span>       
+    <a href="#">聪明点网上购物</a>   	
+</div>
+</div>
+<!--容器-->
+
+<!--底部-->
+<div id="footer">
+	<div class="foot_content">
+    版权所有：四川三个一健康管理有限公司 蜀ICP备08009025号  邮编：610000    您是第 <strong>7500</strong> 位访客<br> 
+地址:成都市少陵路东街28号  电话：028-65312697  13880872688（汪先生） 电子邮件:SGYJKGL@163.com   网站建设：<a href="#">泊凡科技</a>
+    </div>
+</div>
+
+</body>
+</html>

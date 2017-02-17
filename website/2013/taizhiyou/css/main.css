@@ -1,0 +1,117 @@
+/*reset*/
+body,h1,h2,h3,h4,p,ul,ol,dd,dl{margin:0;}
+ul,ol{padding-left:0;list-style-type:none;}
+input,textarea,select{font-size:12px;}
+img{ border:0;}
+a{text-decoration: none}
+a:hover{ color:#f50609}
+/*font*/
+@font-face{font-family: "fzxwjt";src:url('../font/FZZQJW.EOT');}
+@font-face{font-family: "fzxwjt";src:url('../font/FZZQJW.TTF');}
+.ff{font-family:"fzxwjt";}
+/*commom*/
+.fl{float:left;}
+.fr{float:right;}
+.clr{zoom:1}
+.clr:after{ content:"."; display:block; font-size:0; height:0; visibility:hidden; clear:both;}
+.orange{ color:#fb7e14;}
+.red{ color:#f50609}
+.gray{ color:#656565;}
+.grayDark{ color:#464646;}
+.grayLight{ color:#cac2ac}
+.black{ color:#000;}
+.blackLight{ color:#333;}
+.pa{ position:absolute;}
+.mb8{ margin-bottom:8px;}
+.ptb8{ padding:8px 0;}
+.blueDark{ color:#456e86;}
+.b{ border:1px solid #ffe4c4;}
+.p5{ padding:5px}
+.f14{ font-size:14px;}
+.tac{ text-align:center;}
+.oh{ overflow:hidden;}
+/*start*/
+body{font:12px/18px "宋体"; background:url(../images/bg.png) repeat-x #fff; color:#464646;}
+#container{ width:970px; margin:0 auto;}
+#header{ height:90px; padding-top:20px;}
+.nav{ width:755px; float:right; height:80px; background:url(../images/nav_bg.jpg);}
+.nav a{ width:79px; float:left; height:80px; margin-left:15px; text-indent:-999em; overflow:hidden;}
+.banner{ height:205px; padding:5px;border:1px solid #f6ecec; border-radius:2px;}
+.wrap{ overflow: hidden;}
+.bar{ width:235px; float:left;/*margin-bottom:-2000px; padding-bottom:2000px;*/}
+.main{ margin-left:245px;/* margin-bottom:-2000px; padding-bottom:2000px;*/ _height:100px;}
+.tit{ height:36px; line-height:36px; background:#ffefc6}
+.tit h4{ font-size:14px; letter-spacing:.3em; padding-left:.6em; }
+.more{ width:44px; height:13px; background:url(../images/more_ico.png); text-indent:-999em; overflow:hidden; margin-top:12px; margin-right:10px;}
+.content{ padding:10px;}
+.contact_tab th{ color:#111; vertical-align:top; width:3.5em;}
+.strategy_list{ padding:15px 8px 4px 8px;}
+.strategy_list li{height:58px; overflow:hidden; margin-bottom:8px; line-height:22px; border-bottom:1px solid #ddd;}
+.strategy_img{ height:40px; width:40px; padding:4px; border:1px solid #ddd; margin-right:8px;}
+.ask_btn{ width:68px; height:21px; background:url(../images/ask_btn.png); margin-top:9px;}
+.faq{ padding:9px 0; width:90%; margin:0 auto;}
+.faq th{ font-weight:normal; line-height:19px;vertical-align:top; text-align:left; padding-top:3px;}
+.faq td{ border-bottom:1px dashed #ddd; vertical-align:top; padding-bottom:8px;}
+.way_l{ width:51.5%; float:left; padding-left:8px;}
+.way_r{ margin-left:53.5%;}
+.item{ padding:8px 0;}
+.item img{ border:1px solid #ddd; padding:2px; margin-right:8px;}
+.item_list{ margin-left:148px; margin-right:8px;}
+.item_list li{ background:url(../images/list_ico01.png) left no-repeat;  border-bottom:1px dashed #ddd; line-height:30px; padding-left:8px; overflow:hidden;}
+.news_list{ margin:0 0 8px 0; background:fff7e4; background:#fff7e4; padding:8px;_height:100px;}
+.news_list li{ background-image:url(../images/list_ico2.png)}
+.msg{ background:#fff7e4; padding:20px 0 10px 15px;_height:100px;}
+.msg p{ padding-bottom:9px;}
+.sty_radio{ vertical-align:middle; margin-top:-2px; margin-bottom:1px;}
+.sty_text{ height:18px; border:1px solid #dad8d4; vertical-align:middle; width:40%;}
+.sty_area{ height:50px; width:75%;}
+.photo_list li{ width:25%; float:left; }
+.photo_item{ background:#fff7e4; width:90%;overflow:hidden; margin:8px auto;text-align:center; padding:5px}
+.photo_item a:hover img{ border:1px solid #eb6022; margin:-1px;}
+.fill_dash{ border-top:1px dotted #f3ae74; height:1px; overflow:hidden; margin:10px 0;}
+.links{ border:1px solid #f4bc7e; padding:5px 8px; background:#fef6de;}
+.links a{ display:inline-block; margin:0 5px;}
+.footer{ padding:10px 0; background:url(../images/footer_bg.png) right 10px no-repeat; line-height:22px;}
+.art_tit{ font-size:14px; text-align:center; padding:20px 0 5px;}
+.author{ border-bottom:1px dotted #ccc; width:96%; margin:0 auto; text-align:center;}
+.art_content{ line-height:24px;}
+.turn_page{ padding:0 10px 10px; text-align:right;}
+.dynamic_list{ background:none; }
+.my_pagination{ padding:0 8px 10px 8px;text-align:center; font-size:0; text-align:right;}
+.my_pagination a{ display:inline-block;padding:2px 8px; background:#f6f4e9; border:1px solid #e8e4d8; font-size:12px; letter-spacing:0; margin-left:-1px; color:#63533e; font-weight:bold; text-decoration:none;}
+.my_pagination a:hover{ background:#ff8203; color:#fff; text-decoration:none;}
+.faq_list{  border-top:1px solid #ccc; margin-top:8px;}
+.faq_time{ height:44px; margin-bottom:-44px; text-align:right; line-height:22px;}
+.faq_list li{ border-bottom:1px dashed #ccc; padding:10px 0; *zoom:1;}
+.faq_list li dt{ background:url(../images/faq_icos01.png) left 3px no-repeat; padding:2px 0 2px 18px}
+.faq_list li dd{ background:url(../images/faq_icos02.png) 20px 2px no-repeat; padding:2px 0 2px 40px}
+.custorm_list{ padding:0 8px 12px;}
+.custorm_list li{ padding:15px 0 8px; border-bottom:1px solid #ddd; height:110px; overflow:hidden;}
+.custorm_img{ margin-right:8px; border:1px solid #ddd; padding:4px;}
+.custorm_con{ margin-left:120px; line-height:21px; color:#666;}
+.custorm_tit{ background:#ffefc6; padding:3px 5px; font-size:12px;}
+.sub_nav{  background:url(../images/sub_nav_bg.jpg) no-repeat #fff7e2; height:36px; line-height:36px; padding:0 .5em; overflow:hidden;}
+.sub_nav a{ color:#111; margin:0 6px;}
+.sub_nav a:hover{ color:#fb7e14}
+.weather{ background:#feefc6; padding:5px;}
+.senery_photo{ background:#fef2d5; overflow:hidden; width:99.9%; padding:8px 0;}
+.senery_photo li{ float:left;}
+.senery_photo li a{ display:inline-block; margin-right:5px;}
+.way_l01{ width:49%; float:left}
+.way_r01{ float:right; width:49%;}
+.tit01{ height:30px; line-height:30px; padding-left:.5em;}
+.hotel_tit{ font-size:14px; border-bottom:8px solid #fdebbe; line-height:24px;}
+.hotel_tab th,.hotel_tab td{ border:2px solid #f2f2f2; padding:2px 0;}
+.hotel_tab th{ font-size:12px; color:#000; font-weight:normal;}
+.hotel_tab td{ font-weight:bold; font-size:13px;color:#4463c5; text-align:center;}
+.purse{color:#4463c5;}
+.hotel_tit_big{ height:42px; background:url(../images/hotel_tit_bg.jpg);  line-height:42px; padding-left:1.5em;}
+.bg{ background:#fff6e4;}
+.left01{ margin-right:350px;}
+.right01{ width:340px; background:#ebebeb; padding:10px 0;}
+.feather_tab_bg{ background:#ffebce;}
+.feather_box{ background:#000; display:block; line-height:14px; padding:10px; color:#fff; width:2em;}
+
+
+
+

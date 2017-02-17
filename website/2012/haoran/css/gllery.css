@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+#imageFlow {
+	position: absolute;
+	width: 100%;
+	height: 500px;
+	left: 0%;
+	top: 0;	
+	overflow:hidden;
+}
+#imageFlow .diapo {
+	position: absolute;
+	left: -1000px;
+	cursor: pointer;
+	-ms-interpolation-mode: nearest-neighbor;
+	vertical-align:middle;	
+}
+#imageFlow .bank {
+	visibility: hidden;	
+	}
+	
+#imageFlow .text{ margin-left:-9999px;}
+
+#imageFlow .scrollbar {
+	position: absolute;
+	left: 10%;
+	bottom: 10%;
+	width: 80%;
+	height: 16px;
+	z-index: 1000;
+}
+#imageFlow .track {
+	position: absolute;
+	left: 1%;
+	width: 98%;
+	height: 16px;
+	filter: alpha(opacity=0);
+	opacity: 0;
+}
+#imageFlow .arrow-left {
+	position: absolute;
+	bottom:200px;
+	cursor:pointer;
+}
+#imageFlow .arrow-right {
+	position: absolute;
+	right: 0px;
+	bottom:200px;
+	cursor:pointer;
+}
+#imageFlow .bar {
+	position: absolute;
+	height: 16px;
+	left: 25px;
+	filter: alpha(opacity=0);
+	opacity: 0;
+}
+

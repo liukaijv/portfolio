@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>谷全生</title>
+<!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />-->
+<meta name="Author" content=" " />
+<meta name="copyright" content=" " />
+<meta name="description" content=" " />
+<meta name="keywords" content=" " />
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<link href="css/jquery.jscrollpane.css"  rel="stylesheet" />
+<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.js" type="text/javascript"></script>
+<script src="js/jquery.jscrollpane.min.js" type="text/javascript"></script>
+<script src="js/common.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<!--固定头部-->
+<div class="top">
+	<div class="header">
+    	<a href="#" class="logo"></a>    	  	
+        <ul class="mian_nav">
+            <li><a href="#" class="nav_active"><span>我的主页</span></a></li>
+            <li><a href="#"><span>衣裤</span></a></li>
+            <li><a href="#"><span>社区</span></a></li>
+            <li><a href="#"><span>抢购</span></a></li>
+        </ul>       
+        <ul class="top_sear_login">
+            <li><input type="text" class="search_text" value="搜索你想要的"/><a href="#" class="search_btn"></a></li>
+            <li><a href="#" class="login_reg_btn">登录</a><a href="#" class="login_reg_btn reg_btn">注册</a></li>
+            <!--<li>欢迎登陆：伤心的人儿</li>-->
+        </ul>
+        <div class="tit_wrap">
+         <!--公共标题01-->
+		<div class="my_tit">
+    	<ul class="my_tit01">
+        	<li><a href="#" class="my_tit_active">相  册</a></li>
+            <li><a href="#">晒衣展示</a></li>
+            <li><a href="#">个性名片</a></li>
+            <li><a href="#">基本资料</a></li>
+            <li><a href="#">好友管理</a></li>
+            <li><a href="#">保护设置</a></li>
+        </ul>
+        <ul class="my_tit01 my_tit_r">
+            <li><a href="#">上传照片</a></li>            
+        </ul>
+   		</div>
+   		<!--公共标题01-->
+    	</div>                         
+    </div>
+</div>
+<!--固定头部-->
+
+<!--固定侧边栏-->
+<div class="bar">
+	<div class="bar_content">
+        <div class="user_head">
+         <a href="#"><img src="images/header_ico_small.jpg" height="85" width="85" /><span>查看我的资料</span></a>
+        </div>
+        <div class="bar_fill"></div>
+        <div class="box_border">
+            <h1 class="bar_tit">我的好友</h1>
+            <div class="friend_list_wrap">
+                <ul class="friend_list" id="friend_list">
+                    <li><a href="#"><img src="images/friend_head_ico.jpg" height="62" width="62" /><span>伤心的泪</span></a></li>
+                    <li><a href="#"><img src="images/friend_head_ico.jpg" height="62" width="62" /><span>伤心的泪</span></a></li>
+                    <li><a href="#"><img src="images/friend_head_ico.jpg" height="62" width="62" /><span>伤心的泪</span></a></li>                 
+                </ul>
+            </div>
+            <div id="pagebar"></div>
+             <a href="#" class="go_chat_btn"></a>
+             <h1 class="bar_tit">我的社区</h1>
+             <div class="community_reco">
+                <ul class="friend_list" id="community_reco">
+                    <li><a href="#"><img src="images/friend_head_ico.jpg" height="62" width="62" /><span>伤心的泪</span></a></li>
+                    <li><a href="#"><img src="images/friend_head_ico.jpg" height="62" width="62" /><span>伤心的泪</span></a></li>
+                    <li><a href="#"><img src="images/friend_head_ico.jpg" height="62" width="62" /><span>伤心的泪</span></a></li>
+                    <li><a href="#"><img src="images/friend_head_ico.jpg" height="62" width="62" /><span>伤心的泪</span></a></li>                
+                </ul>
+            </div>
+        </div>
+    </div>   
+</div>
+<!--固定侧边栏-->
+
+<!--容器框-->
+<div class="contianer">
+
+<!--内容-->
+<div class="content">
+	
+    <div class="pwd_sesur box_border">
+    	<table class="pwd_sesur_tab">
+        	<tr>
+            	<th class="bigsize" width="200" height="200">权限设置</th>
+                <td class="td01" width="778">
+                	<p><strong>查看资料的权限</strong><input type="radio" name="gender" class="sty_radio"/>&nbsp;对外开放&nbsp;&nbsp;<input type="radio" name="gender" class="sty_radio"/>&nbsp;只有我的好友&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" class="sty_radio"/>&nbsp;不对外开放&nbsp;&nbsp;</p>
+                    <p><strong>聊天的权限</strong><input type="radio" name="gender" class="sty_radio"/>&nbsp;同社区&nbsp;&nbsp;<input type="radio" name="gender" class="sty_radio"/>&nbsp;同城&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" class="sty_radio"/>&nbsp;同校&nbsp;&nbsp;<input type="radio" name="gender" class="sty_radio"/>&nbsp;全部&nbsp;&nbsp;</p>
+                    <p><strong>查看资料的权限</strong>相遇10次以上即可活的所有权限</p>
+                </td>
+            </tr>
+            <tr>
+            	<th class="bigsize" width="200" height="230">更改密码</th>
+                <td class="td02">
+                	<table>
+                    	<tr>
+                        	<td width="110" align="right"><span class="bigsize">&nbsp;&nbsp;登陆名：</span></td><td>234343@qq.com</td>
+                        </tr>
+                        <tr>
+                        	<td width="110" align="right"><span class="bigsize">当前密码：</span></td><td><input type="password" class=" sty_input sty_text" /></td>
+                        </tr>
+                          <tr>
+                        	<td width="110" align="right"><span class="bigsize">&nbsp;&nbsp;新密码：</span></td><td><input type="password" class=" sty_input sty_text" /></td>
+                            <tr>
+                        	<td width="110" align="right"></td>
+                            <td>
+                            	<div class="secury_level">
+                                <span>安全强度：</span><span class="secury_persent"><span style="height:100%; width:50%; background:#b7c4ca;"></span></span>
+                                </div>
+                            </td>
+                        </tr>
+                         <tr>
+                        	<td width="110" align="right"><span class="bigsize">密码确认：</span></td><td><input type="password" class=" sty_input sty_text" /></td>
+                        </tr>
+                    </table>               	
+                  
+                </td>
+            </tr>
+        </table>
+        <div class="pws_secur_foot">
+        	<input type="image" src="images/save_edit_btn.jpg" />&nbsp;&nbsp;&nbsp;<input type="image" src="images/order_cancle_btn.jpg" />
+        </div>
+    </div>
+    
+</div>
+<!--内容-->
+
+</div>
+<!--容器框-->
+
+<div class="footer">
+	<div class="foot_content">
+    	<span class="fl foot_nav">© 2011-2012 Freegus<a href="#">关于我们</a><a href="#">加入我们</a><a href="#">帮助中心</a><a href="#">免责声明</a><a href="#">联系我们</a></span>
+        <span class="fr foot_r">网站建设：<a href="#">泊凡科技</a></span><div class="clr"></div>
+    </div>
+</div>
+
+</body>
+</html>
+

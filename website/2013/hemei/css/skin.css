@@ -1,0 +1,71 @@
+.jcarousel-skin-ie7 .jcarousel-container {
+       
+}
+
+.jcarousel-skin-ie7 .jcarousel-direction-rtl {
+	direction: rtl;
+}
+
+.jcarousel-skin-ie7 .jcarousel-container-horizontal {
+    width: 780px;
+	padding:20px 30px;  
+}
+
+
+
+.jcarousel-skin-ie7 .jcarousel-clip {
+    overflow: hidden;
+}
+
+.jcarousel-skin-ie7 .jcarousel-clip-horizontal {
+    width:  780px;
+    height: 140px;
+}
+
+
+
+.jcarousel-skin-ie7 .jcarousel-item {
+    width: 180px;
+    height: 140px;
+	margin-right:10px;  
+}
+
+
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-ie7 .jcarousel-next-horizontal {
+    position: absolute;
+    top: 60px;
+    right: -20px;
+    width: 45px;
+    height: 50px;
+    cursor: pointer;
+    background: url(../images/next_btn.jpg);
+}
+
+.jcarousel-skin-ie7 .jcarousel-direction-rtl .jcarousel-next-horizontal {
+    left: 5px;
+    right: auto;
+    background-image: url(prev-horizontal.gif);
+}
+
+
+
+.jcarousel-skin-ie7 .jcarousel-prev-horizontal {
+    position: absolute;
+    top: 60px;
+    left: -45px;
+    width: 70px;
+    height: 50px;
+    cursor: pointer;
+    background:  url(../images/prev_btn.jpg);
+}
+
+.jcarousel-skin-ie7 .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+    left: auto;
+    right: 5px;
+    background-image: url(next-horizontal.gif);
+}
+

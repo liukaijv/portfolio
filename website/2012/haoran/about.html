@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>浩然家具</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="Author" content=" " />
+<meta name="copyright" content=" " />
+<meta name="description" content=" " />
+<meta name="keywords" content=" " />
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<link href="css/jquery.jscrollpane.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="js/iepngfix_tilebg.js" type="text/javascript"></script>
+<script src="js/jquery.roundabout.js" type="text/javascript"></script>
+<script src="js/jquery.roundabout-shapes.js" type="text/javascript"></script>
+<script src="js/jquery.jscrollpane.min.js"></script>
+<script src="js/mwheelIntent.js"></script>
+<script src="js/jquery.mousewheel.js"></script>
+<script type="text/javascript">
+</script>
+<script>
+$(function(){	
+	$('.gllery ul').roundabout({		
+		minOpacity: 0,
+		maxOpacity: 1.0,
+		minScale: 0.1,
+		maxScale: 0.9,		
+		btnNext: '.next',	
+		btnPrev: '.prev',		
+		easing: "swing",		
+		shape: "lazySusan"
+	
+	});
+	$('.next,.prev').css({filter:"alpha(opacity=40)",opacity:0.4});
+	$('.next,.prev').hover(function(){
+		$(this).css({filter:"alpha(opacity=100)",opacity:100});							
+	},function(){
+		$(this).css({filter:"alpha(opacity=40)",opacity:0.4});	
+		});	
+		$('.scroll-pane').jScrollPane(
+			{
+				verticalDragMinHeight: 100,
+				verticalDragMaxHeight: 100,
+				horizontalDragMinWidth: 100,
+				horizontalDragMaxWidth: 100
+			}						  
+		);		
+		$('#panel ul').hide();
+		$('#panel ul').each(function(){			
+			if($(this).hasClass('show')){
+				$(this).show();
+				}						 
+			})				
+		$('#nav1 ul li').hover(function(){
+			$('#nav1 ul li').removeClass('focus');
+			var num=$(this).addClass('focus').index();
+			$('#panel ul').hide();
+			$('#panel ul').eq(num).addClass('show').show().siblings().removeClass('show');
+		},function(){			
+			});			
+		$('#panel ul li').click(function(){
+				$(this).parent('ul').addClass('show').siblings().removeClass('show');						 
+			});
+		
+});
+</script>
+</head>
+
+<body>
+
+<div id="header_box">
+	<div class="header">
+    	<div class="logo"><a href="#" title=""><img src="images/logo.gif" height="79" width="130" /></a></div>
+        <div class="nav">
+        	<ul>
+            	<li><a href="#">关于浩然</a></li>
+                <li><a href="#">服务项目</a></li>
+                <li><a href="#" class="nav_focus">团队展示</a></li>
+                <li><a href="#">浩然动态</a></li>
+                <li><a href="#">人才招聘</a></li>
+                <li><a href="#">在线留言</a></li>
+                <li><a href="#">联系我们</a></li>               
+            </ul>
+        </div>
+        <div class="clr"></div>
+    </div>
+</div>
+
+<div id="contianer">
+	<div class="content ">
+    	<div class="left_ad"><a href="#"><img src="images/left_ad.gif" /></a></div>
+        <div class="scroll_box">
+            <div class="scroll-pane">      	    	
+                <div class="news_view">
+                	<h3 class="main_tit">浩然简介</h3>
+                   <p style=" text-indent:2em">                   
+    浩然家具设计工作室成立于2008年，位于中国三大家具城之一，西部政治、经济、文化、
+交通中心的四川成都。主要从事板式家具的设计与研发。浩然家具设计公司成立5年以来，
+已经成为了一家拥数十人的创意设计团队，其设计师具有国内知名设计公司和大型家具企
+业的从业经验，成为业界最具专业设计水平的设计团队之一。</p>
+<p style=" text-indent:2em"> 
+“浩然人”不畏艰辛、敢于创新、精益求精，秉承“坚持原创第一，奉献设计精品”的设
+计理念，始终以市场为导向，打破传统设计，锐意进取，不断创新，引领设计新思潮。本
+公司建立了多渠道的融合与发展，打造强势的综合性设计团队，以客户自身现状为依据，
+以客户利益为己任，以成功经验为参考，为客户塑造完美的品牌形象，实现品牌价值的最
+大化。</p>
+<p style=" text-indent:2em"> 
+在科技日新月异、竞争激烈的今天，“浩然人”秉承着与顾客同进步、与员工共发展的宗
+旨立足于群雄之间。“浩然英雄气，塞乎天地间”一个富有创新思维的“浩然人”借着“
+				</p>
+                </div> 
+            </div>
+        </div>
+        <div class="rigth2"><a href="#"><img src="images/right_ad.gif" /></a></div>
+        <div class="clr"></div>
+        </div>
+        
+    <div class="sub_wrap">
+    	<div class="sub_nav" id="nav1">
+        	<ul>
+            	<li><a href="#">关于浩然</a></li>
+                <li><a href="#">服务项目</a></li>
+                <li><a href="#">团队展示</a></li>
+                <li><a href="#" class="focus">浩然动态</a></li>
+                <li><a href="#">人才招聘</a></li>
+                <li><a href="#">在线留言</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+        <div class="sub_nav" id="panel">
+        	<ul>
+            	<li><a href="#">浩然简1介</a></li>
+                <li><a href="#">公司文化1</a></li>                
+                <li><a href="#" class="focus">公司荣誉1</a></li>               
+            </ul>
+            <ul class="show">
+            	<li><a href="#">浩然简2介</a></li>
+                <li><a href="#">公司文化2</a></li>                
+                <li><a href="#" class="focus">公司荣誉2</a></li>               
+            </ul>
+            <ul>
+            	<li><a href="#">浩然简介3</a></li>
+                <li><a href="#">公司文化3</a></li>                
+                <li><a href="#" class="focus">公司荣誉3</a></li>               
+            </ul>
+        </div>     
+        <div class="clr"></div>         
+       
+    </div>
+</div>
+
+<div id="footer">
+© 2012 成都浩然家具设计公司 Copyright  蜀ICP030173号        Technical support：<a href="http://www.scbofan.com">scbofan</a> 
+</div>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*全局*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,select,input{ margin:0px; padding:0px;}
+
+/*公共样式*/
+img{border:none; -ms-interpolation-mode: bicubic;/*IE7下防止图片失真*/}
+table{border-collapse:collapse;word-wrap:break-word;word-break:break-all;/*表格强制分行*/}
+ul,dl{ list-style:none;}
+a{text-decoration:none;}
+a:hover{ text-decoration:underline;}
+.clr{clear:both;}
+.fl{float:left;}
+.fr{float: right;}
+.hide{display:none;}
+.show{display:block;}
+.black{#000;}
+.grayDarker{#222;}
+.grayDark{#333;}
+.gray{#555;}
+.grayLight{#999;}
+.grayLighter{#grayLighter}
+.white{ #000;}
+.blue{#049cdb;}
+.green{#46a546;}
+.red{#9d261d;}
+.yellow{#ffc40d}
+.orange{#f89406}
+.pink{#c3325f}
+.purple{#7a43b6}
+
+
+
+

@@ -1,0 +1,90 @@
+/* CSS Document */
+ /**首页滚动样式**/
+.jcarousel-skin-tango .jcarousel-container {
+ 
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl {
+	direction: rtl;
+}
+
+.jcarousel-skin-tango .jcarousel-container-horizontal {
+    width: 870px;
+	height: 190px;  
+}
+
+.jcarousel-skin-tango .jcarousel-container-vertical {
+    width: 870px;
+    height: 190px;   
+}
+
+.jcarousel-skin-tango .jcarousel-clip {
+    overflow: hidden;
+}
+
+.jcarousel-skin-tango .jcarousel-clip-horizontal {
+    width:  870px;
+    height: 190px;
+}
+
+.jcarousel-skin-tango .jcarousel-clip-vertical {
+    width:  75px;
+    height: 245px;
+}
+
+.jcarousel-skin-tango .jcarousel-item {
+    width: 203px;
+    height: 190px;
+	
+}
+.jcarousel-skin-tango .jcarousel-item  img{
+	
+	border:1px solid #b2b3ae;
+	 padding:3px;}
+	 
+.jcarousel-skin-tango .jcarousel-item-horizontal {
+	margin-right:15px;
+	_margin-right:10px;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-item-horizontal {
+	margin:0;
+}
+
+.jcarousel-skin-tango .jcarousel-item-vertical {
+	margin:0;
+}
+
+.jcarousel-skin-tango .jcarousel-item-placeholder {
+   
+}
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-tango .jcarousel-next-horizontal {
+    position: absolute;
+    top: 65px;
+    right: -42px;
+    width: 32px;
+    height: 33px;
+    cursor: pointer;
+    background: transparent url(../../aaa/images/right_btn.jpg) no-repeat 0 0    ;
+}
+
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal {
+    position: absolute;
+    top:65px;
+    left: -40px;
+    width: 32px;
+    height: 33px;
+    cursor: pointer;
+	background:url(../../aaa/images/left_btn.jpg) no-repeat;
+    
+}
+
+
+
+
+

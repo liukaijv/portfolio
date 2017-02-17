@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>谷全生</title>
+<!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />-->
+<meta name="Author" content=" " />
+<meta name="copyright" content=" " />
+<meta name="description" content=" " />
+<meta name="keywords" content=" " />
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<link href="css/jquery.jscrollpane.css"  rel="stylesheet" />
+<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.js" type="text/javascript"></script>
+<script src="js/jquery.jscrollpane.min.js" type="text/javascript"></script>
+<script src="js/common.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<!--固定头部-->
+<div class="top">
+	<div class="header">
+    	<a href="#" class="logo"></a>    	  	
+        <ul class="mian_nav">
+            <li><a href="#" class="nav_active"><span>我的主页</span></a></li>
+            <li><a href="#"><span>衣裤</span></a></li>
+            <li><a href="#"><span>社区</span></a></li>
+            <li><a href="#"><span>抢购</span></a></li>
+        </ul>       
+        <ul class="top_sear_login">
+            <li><input type="text" class="search_text" value="搜索你想要的"/><a href="#" class="search_btn"></a></li>
+            <li><a href="#" class="login_reg_btn">登录</a><a href="#" class="login_reg_btn reg_btn">注册</a></li>
+            <!--<li>欢迎登陆：伤心的人儿</li>-->
+        </ul>
+        <div class="tit_wrap">
+         <!--公共标题01-->
+		<div class="my_tit">
+    	<ul class="my_tit01">
+        	<li><a href="#" class="my_tit_active">相  册</a></li>
+            <li><a href="#">晒衣展示</a></li>
+            <li><a href="#">个性名片</a></li>
+            <li><a href="#">基本资料</a></li>
+            <li><a href="#">好友管理</a></li>
+            <li><a href="#">保护设置</a></li>
+        </ul>
+        <ul class="my_tit01 my_tit_r">
+            <li><a href="#"><span class="font_normal">您有9条最新动态，点击查看</span></a></li>  
+            <li ><a href="#" style="border:1px solid #ccc; padding:0;"><img src="images/fresh_btn.jpg" /></a></li>           
+        </ul>
+   		</div>
+   		<!--公共标题01-->
+    	</div>                         
+    </div>
+</div>
+<!--固定头部-->
+
+<!--固定侧边栏-->
+<div class="bar">
+	<div class="bar_content">
+        <div class="user_head">
+         <a href="#"><img src="images/header_ico_small.jpg" height="85" width="85" /><span>查看我的资料</span></a>
+        </div>
+        <div class="bar_fill"></div>
+        <div class="box_border">
+            <h1 class="bar_tit">我的好友</h1>
+            <div class="friend_list_wrap">
+                <ul class="friend_list" id="friend_list">
+                    <li><a href="#"><img src="images/friend_head_ico.jpg" height="62" width="62" /><span>伤心的泪</span></a></li>
+                    <li><a href="#"><img src="images/friend_head_ico.jpg" height="62" width="62" /><span>伤心的泪</span></a></li>
+                    <li><a href="#"><img src="images/friend_head_ico.jpg" height="62" width="62" /><span>伤心的泪</span></a></li>                 
+                </ul>
+            </div>
+            <div id="pagebar"></div>
+             <a href="#" class="go_chat_btn"></a>
+             <h1 class="bar_tit">我的社区</h1>
+             <div class="community_reco">
+                <ul class="friend_list" id="community_reco">
+                    <li><a href="#"><img src="images/friend_head_ico.jpg" height="62" width="62" /><span>伤心的泪</span></a></li>
+                    <li><a href="#"><img src="images/friend_head_ico.jpg" height="62" width="62" /><span>伤心的泪</span></a></li>
+                    <li><a href="#"><img src="images/friend_head_ico.jpg" height="62" width="62" /><span>伤心的泪</span></a></li>
+                    <li><a href="#"><img src="images/friend_head_ico.jpg" height="62" width="62" /><span>伤心的泪</span></a></li>                
+                </ul>
+            </div>
+        </div>
+    </div>   
+</div>
+<!--固定侧边栏-->
+
+<!--容器框-->
+<div class="contianer">
+
+<!--内容-->
+<div class="content">
+	
+    <div class="center_box">
+    		<div class="comment_input_area_box">
+         	<textarea class="comment_input_area">唠叨一下，振奋下心情……</textarea>
+            <div class="comment_input_area_box_bottom">
+            	<span class="fl"><a href="#" id="emotion_ico"><img src="images/emotion_btn.jpg" /></a></span><span class="fr">你还能输入185个字<a href="#"><img src="images/comment_post_btn.jpg" /></a><a href="#">取消</a></span>
+            </div>
+            </div>
+            
+            <div class="center_dynamic_item">
+         	<dl>
+            	<dd>
+                	<a href="#"><img src="images/header_ico_small.jpg" height="50" width="50" /></a>
+                </dd>
+                <dt>
+                	<div class="center_comment_content">                    	
+                        	<table>
+                            	<tr>
+                                	<td width="600" valign="top"><a href="#" class="green">龟壳</a>：想死就过来……</td>
+                                    <td align="right" width="200" valign="top"><span class="grayLight">对你的产品进行了评论</span></td>
+                                </tr>
+                            </table>                       
+                        <div><span class="fl gray">2012-01-01 17:10</span><span class="fr"><a href="#" class="green">查看页面</a>&nbsp;&nbsp;<a href="#" class="green">回复</a></span><div class="clr"></div></div>
+                    </div>
+                    <div class="center_comment_content">
+                    	<div>
+                        	<table>
+                            	<tr>                                	
+                                    <td valign="top"><a href="#" class="green">我的回复</a>：想死就过来……</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div><span class="fl gray">2012-01-01 17:10</span><div class="clr"></div></div>                     
+             
+                        <div class="comment_input_area_box comment_input_area_box1">
+                            <textarea class="comment_input_area comment_input_area1">我要回复…</textarea>
+                            <div class="comment_input_area_box_bottom comment_input_area_box_bottom1">
+                                <span class="fl"><a href="#" id="emotion_ico"><img src="images/emotion_btn1.jpg" height="20" width="20"/></a></span><span class="fr"><a href="#"><img src="images/feed_btn.jpg" /></a><a href="#">取消</a></span>
+                            </div>
+                         </div>
+                    </div>
+                </dt>
+                <div class="clr"></div>
+            </dl>            
+         </div>
+         <div class="center_dynamic_item">
+         	<dl>
+            	<dd>
+                	<a href="#"><img src="images/header_ico_small.jpg" height="50" width="50" /></a>
+                </dd>
+                <dt>
+                	<div class="center_comment_content">                    	
+                        	<table>
+                            	<tr>
+                                	<td width="600" valign="top"><a href="#" class="green">龟壳</a>：想死就过来……</td>
+                                    <td align="right" width="200" valign="top"><span class="grayLight">对你的文章进行了评论</span></td>
+                                </tr>
+                            </table>                       
+                        <div><span class="fl gray">2012-01-01 17:10</span><span class="fr"><a href="#" class="green">查看页面</a>&nbsp;&nbsp;<a href="#" class="green">回复</a></span><div class="clr"></div></div>
+                    </div>
+                    <div class="center_comment_content">
+                    	<div>
+                        	<table>
+                            	<tr>                                	
+                                    <td valign="top"><a href="#" class="green">我的回复</a>：想死就过来……</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div><span class="fl gray">2012-01-01 17:10</span><div class="clr"></div></div>                     
+             
+                        <div class="comment_input_area_box comment_input_area_box1">
+                            <textarea class="comment_input_area comment_input_area1">我要回复…</textarea>
+                            <div class="comment_input_area_box_bottom comment_input_area_box_bottom1">
+                                <span class="fl"><a href="#" id="emotion_ico"><img src="images/emotion_btn1.jpg" height="20" width="20"/></a></span><span class="fr"><a href="#"><img src="images/feed_btn.jpg" /></a><a href="#">取消</a></span>
+                            </div>
+                         </div>
+                    </div>
+                </dt>
+                <div class="clr"></div>
+            </dl>            
+         </div>        	
+         <div class="center_dynamic_item">
+         	<dl>
+            	<dd>
+                	<a href="#"><img src="images/header_ico_small.jpg" height="50" width="50" /></a>
+                </dd>
+                <dt>
+                	<div class="center_comment_content">                    	
+                        	<table>
+                            	<tr>
+                                	<td width="600" valign="top"><a href="#" class="green">龟壳</a>：想死就过来……</td>
+                                    <td align="right" width="200" valign="top"><span class="grayLight">对你的视频进行了评论</span></td>
+                                </tr>
+                            </table>                       
+                        <div><span class="fl gray">2012-01-01 17:10</span><span class="fr"><a href="#" class="green">查看页面</a>&nbsp;&nbsp;<a href="#" class="green">回复</a></span><div class="clr"></div></div>
+                    </div>
+                    <div class="center_comment_content">
+                    	<div>
+                        	<table>
+                            	<tr>                                	
+                                    <td valign="top"><a href="#" class="green">我的回复</a>：想死就过来……</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div><span class="fl gray">2012-01-01 17:10</span><div class="clr"></div></div>                     
+             
+                        <div class="comment_input_area_box comment_input_area_box1">
+                            <textarea class="comment_input_area comment_input_area1">我要回复…</textarea>
+                            <div class="comment_input_area_box_bottom comment_input_area_box_bottom1">
+                                <span class="fl"><a href="#" id="emotion_ico"><img src="images/emotion_btn1.jpg" height="20" width="20"/></a></span><span class="fr"><a href="#"><img src="images/feed_btn.jpg" /></a><a href="#">取消</a></span>
+                            </div>
+                         </div>
+                    </div>
+                </dt>
+                <div class="clr"></div>
+            </dl>            
+         </div>        	
+         <div class="center_dynamic_item">
+         	<dl>
+            	<dd>
+                	<a href="#"><img src="images/header_ico_small.jpg" height="50" width="50" /></a>
+                </dd>
+                <dt>
+                	<div class="center_comment_content">                    	
+                        	<table>
+                            	<tr>
+                                	<td width="600" valign="top"><a href="#" class="green">龟壳</a>：想死就过来……</td>
+                                    <td align="right" width="200" valign="top"><span class="grayLight">对你的产品进行了评论</span></td>
+                                </tr>
+                            </table>                       
+                        <div><span class="fl gray">2012-01-01 17:10</span><span class="fr"><a href="#" class="green">查看页面</a>&nbsp;&nbsp;<a href="#" class="green">回复</a></span><div class="clr"></div></div>
+                    </div>
+                    <div class="center_comment_content">
+                    	<div>
+                        	<table>
+                            	<tr>                                	
+                                    <td valign="top"><a href="#" class="green">我的回复</a>：想死就过来……</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div><span class="fl gray">2012-01-01 17:10</span><div class="clr"></div></div>                     
+             
+                        <div class="comment_input_area_box comment_input_area_box1">
+                            <textarea class="comment_input_area comment_input_area1">我要回复…</textarea>
+                            <div class="comment_input_area_box_bottom comment_input_area_box_bottom1">
+                                <span class="fl"><a href="#" id="emotion_ico"><img src="images/emotion_btn1.jpg" height="20" width="20"/></a></span><span class="fr"><a href="#"><img src="images/feed_btn.jpg" /></a><a href="#">取消</a></span>
+                            </div>
+                         </div>
+                    </div>
+                </dt>
+                <div class="clr"></div>
+            </dl>            
+         </div>        	       	
+           
+        <div class="get_more_goods box_border">
+   		 <a href="#">点击查看更多↓</a>   
+     	</div>
+    </div>
+    
+    <div class="center_r box_border">
+    	<h1 class="bar_tit">来访游客</h1>           
+        <ul class="friend_list" >
+            <li><a href="#"><img src="images/friend_head_ico.jpg" height="62" width="62" /><span>伤心的泪</span></a></li>
+            <li><a href="#"><img src="images/friend_head_ico.jpg" height="62" width="62" /><span>伤心的泪</span></a></li>
+            <li><a href="#"><img src="images/friend_head_ico.jpg" height="62" width="62" /><span>伤心的泪</span></a></li> 
+             <li><a href="#"><img src="images/friend_head_ico.jpg" height="62" width="62" /><span>伤心的泪</span></a></li>
+            <li><a href="#"><img src="images/friend_head_ico.jpg" height="62" width="62" /><span>伤心的泪</span></a></li>
+            <li><a href="#"><img src="images/friend_head_ico.jpg" height="62" width="62" /><span>伤心的泪</span></a></li>                 
+        </ul>            
+    </div>
+	<div class="clr"></div>
+</div>
+<!--内容-->
+
+</div>
+<!--容器框-->
+
+<div class="footer">
+	<div class="foot_content">
+    	<span class="fl foot_nav">© 2011-2012 Freegus<a href="#">关于我们</a><a href="#">加入我们</a><a href="#">帮助中心</a><a href="#">免责声明</a><a href="#">联系我们</a></span>
+        <span class="fr foot_r">网站建设：<a href="#">泊凡科技</a></span><div class="clr"></div>
+    </div>
+</div>
+
+</body>
+</html>
+

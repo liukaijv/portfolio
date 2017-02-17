@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+body,h3,ul{ margin:0; padding:0;}
+img{ border:none;}
+ul{ list-style:none;}
+.qq_wrap{ width:115px; height:auto; display:none;}
+.qq_wrap h3{ height:41px; background:url(images/qq_top_bg.gif) no-repeat;}
+.qq_list{ background:url(images/qq_bg.gif) repeat-x #c0a264; text-align:center;}
+.qq_list ul li{ padding-top:5px;}
+.qq_bottom{ height:53px; background:url(images/qq_bottom_bg.gif) no-repeat;}
+.qq_defualt{ cursor:pointer;}
+</style>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function () {			
+            autoscroll();
+			defualtscroll();
+            $(".qq_defualt").mouseover(function () {
+				$(this).hide();								 
+                $(".qq_wrap").fadeIn();
+                autoscroll();				
+            });
+			$('.qq_wrap').mouseout(function(){
+				$(this).hide();
+				$('.qq_defualt').fadeIn();						
+				});
+			function defualtscroll(){				
+                height = $(".qq_defualt").height();
+                scrolltop = $(document).scrollTop();
+                y = scrolltop + ($(window).height()-height) / 2;
+                $(".qq_defualt").css("position", "absolute");
+                $(".qq_defualt").css("top", y);
+                $(".qq_defualt").css("right", 0);               			
+				}
+            function autoscroll() {                
+                height = $(".qq_wrap").height();
+                scrolltop = $(document).scrollTop();
+                y = scrolltop + ($(window).height()-height) / 2;
+                $(".qq_wrap").css("position", "absolute");
+                $(".qq_wrap").css("top", y);
+                $(".qq_wrap").css("right", 0);                
+            }            
+        });
+</script>
+</head>
+
+<body>
+<div style="height:1500px;">
+<div class="qq_wrap">
+<h3></h3>
+<div class="qq_list">
+	<ul>
+    	<li><a href="#"><img src="images/qq_ico1.gif" width="89" height="51" /></a></li>
+        <li><a href="#"><img src="images/qq_ico2.gif" width="89" height="51" /></a></li>
+        <li><a href="#"><img src="images/qq_ico3.gif" width="89" height="51" /></a></li>
+    </ul>
+</div>
+<div class="qq_bottom"></div>
+</div>
+<div class="qq_defualt"><img src="images/qq_default_bg.gif" width="42" height="190" /></div>
+
+</div>
+</body>
+</html>

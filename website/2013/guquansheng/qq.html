@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>qq</title>
+<meta name="Author" content=" " />
+<meta name="copyright" content=" " />
+<meta name="description" content=" " />
+<meta name="keywords" content=" " />
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.qqFace.js"></script>
+<style>
+.qqFace{margin-top:4px;background:#fff;padding:2px;border:1px #dfe6f6 solid;}
+.qqFace table td{padding:0px;}
+.qqFace table td img{cursor:pointer;border:1px #fff solid;}
+.qqFace table td img:hover{border:1px #0066cc solid;}
+</style>
+<script>
+$(function(){
+	$('.emotion').qqFace({
+		id : 'facebox', //表情盒子的ID
+		assign:'saytext', //给那个控件赋值
+		path:'face/'	//表情存放的路径
+	});
+	$('.qq_box').show();
+	$.fn.mydrag =function(target){	
+		var bool=false;
+		var that =$(this);		
+		var offX=0;
+		var offY=0;		
+		var drag=target!='undefined'?$(target):that;		
+		that.mousedown(function(e){
+			bool=true;
+			offX = e.pageX-drag.position().left;
+			offY = e.pageY-drag.position().top;
+			that.css('cursor','move');		
+		});
+		$(document).mousemove(function(e){			
+			var pX=	e.pageX;
+			var pY= e.pageY;				
+			if(!bool || pX<=0 || pY<=0)return;												
+			var x =pX-offX;
+			var y =pY-offY;
+			var pos =drag.position();
+			drag.css({'left':+x,'top':+y});			
+		}).mouseup(function(){		
+			bool=false;
+			that.css({'cursor':'default'});
+		});	
+		
+	}	
+	$('.qq_l_tit').mydrag('.qq_box');
+	
+});
+function replace_em(str){
+	str = str.replace(/\</g,'&lt;');
+	str = str.replace(/\>/g,'&gt;');
+	str = str.replace(/\n/g,'<br/>');
+	str = str.replace(/\[em_([0-9]*)\]/g,'<img src="face/$1.gif" border="0" />');
+	return str;
+}
+
+</script>
+</head>
+
+<body>
+<div class="qq_box">
+    <div class="qq_l">
+    	<div class="qq_l_tit">
+        	<ul>
+            	<li>悠悠</li>
+            </ul>
+        </div>
+        <div class="qq_user_describle">
+        	<img src="images/qq_user_head.jpg" height="75" width="65" class="qq_user_big_head">
+            <div class="qq_user_detail"> 
+            	<p>          	
+                <span class="fl"><strong>悠然</strong>&nbsp;22岁&nbsp;电子科技大学</span>
+                <span class="fr"><img src="images/qq_stadus_ico.jpg" class="qq_stadus_ico fl">在线</span>
+                </p>
+                <p><a href="#" class="qq_add_btn">加为好友</a></p>           
+            </div>
+        </div>
+        <div class="qq_content">
+        	<dl>
+            	<dt>妞妞&nbsp;22:05:06</dt>
+                <dd>说什么忘记了</dd>
+            </dl>
+            <dl>
+            	<dt>妞妞&nbsp;22:05:06</dt>
+                <dd>说什么忘记了</dd>
+            </dl>           
+        </div>
+        <div class="qq_mood">
+        	<a href="#" class="qq_quick_send_btn">快捷回复</a>
+            <a href="#" class="qq_mood_btn emotion">表情</a>
+        </div>
+        <div class="qq_input" contenteditable="true" id="saytext">
+        
+        </div>
+        <div class="qq_send_bar">
+        	<span class="fl">请文明聊天，禁止恶意中伤他人！</span>
+            <a href="#" class="qq_send_btn">发送</a>
+        </div>
+    </div>
+    <div class="qq_r">
+        <h3>和这些人也聊聊</h3>
+        <ul class="qq_user_list">
+            <li>
+            	<img src="images/qq_head_portrait.jpg" height="48" width="40">
+                <p class="qq_user_data">妞妞<br>21岁</p>
+            </li>
+           	<li>
+                <img src="images/qq_head_portrait.jpg" height="48" width="40">
+                <p class="qq_user_data">妞妞<br>21岁</p>
+            </li>
+            <li>
+                <img src="images/qq_head_portrait.jpg" height="48" width="40">
+                <p class="qq_user_data">妞妞<br>21岁</p>
+            </li>
+            <li>
+                <img src="images/qq_head_portrait.jpg" height="48" width="40">
+                <p class="qq_user_data">妞妞<br>21岁</p>
+            </li>
+            <li>
+                <img src="images/qq_head_portrait.jpg" height="48" width="40">
+                <p class="qq_user_data">妞妞<br>21岁</p>
+            </li>
+            <li>
+                <img src="images/qq_head_portrait.jpg" height="48" width="40">
+                <p class="qq_user_data">妞妞<br>21岁</p>
+            </li>
+            <li>
+                <img src="images/qq_head_portrait.jpg" height="48" width="40">
+                <p class="qq_user_data">妞妞<br>21岁</p>
+            </li>
+        </ul>
+        <p><a href="#" class="qq_more_btn">更多</a></p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,612 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>爱国韵</title>
+<!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />-->
+<meta name="Author" content=" " />
+<meta name="copyright" content=" " />
+<meta name="description" content=" " />
+<meta name="keywords" content=" " />
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="js/iepngfix_tilebg.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+$(function(){
+		   
+	// 背景滚动
+	/*var pos=0;	
+	setInterval(function(){
+		$('.scroll_bg').css('backgroundPosition','-1px -'+pos+'px');		
+		pos++;		
+	},10);		*/
+	
+	//导航li背景控制
+	$('#nav>ul>li:first').css('background','url(images/li_first.gif) no-repeat');
+	$('#nav>ul>li:last').css('background','url(images/li_last.gif) no-repeat top right');	
+	/*$('#nav>ul>li>a').hover(function(){
+		$(this).parent('li').find('ul').show();							 
+	},function(){
+		$(this).parent('li').find('ul').hide();	
+	})*/
+	
+	//导航下拉
+	$('#nav ul li').hover(function(){
+		$(this).find('ul').show();
+		$(this).find('a:first').addClass('hover');		
+	},function(){
+		$(this).find('ul').hide();
+		$(this).find('a:first').removeClass('hover');
+	});
+	
+	//首页收索框
+	$('#select_div p span').click(function(){
+		$('#select_div ul').stop().slideDown();									
+	});
+	$('#select_div ul li').click(function(){
+		$('#select_div p span').html($(this).text());
+		$('#select_div ul').slideUp('fast');
+	});
+	$('#select_div').mouseleave(function(){
+		$(this).find('ul').delay(500).slideUp();										
+	})
+	
+	//首页列表布局
+	$('.search_text').blur();
+	$('.item1 ul li').eq(2).css('borderRight','none').end().eq(5).css('borderRight','none');
+	$('.item2 ul li').eq(2).css('borderRight','none').end().eq(5).css('borderRight','none');
+	$('.item3 ul li').eq(2).css('borderRight','none').end().eq(5).css('borderRight','none');
+	$('.item3 ul li:gt(2)').css('borderBottom','none');
+	
+});
+</script>
+
+</head>
+
+<body>
+<div id="up_wrap">
+
+<div class="contianer">
+
+<!--头部-->
+<div id="header">
+	<div class="top">
+    	<dl>
+        	<dd>欢迎来到爱国韵！</dd>
+            <dt>
+            	<a href="#">注册</a><span>|</span>
+            	<a href="#">帮助</a><span>|</span>
+                <a href="#">简体</a><span>|</span>
+                <a href="#">繁体</a>            	
+            </dt>
+            <div class="clr"></div>
+        </dl>
+    </div>
+    <div class="logo_wrap">
+    	<dl>
+        	<dd><a href="#"><img src="images/logo1.png" height="70" width="210" /></a></dd>
+            <dt>
+            	<table>
+                	<tr>
+                        <td>
+                        	<input type="text" class="search_text" maxlength="45" onfocus="if(this.value=='输入相关类别名称或关键词'){this.value=''}" onblur="if(this.value==''){this.value='输入相关类别名称或关键词'}" />
+                        </td>
+                        <td>
+                            <div id="select_div">
+                                <p><span>请选择</span></p>
+                                <ul>
+                                    <li>我是一</li>
+                                    <li>我是二</li>
+                                    <li>我是三</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                        	<input type="submit" value="" class="search_sub" />
+                        </td>
+                    </tr>
+                </table>
+            </dt>
+            <div class="clr"></div>
+        </dl>    	
+    </div>
+</div>
+
+<div class="nav_border">
+
+<!--导航-->
+<div id="nav">
+	<ul>
+    	<li><a href="#">返回首页</a></li>
+        <li><a href="#">神话传说</a>
+        	<ul>
+            	<li><a href="#">上古神话</a></li>
+                <li><a href="#">民间传说</a></li>
+                <li><a href="#">节日传说</a></li>
+                <li><a href="#">神兽传说</a></li>
+            </ul>
+        </li>
+        <li><a href="#"  class="focus">古人古事</a></li>
+        <li><a href="#">民俗风情</a></li>
+        <li><a href="#">国粹经典</a></li>
+        <li><a href="#"><span>大好河山</span></a></li>
+        <li><a href="#">趣味中华</a></li>
+    </ul>
+</div>
+
+<!--第一部分-->
+<div class="wrap1">
+
+	<!--第一部分左边-->
+    <div class="box1_l">
+    	<div class="box1_l_top">
+				<div class="box1_l_top_l">
+                	<table>
+                    	<tr>
+                        <th width="80"><strong>历史今天</strong></th>
+                        <th><a href="#"><img src="images/data_pick.jpg" height="21" width="19" /></a></th>
+                        </tr>
+                        <tr>
+                        	<td colspan="2">国历 2012年7月9日</td>
+                        </tr>
+                        <tr>
+                        	<td colspan="2">农历 壬辰年五月廿</td>
+                        </tr>
+                    </table>
+                </div>             	
+                <dl>
+                <dt><a href="#"><img src="images/ad_1.jpg" height="130" width="180" /></a></dt>
+                <dd>
+                	<h3>长亭外古道边芳草碧连天</h3>
+                    <div  class="summery">
+                    是一部国别体史书。主要记述了战
+                    国时期的纵横家的政主要记述了战
+                    主要记述了战国时期的纵横家的政
+                    国时期的纵横家的政....
+                    </div>
+                </dd>
+                <div class="clr"></div>
+            </dl>
+        </div>
+        <div class="box1_l_list">
+        	<ul>
+            	<li><a href="#">1992年，彭定康正式出任香港最后一任总督</a></li>
+                <li><a href="#">1992年，彭定康正式出任香港最后一任总督</a></li>
+                <li><a href="#">1992年，彭定康正式出任香港最后一任总督</a></li>
+                <li><a href="#">1992年，彭定康正式出任香港最后一任总督</a></li>
+                <div class="clr"></div>
+            </ul>
+            <div class="clr"></div>
+        </div>
+    </div>
+    
+    <!--登陆-->
+    <div class="box1_r">
+    	<div class="login">
+        	<dl>
+                <dd>
+                    <table>
+                        <tr>
+                            <th>帐号</th><td><input type="text" class="text_sty" maxlength="25" /></td>
+                        </tr>
+                        <tr>
+                            <th>密码</th><td><input type="password" class="text_sty" maxlength="25" /></td>
+                        </tr>
+                    </table>
+                </dd>
+                <dt>
+                	<table>
+                    	<tr>
+                        	<td width="110"><input type="submit" class="sub_sty" value="" /></td>
+                    		<td width="80"><input type="checkbox" name="record" class="check_sty" />记住密码</td>
+                            <td><a href="#">注册账号</a></td>                       
+                        </tr>
+                   </table>
+                </dt>
+            </dl>
+        </div>
+    </div>
+    <div class="clr"></div>
+</div>
+</div>
+
+<div class="scroll_bg">
+	<div class="wrap2">
+    	<div class="wrap2_l">
+        	<h3 class="left_tit"></h3>
+            
+          <!--  图文-->
+           	<div class="item1">
+            	<ul>
+                	<li>
+                    	<div class="item_li">
+                        	<dl>
+                            	<dt>
+                                	<a href="#"><img src="images/item1_img.gif" height="110" width="150" /></a>
+                                    <p>
+                                    	匪夷所思的唐朝画皮<br />
+                                        <span class="item_tit">二逼青年发表</span><br />
+                                        <span style="color:red">关注热度 <strong style="color:#444444">12563</strong></span>
+                                    </p>
+                                </dt>
+                                <dd>
+                                	在《酉阳杂俎》中，记鬼怪
+                                    故事的被归在"诺皋记"门
+                                    下。何为"诺皋"？这两个
+                                    字非常奇僻隐秘
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="item_li">
+                        	<dl>
+                            	<dt>
+                                	<a href="#"><img src="images/item1_img.gif" height="110" width="150" /></a>
+                                    <p>
+                                    	匪夷所思的唐朝画皮<br />
+                                        <span style="color:#999898">二逼青年发表</span><br />
+                                        <span style="color:red">关注热度 <strong style="color:#444444">12563</strong></span>
+                                    </p>
+                                </dt>
+                                <dd>
+                                	在《酉阳杂俎》中，记鬼怪
+                                    故事的被归在"诺皋记"门
+                                    下。何为"诺皋"？这两个
+                                    字非常奇僻隐秘
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="item_li">
+                        	<dl>
+                            	<dt>
+                                	<a href="#"><img src="images/item1_img.gif" height="110" width="150" /></a>
+                                    <p>
+                                    	匪夷所思的唐朝画皮<br />
+                                        <span style="color:#999898">二逼青年发表</span><br />
+                                        <span style="color:red">关注热度 <strong style="color:#444444">12563</strong></span>
+                                    </p>
+                                </dt>
+                                <dd>
+                                	在《酉阳杂俎》中，记鬼怪
+                                    故事的被归在"诺皋记"门
+                                    下。何为"诺皋"？这两个
+                                    字非常奇僻隐秘
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                   	<li>
+                    	<div class="item_li">
+                        	<dl>
+                            	<dt>
+                                	<a href="#"><img src="images/item1_img.gif" height="110" width="150" /></a>
+                                    <p>
+                                    	匪夷所思的唐朝画皮<br />
+                                        <span style="color:#999898">二逼青年发表</span><br />
+                                        <span style="color:red">关注热度 <strong style="color:#444444">12563</strong></span>
+                                    </p>
+                                </dt>
+                                <dd>
+                                	在《酉阳杂俎》中，记鬼怪
+                                    故事的被归在"诺皋记"门
+                                    下。何为"诺皋"？这两个
+                                    字非常奇僻隐秘
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="item_li">
+                        	<dl>
+                            	<dt>
+                                	<a href="#"><img src="images/item1_img.gif" height="110" width="150" /></a>
+                                    <p>
+                                    	匪夷所思的唐朝画皮<br />
+                                        <span style="color:#999898">二逼青年发表</span><br />
+                                        <span style="color:red">关注热度 <strong style="color:#444444">12563</strong></span>
+                                    </p>
+                                </dt>
+                                <dd>
+                                	在《酉阳杂俎》中，记鬼怪
+                                    故事的被归在"诺皋记"门
+                                    下。何为"诺皋"？这两个
+                                    字非常奇僻隐秘
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="item_li">
+                        	<dl>
+                            	<dt>
+                                	<a href="#"><img src="images/item1_img.gif" height="110" width="150" /></a>
+                                    <p>
+                                    	匪夷所思的唐朝画皮<br />
+                                        <span class="item_tit">二逼青年发表</span><br />
+                                        <span style="color:red">关注热度 <strong style="color:#444444">12563</strong></span>
+                                    </p>
+                                </dt>
+                                <dd>
+                                	在《酉阳杂俎》中，记鬼怪
+                                    故事的被归在"诺皋记"门
+                                    下。何为"诺皋"？这两个
+                                    字非常奇僻隐秘
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                </ul>
+                <div class="clr"></div>
+            </div>
+            
+            <!--视频-->
+            <div class="item2">
+            	<ul>
+                	<li>
+                    	<div class="item_li2">
+                        	<a href="#"><img src="images/item2_img.gif" height="140" width="190" /></a>>
+                            <p>
+                            	匪夷所思的唐朝画皮<br />
+                                <span class="item_tit">二逼青年上传视频</span><br />
+                                <span class="item_time">1563</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="item_li2">
+                        	<a href="#"><img src="images/item2_img.gif" height="140" width="190" /></a>
+                            <p>
+                            	匪夷所思的唐朝画皮<br />
+                                <span class="item_tit">二逼青年上传视频</span><br />
+                                <span class="item_time">1563</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="item_li2">
+                        	<a href="#"><img src="images/item2_img.gif" height="140" width="190" /></a>
+                            <p>
+                            	匪夷所思的唐朝画皮<br />
+                                <span class="item_tit">二逼青年上传视频</span><br />
+                                <span class="item_time">1563</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="item_li2">
+                        	<a href="#"><img src="images/item2_img.gif" height="140" width="190" /></a>
+                            <p>
+                            	匪夷所思的唐朝画皮<br />
+                                <span class="item_tit">二逼青年上传视频</span><br />
+                                <span class="item_time">1563</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="item_li2">
+                        	<a href="#"><img src="images/item2_img.gif" height="140" width="190" /></a>
+                            <p>
+                            	匪夷所思的唐朝画皮<br />
+                                <span class="item_tit">二逼青年上传视频</span><br />
+                                <span class="item_time">1563</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="item_li2">
+                        	<a href="#"><img src="images/item2_img.gif" height="140" width="190" /></a>
+                            <p>
+                            	匪夷所思的唐朝画皮<br />
+                                <span class="item_tit">二逼青年上传视频</span><br />
+                                <span class="item_time">1563</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="clr"></div>
+            </div>
+            
+            <!--文章-->
+            <div class="item3">
+            	<ul>
+                	<li>
+                    	<div class="item_li3">                     	
+                            <span class="item_neme">匪夷所思的唐朝画皮</span><br />
+                            <span class="item_tit">二逼青年上传视频</span><br />
+                            <span class="item_content"><a href="#">在《酉阳杂俎》中，记鬼怪
+                            故事的被归在"诺皋记"门
+                            下。何为"诺皋"？这两个
+                            字非常奇僻隐秘</a></span>
+                            <span class="item_time">1563</span>                          
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="item_li3">                     	
+                            <span class="item_neme">匪夷所思的唐朝画皮</span><br />
+                            <span class="item_tit">二逼青年上传视频</span><br />
+                             <span class="item_content"><a href="#">在《酉阳杂俎》中，记鬼怪
+                            故事的被归在"诺皋记"门
+                            下。何为"诺皋"？这两个
+                            字非常奇僻隐秘</a></span>
+                            <span class="item_time">1563</span>                          
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="item_li3">                     	
+                            <span class="item_neme">匪夷所思的唐朝画皮</span><br />
+                            <span class="item_tit">二逼青年上传视频</span><br />
+                             <span class="item_content"><a href="#">在《酉阳杂俎》中，记鬼怪
+                            故事的被归在"诺皋记"门
+                            下。何为"诺皋"？这两个
+                            字非常奇僻隐秘</a></span>
+                            <span class="item_time">1563</span>                          
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="item_li3">                     	
+                            <span class="item_neme">匪夷所思的唐朝画皮</span><br />
+                            <span class="item_tit">二逼青年上传视频</span><br />
+                            <span class="item_content"><a href="#">在《酉阳杂俎》中，记鬼怪
+                            故事的被归在"诺皋记"门
+                            下。何为"诺皋"？这两个
+                            字非常奇僻隐秘</a></span>
+                            <span class="item_time">1563</span>                          
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="item_li3">                     	
+                            <span class="item_neme">匪夷所思的唐朝画皮</span><br />
+                            <span class="item_tit">二逼青年上传视频</span><br />
+                             <span class="item_content"><a href="#">在《酉阳杂俎》中，记鬼怪
+                            故事的被归在"诺皋记"门
+                            下。何为"诺皋"？这两个
+                            字非常奇僻隐秘</a></span>
+                            <span class="item_time">1563</span>                          
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="item_li3">                     	
+                            <span class="item_neme">匪夷所思的唐朝画皮</span><br />
+                            <span class="item_tit">二逼青年上传视频</span><br />
+                            <span class="item_content"><a href="#">在《酉阳杂俎》中，记鬼怪
+                            故事的被归在"诺皋记"门
+                            下。何为"诺皋"？这两个
+                            字非常奇僻隐秘</a></span>
+                            <span class="item_time">1563</span>                          
+                        </div>
+                    </li>
+                </ul>
+                <div class="clr"></div>
+            </div>
+                        
+        </div>
+        
+       <!--第二部分右边-->
+        <div class="wrap2_r">
+       		<h3 class="right_tit"></h3>
+            <div class="right_box">
+            	<ul>
+                	<li>
+                    	<a href="#">那部你觉得“幸好我看了”的影片</a>
+                        <p>
+                        时间：7月8日 - 9月10日<br />2032人参加
+                        </p>
+                    </li>
+                    <li>
+                    	<a href="#">那部你觉得“幸好我看了”的影片</a>
+                        <p>
+                        时间：7月8日 - 9月10日<br />2032人参加
+                        </p>
+                    </li>
+                    <li>
+                    	<a href="#">那部你觉得“幸好我看了”的影片</a>
+                        <p>
+                        时间：7月8日 - 9月10日<br />2032人参加
+                        </p>
+                    </li>
+                    <li>
+                    	<a href="#">那部你觉得“幸好我看了”的影片</a>
+                        <p>
+                        时间：7月8日 - 9月10日<br />2032人参加
+                        </p>
+                    </li>
+                    <li>
+                    	<a href="#">那部你觉得“幸好我看了”的影片</a>
+                        <p>
+                        时间：7月8日 - 9月10日<br />2032人参加
+                        </p>
+                    </li>
+                    <li>
+                    	<a href="#">那部你觉得"幸好我看了"的影片</a>
+                        <p>
+                        时间：7月8日 - 9月10日<br />2032人参加
+                        </p>
+                    </li>
+                    <li>
+                    	<a href="#">那部你觉得"幸好我看了"的影片</a>
+                        <p>
+                        时间：7月8日 - 9月10日<br />2032人参加
+                        </p>
+                    </li>
+                    <li>
+                    	<a href="#">那部你觉得"幸好我看了"的影片</a>
+                        <p>
+                        时间：7月8日 - 9月10日<br />2032人参加
+                        </p>
+                    </li>
+                    <li>
+                    	<a href="#">那部你觉得"幸好我看了"的影片</a>
+                        <p>
+                        时间：7月8日 - 9月10日<br />2032人参加
+                        </p>
+                    </li>
+                    <li>
+                    	<a href="#">那部你觉得"幸好我看了"的影片</a>
+                        <p>
+                        时间：7月8日 - 9月10日<br />2032人参加
+                        </p>
+                    </li>
+                    <li>
+                    	<a href="#">那部你觉得"幸好我看了"的影片</a>
+                        <p>
+                        时间：7月8日 - 9月10日<br />2032人参加
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="clr"></div>
+    </div>
+</div>
+
+<div class="fill"></div>
+
+<!--友情-->
+<div id="link">
+	<h3>友情链接：</h3>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+</div>
+
+</div>
+</div>
+
+<!--底部-->
+<div id="footer">
+Copyright © 2006-2012法律声明：本站所有图片 文字未经允许不得转载或镜像 违者将追究其法律责任　技术支持：<a href="#">泊凡科技</a>    
+</div>
+
+</body>
+</html>
+
+
+
+

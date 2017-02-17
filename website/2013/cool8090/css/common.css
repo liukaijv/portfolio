@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*全局*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,select,input{ margin:0px; padding:0px;}
+
+/*公共样式*/
+img{border:none; -ms-interpolation-mode: bicubic;/*IE7下防止图片失真*/}
+table{border-collapse:collapse;word-wrap:break-word;word-break:break-all;/*表格强制分行*/}
+ul,dl{ list-style:none;}
+a{text-decoration:none;}
+a:hover{ text-decoration:underline;}
+.clr{clear:both;}
+.fl{float:left;}
+.fr{float: right;}
+.hide{display:none;}
+.show{display:block;}
+.black{#000;}
+.grayDarker{#222;}
+.grayDark{#333;}
+.gray{#555;}
+.grayLight{#999;}
+.grayLighter{#grayLighter}
+.white{ #000;}
+.blue{#049cdb;}
+.green{#46a546;}
+.red{#9d261d;}
+.yellow{#ffc40d}
+.orange{#f89406}
+.pink{#c3325f}
+.purple{#7a43b6}
+
+.box{ width:1000px; margin:50px auto 0;}
+.slide{ border:1px solid #bdbcbc; height:470px; position:relative; overflow:hidden;}
+.slide_num{ position:absolute; bottom:0px; left:0; height:40px;  z-index:9999}
+.slide_wrap{ position:absolute; top:0; left:0; height:470px; width:1000px; overflow:hidden; z-index:1; }
+.slide_num li{ height:40px; width:40px; margin-right:5px; float:left; border:3px solid #fff;}
+.slide_num li img{height:40px; width:40px;}
+.slide_num li.focus{ border:3px solid #096;}
+.next,.prev{ height:50px; width:50px; background:red; position: absolute; top:200px; z-index:9999}
+.next{ right:20px;}
+.prev{ left:20px;}
+.slide_ul{ width:10000px; height:470px; overflow:hidden; position: absolute; left:0 ; top:0; z-index:1}
+.slide_ul li{ float:left;}
+
+
+

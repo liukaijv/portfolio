@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>爱国韵</title>
+<!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />-->
+<meta name="Author" content=" " />
+<meta name="copyright" content=" " />
+<meta name="description" content=" " />
+<meta name="keywords" content=" " />
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<link href="css/emoticon.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="js/mood.js" type="text/javascript"></script>
+<script src="js/iepngfix_tilebg.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+$(function(){	 
+	// 背景滚动
+	/*var pos=0;	
+	setInterval(function(){
+		$('.scroll_bg').css('backgroundPosition','-1px -'+pos+'px');		
+		pos++;		
+	},10);		*/
+	
+	//导航li背景控制
+	$('#nav>ul>li:first').css('background','url(images/li_first.gif) no-repeat');
+	$('#nav>ul>li:last').css('background','url(images/li_last.gif) no-repeat top right');	
+	/*$('#nav>ul>li>a').hover(function(){
+		$(this).parent('li').find('ul').show();							 
+	},function(){
+		$(this).parent('li').find('ul').hide();	
+	})*/
+	
+	//导航下拉
+	$('#nav ul li').hover(function(){
+		$(this).find('ul').show();
+		$(this).find('a:first').addClass('hover');		
+	},function(){
+		$(this).find('ul').hide();
+		$(this).find('a:first').removeClass('hover');
+	});
+	
+	//首页收索框
+	$('#select_div p span').click(function(){
+		$('#select_div ul').stop().slideDown();									
+	});
+	$('#select_div ul li').click(function(){
+		$('#select_div p span').html($(this).text());
+		$('#select_div ul').slideUp('fast');
+	});
+	$('#select_div').mouseleave(function(){
+		$(this).find('ul').delay(500).slideUp();										
+	})
+	
+	//首页列表布局
+	$('.search_text').blur();
+	$('.item1 ul li').eq(2).css('borderRight','none').end().eq(5).css('borderRight','none');
+	$('.item2 ul li').eq(2).css('borderRight','none').end().eq(5).css('borderRight','none');
+	$('.item3 ul li').eq(2).css('borderRight','none').end().eq(5).css('borderRight','none');
+	$('.item3 ul li:gt(2)').css('borderBottom','none');
+	
+	$('.history_list_cultural ul li').each(function(i){
+		var m=i+1;
+		$(this).css('background','url(images/history_list_ico'+m+'.jpg) left center no-repeat');
+	});
+	$(".message_face").jqfaceedit({txtAreaObj:$(".test_mood"),containerObj:$('.comment_input_area_box'),top:30,left:-28});
+	$('.message_face').click(function(){
+		return false;	
+	})	
+});
+</script>
+
+</head>
+
+<body>
+
+<!--头部背景大图-->
+<div id="up_wrap">
+
+<!--容器-->
+<div class="contianer">
+
+<!--头部-->
+<div id="header">
+	<div class="top">
+    	<dl>
+        	<dd>欢迎来到爱国韵！</dd>
+            <dt>
+            	<a href="#">注册</a><span>|</span>
+            	<a href="#">帮助</a><span>|</span>
+                <a href="#">简体</a><span>|</span>
+                <a href="#">繁体</a>            	
+            </dt>
+            <div class="clr"></div>
+        </dl>
+    </div>
+    <div class="logo_wrap">
+    	<dl>
+        	<dd><a href="#"><img src="images/logo1.png" height="70" width="210" /></a></dd>
+            <dt>
+            	<table>
+                	<tr>
+                        <td>
+                        	<input type="text" class="search_text" maxlength="45" onfocus="if(this.value=='输入相关类别名称或关键词'){this.value=''}" onblur="if(this.value==''){this.value='输入相关类别名称或关键词'}" />
+                        </td>
+                        <td>
+                            <div id="select_div">
+                                <p><span>请选择</span></p>
+                                <ul>
+                                    <li>我是一</li>
+                                    <li>我是二</li>
+                                    <li>我是三</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                        	<input type="submit" value="" class="search_sub" />
+                        </td>
+                    </tr>
+                </table>
+            </dt>
+            <div class="clr"></div>
+        </dl>    	
+    </div>
+</div>
+
+<!--边框-->
+<div class="sub_boder">
+
+<!--导航-->
+<div id="nav">
+	<ul>
+    	<li><a href="#">返回首页</a></li>
+        <li><a href="#">神话传说</a>
+        	<ul>
+            	<li><a href="#">上古神话</a></li>
+                <li><a href="#">民间传说</a></li>
+                <li><a href="#">节日传说</a></li>
+                <li><a href="#">神兽传说</a></li>
+            </ul>
+        </li>
+        <li><a href="#"  class="focus">古人古事</a></li>
+        <li><a href="#">民俗风情</a></li>
+        <li><a href="#">国粹经典</a></li>
+        <li><a href="#"><span>大好河山</span></a></li>
+        <li><a href="#">趣味中华</a></li>
+    </ul>
+</div>
+
+<!--前台页面-->
+<!--前台内容-->
+<div class="index_content">
+
+
+<!--左右框-->
+<div class="index_wrap">
+
+	<div class="index_left">
+    
+ 	 <div class="index_box">
+    	<div class="index_left_big_top"></div>
+        	
+        <div class="atrticle_content">
+        	<h2 class="blue" style="font-size:14px;">匪迷所思的唐朝画皮</h2>
+            <p style="padding:5px 0;"><a href="#"><img src="images/header_ico.jpg" height="25" width="25" style="padding-right:5px;"/></a>发表文章的人  2012-10-23  13：33   <span class="blue">完善</span>（333）</p>
+           <div class="atr_content_detail">
+           		<p style="text-indent:2em">   洛带古镇景区地处成都市龙泉驿区境内，是"中国水蜜桃之乡""中国国际桃花节"主办地，其属亚热带季风气候，年
+平均气温16-17℃，冬无严寒、夏无酷暑、气候宜人，水质、空气均达国家标准，全年均适宜旅游。地处成都市"二圈层"
+经济圈，客家古镇，因此又是四川省打造"两湖一山"旅游区的重点景区，是国家AAAA级旅游景区、全国首批重点小城镇、
+成都市重点保护镇、成都文化旅游发展优先镇、省级历史文化名镇、全国"亿万农民健身活动先进镇"，也是中国西部最大
+的也是唯一的被世人称之为"世界的洛带、永远的客家"，作为世界客属第20届恳亲大会的核心分会场之一，确定了洛带在
+世界的客家文化地位。景区包含有古镇核心保护区、金龙湖景区和宝胜村客家原生态村落。镇内85%以上属客家人，是四川
+客家聚集区的典型代表。　洛带古镇是成都近郊保存最为完整的客家古镇，有"天下客家第一镇"的美誉，旅游资源十分丰
+富，文化底蕴非常厚重。镇内千年老街、客家民居保存完好，老街呈"一街七巷子"格局，空间变化丰富；街道两边商铺林
+立，属典型的明清建筑风格。"一街"由上街和下街组成，宽约8米，长约1200米，东高西低，石板镶嵌；街衢两边纵横交
+错着的"七巷"分别为北巷子、凤仪巷、槐树巷、江西会馆巷、柴市巷、马槽堰巷和糠市巷。镇内尤以国家级重点文物保护
+单位--四大会馆（广东会馆、江西会馆、湖广会馆、川北会馆）和客家博物馆、客家公园最为出名，是我国古代建筑"大观
+园"中的一支奇葩，总面积达20000余平方米。洛带会馆是一部浓缩了的客家移民史，客家会馆的建筑风格属典型明清建筑
+风格，各殿内圆木撑弓镂雕戏剧场面，明间阑额彩绘，卷棚天花中棚和屋脊等，均雕刻了各式龙凤花鸟戏剧人物，造型逼真，
+单位--四大会馆（广东会馆、江西会馆、湖广会馆、川北会馆）和客家博物馆、客家公园最为出名，是我国古代建筑"大观
+园"中的一支奇葩，总面积达20000余平方米。洛带会馆是一部浓缩了的客家移民史，客家会馆的建筑风格属典型明清建筑
+风格，各殿内圆木撑弓镂雕戏剧场面，明间阑额彩绘，卷棚天花中棚和屋脊等，均雕刻了各式龙凤花鸟戏剧人物，造型逼真，
+单位--四大会馆（广东会馆、江西会馆、湖广会馆、川北会馆）和客家博物馆、客家公园最为出名，是我国古代建筑"大观
+单位--四大会馆（广东会馆、江西会馆、湖广会馆、川北会馆）和客家博物馆、客家公园最为出名，是我国古代建筑"大观
+精工细雕，十分考究，具有极高的艺术欣赏价值。风火墙以砖砌，呈半圆形巨壁，高底参差。</p>
+           </div>
+           <p style="padding:8px 0;"><strong class="blue">喜欢</strong>(333)&nbsp;&nbsp;&nbsp;<strong class="blue">收藏</strong>(333)&nbsp;&nbsp;&nbsp;<strong class="blue">分享</strong>(333)</p>
+           <div class="article_tab">
+           		<ul>
+                	<li><a href="#" class="tab_focus">评论</a></li>
+                    <li><a href="#">最新评论</a></li>
+                </ul>
+           </div>
+           <div class="cmt_box">
+        	<ul>
+                <li>
+                	<table>
+                    	<tr>
+                        	<td width="60"><a href="#"><img src="images/header_ico.jpg" height="50" width="50" /></a></td>
+                            <td width="500">
+                                <p><strong class="blue">评论的人</strong></p>
+                                <p>手上的鸡蛋好大……</p>
+                                <p>2012-10-23  13：33  <a href="#" class="blue">我要回复</a></p>
+                            </td>
+                            <td align="center" width="100">
+                            	<a href="#" class="feedback_a">回复</a>&nbsp;&nbsp;<a href="#"  class="feedback_a">举报</a>
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+                 <li>
+                	<table>
+                    	<tr>
+                        	<td width="60"><a href="#"><img src="images/header_ico.jpg" height="50" width="50" /></a></td>
+                            <td width="500">
+                                <p><strong class="blue">评论的人</strong></p>
+                                <p>手上的鸡蛋好大……</p>
+                                <p>2012-10-23  13：33  <a href="#" class="blue">我要回复</a></p>
+                            </td>
+                            <td align="center" width="100">
+                            	<a href="#" class="feedback_a">回复</a>&nbsp;&nbsp;<a href="#"  class="feedback_a">举报</a>
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+                 <li>
+                	<table>
+                    	<tr>
+                        	<td width="60"><a href="#"><img src="images/header_ico.jpg" height="50" width="50" /></a></td>
+                            <td width="500">
+                                <p><strong class="blue">评论的人</strong></p>
+                                <p>手上的鸡蛋好大……</p>
+                                <p>2012-10-23  13：33  <a href="#" class="blue">我要回复</a></p>
+                            </td>
+                            <td align="center" width="100">
+                            	<a href="#" class="feedback_a">回复</a>&nbsp;&nbsp;<a href="#"  class="feedback_a">举报</a>
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+                 <li>
+                	<table>
+                    	<tr>
+                        	<td width="60"><a href="#"><img src="images/header_ico.jpg" height="50" width="50" /></a></td>
+                            <td width="500">
+                                <p><strong class="blue">评论的人</strong></p>
+                                <p>手上的鸡蛋好大……</p>
+                                <p>2012-10-23  13：33  <a href="#" class="blue">我要回复</a></p>
+                            </td>
+                            <td align="center" width="100">
+                            	<a href="#" class="feedback_a">回复</a>&nbsp;&nbsp;<a href="#"  class="feedback_a">举报</a>
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="page page2" >
+            <a href="#" >上一页</a>
+            <a href="#" >1</a>
+            <a href="#" class="p_focus">2</a>
+            <a href="#" >3</a>
+            <a href="#" >4</a>
+            <a href="#" >5</a>
+            <a href="#" >6</a>
+            <a href="#" >7</a>
+            <a href="#" >10</a>
+            <a href="#" >下一页</a>
+        </div>
+        <div class="blue" style="padding-left:5px; padding-bottom:2px; padding-top:8px; border-top:1px dashed #ccc;">我要评论</div>
+         <div class="comment_input_area_box">
+         	<textarea class="comment_input_area test_mood"></textarea>
+            <div class="comment_input_area_box_bottom">
+            	<span class="fl"><a href="#" id="emotion_ico" class="message_face"><img src="images/emotion_btn.jpg" /></a></span><span class="fr">你还能输入185个字<a href="#"><img src="images/comment_post_btn.jpg" /></a><a href="#">取消</a></span>
+            </div>
+         </div>      
+        </div>
+        
+         
+                      
+         <div class="index_left_big_bottom"></div>
+        </div>
+        
+       
+        
+    </div>
+    
+    <div class="index_right">  
+    	
+        <div class="index_box">
+        	<div class="index_right_top"></div>
+        	<div class="index_right_tit">
+        	<h1 class="index_common_tit">更多古典文学活动</h1>
+            <a href="#" class="genery_more">更多>></a>
+        	<div class="clr"></div>
+        	</div>
+            <div class="history_list">
+            	<ul>
+                	<li><a href="#"><em>> </em>世界屋脊找到石油</a><a href="#" class="list_author">二逼发表</a></li>
+                    <li><a href="#"><em>> </em>世界屋脊找到石油</a><a href="#" class="list_author">二逼发表</a></li>
+                    <li><a href="#"><em>> </em>世界屋脊找到石油</a><a href="#" class="list_author">二逼发表</a></li>
+                    <li><a href="#"><em>> </em>世界屋脊找到石油</a><a href="#" class="list_author">二逼发表</a></li>
+                    <li><a href="#"><em>> </em>世界屋脊找到石油</a><a href="#" class="list_author">二逼发表</a></li>
+                </ul>
+            </div>
+            <div class="index_right_bottom"></div>
+        </div>
+        
+        <div class="index_box">
+        	<div class="index_right_top"></div>
+        	<div class="index_right_tit">
+        	<h1 class="index_common_tit">更多活动</h1>
+            <a href="#" class="genery_more">更多>></a>
+        	<div class="clr"></div>
+        	</div>
+            <div class="history_list">
+            	<ul>
+                	<li><a href="#"><em>> </em>世界屋脊找到石油</a><a href="#" class="list_author">二逼发表</a></li>
+                    <li><a href="#"><em>> </em>世界屋脊找到石油</a><a href="#" class="list_author">二逼发表</a></li>
+                    <li><a href="#"><em>> </em>世界屋脊找到石油</a><a href="#" class="list_author">二逼发表</a></li>
+                    <li><a href="#"><em>> </em>世界屋脊找到石油</a><a href="#" class="list_author">二逼发表</a></li>
+                    <li><a href="#"><em>> </em>世界屋脊找到石油</a><a href="#" class="list_author">二逼发表</a></li>
+                </ul>
+            </div>
+            <div class="index_right_bottom"></div>
+        </div>
+        
+        <div class="index_box">
+        	<div class="index_right_top"></div>
+        	<div class="index_right_tit">
+        	<h1 class="index_common_tit">关注此文章的人员</h1>
+            <a href="#" class="genery_more">更多>></a>
+        	<div class="clr"></div>
+        	</div>
+            	<div class="vip_recom_ul_box">                	
+                    <ul class="vip_recom_ul vip_recom_ul1">
+                        <li>
+                            <table>
+                                <tr>
+                                    <td width="65"><a href="#"><img src="images/header_ico.jpg" height="55" width="55" /></a></td>
+                                    <td valign="top">
+                                        <p class="blue">简直老火  lv:书童</p>
+                                        <p>偶滴手机屏保换成少爷的...</p>
+                                        <p><a href="#"><img src="images/attention_ico.jpg" height="21" width="60" /></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li>
+                            <table>
+                                <tr>
+                                    <td width="65"><a href="#"><img src="images/header_ico.jpg" height="55" width="55" /></a></td>
+                                    <td valign="top">
+                                        <p class="blue">简直老火  lv:书童</p>
+                                        <p>偶滴手机屏保换成少爷的...</p>
+                                        <p><a href="#"><img src="images/attention_ico.jpg" height="21" width="60" /></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li>
+                            <table>
+                                <tr>
+                                    <td width="65"><a href="#"><img src="images/header_ico.jpg" height="55" width="55" /></a></td>
+                                    <td valign="top">
+                                        <p class="blue">简直老火  lv:书童</p>
+                                        <p>偶滴手机屏保换成少爷的...</p>
+                                        <p><a href="#"><img src="images/attention_ico.jpg" height="21" width="60" /></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li>
+                            <table>
+                                <tr>
+                                    <td width="65"><a href="#"><img src="images/header_ico.jpg" height="55" width="55" /></a></td>
+                                    <td valign="top">
+                                        <p class="blue">简直老火  lv:书童</p>
+                                        <p>偶滴手机屏保换成少爷的...</p>
+                                        <p><a href="#"><img src="images/attention_ico.jpg" height="21" width="60" /></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li>
+                            <table>
+                                <tr>
+                                    <td width="65"><a href="#"><img src="images/header_ico.jpg" height="55" width="55" /></a></td>
+                                    <td valign="top">
+                                        <p class="blue">简直老火  lv:书童</p>
+                                        <p>偶滴手机屏保换成少爷的...</p>
+                                        <p><a href="#"><img src="images/attention_ico.jpg" height="21" width="60" /></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </li>
+                    </ul>
+                    <a href="#" class="blue change_list">换一批</a>                
+                </div>                         
+            <div class="index_right_bottom"></div>
+        </div>       
+       
+        
+        
+    </div>
+<div class="clr"></div>
+</div>
+<!--左右框-->
+   
+</div>
+<!--前台内容-->
+
+</div>
+<!--边框完-->
+<!--友情-->
+<div id="link">	
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+</div>
+
+
+</div>
+<!--容器完-->
+</div>
+<!--头部背景完-->
+
+<!--底部-->
+<div id="footer">
+Copyright © 2006-2012法律声明：本站所有图片 文字未经允许不得转载或镜像 违者将追究其法律责任　技术支持：<a href="#">泊凡科技</a>    
+</div>
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>实惠</title>
+<!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />-->
+<meta name="Author" content=" " />
+<meta name="copyright" content=" " />
+<meta name="description" content=" " />
+<meta name="keywords" content=" " />
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<!–-[if IE 6]>
+<!--<script src="js/DD_belatedPNG.js" type="text/javascript"></script>-->
+<script>
+<!--DD_belatedPNG.fix('.logo,.nav_focus','img,background');-->
+</script>
+<![endif]-–>
+<script>
+$(function(){	
+	if($.browser.msie&&($.browser.version=="6.0")){
+		
+	}
+	//banner
+	var slide_num=$('.slide_wrap a').length;	
+	for(i=0;i<slide_num;i++){
+			var j=i+1;
+			$('.slide_num').append('<li>'+j+'</li>');		
+	}
+	$('.slide_num li:first').addClass('focus');
+	var index=0;
+	$('.slide_num li').click(function(){
+		index=$(this).index();
+		show(index);
+	});
+	var t=setInterval(function(){		
+		show(index);
+		index++;
+		if(index==slide_num){
+			index=0;
+		}		
+	},4000);	
+	$('.slide_wrap a').hover(function(){
+		clearInterval(t);							  
+	},function(){
+		t=setInterval(function(){
+		show(index);
+		index++;
+		if(index==slide_num){
+			index=0;
+		}		
+	},4000);
+	});
+});
+function show(num){
+	var sw=972;	
+	$('.slide_num li').eq(num).addClass('focus').siblings().removeClass('focus');
+	$('.slide_ul').animate({left:'-'+num*sw+'px'},400);
+}
+</script>
+</head>
+
+<body>
+
+<div class="wrapper">
+<!--header-->
+<div class="header">
+	<span class="top_tel">028-66917261</span>
+	<div class="top_nav">
+    	<ul>
+        	<li><a href="#" class="yellow">最新活动</a></li>
+            <li><a href="#" class="yellow">经典案例</a></li>
+            <li><a href="#" class="yellow">优惠活动</a></li>
+            <li><a href="#">在线客服</a></li>
+            <li><a href="#">加入收藏</a></li>
+            <li><a href="#">设为首页</a></li>
+        </ul>
+    </div>
+    <div class="navgation">
+    	<ul>
+        	<li><a href="#">网站首页</a></li>
+            <li><a href="#">精品套餐</a></li>
+            <li><a href="#">公司介绍</a></li>
+            <li><a href="#">新闻中心</a></li>
+            <li><a href="#">经典案例</a></li>
+            <li><a href="#">员工风貌</a></li>
+            <li><a href="#">企业招聘</a></li>
+            <li><a href="#">装修流程 </a></li>
+            <li><a href="#">在线留言</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+    </div>
+</div>
+<!--header end-->
+
+<!--slide-->
+<div id="slide_box">
+	<div class="slide_top"></div>
+    <div class="slide_content">
+    	<div class="slide">
+    	<ul class="slide_num">        	
+       </ul>
+        <div class="slide_wrap">
+    		<ul class="slide_ul">
+                <li><a href="#"><img src="images/slide_img1.jpg" height="320" width="972" /></a></li>
+                <li><a href="#"><img src="images/slide_img1.jpg" height="320" width="972" /></a></li>
+                <li><a href="#"><img src="images/slide_img1.jpg" height="320" width="972" /></a></li>
+                <li><a href="#"><img src="images/slide_img1.jpg" height="320" width="972" /></a></li>                      
+            </ul>
+       </div>         
+    </div>
+    </div>
+    <div class="slide_bottom"></div>
+</div>
+<!--slide end-->
+
+<!--container-->
+<div class="container">
+
+<div class="wrap">
+	<div class="bar">
+    	<div class="bar_tit bar_company_info"></div>
+        <div class="bar_box">
+        	<ul class="bar_nav">
+        	<li><a href="#" class="bar_nav_focus">公司简介</a></li>
+            <li><a href="#">企业文化</a></li>
+            <li><a href="#">资质荣誉</a></li>            
+        </ul>
+        </div>
+        <div class="bar_tit bar_contact_tit"></div>
+        <div class="bar_box bar_contact">
+        联系人：徐先生<br />
+电  话：13678081376
+       18228078761<br />
+   QQ：572602792<br />
+地 址：成都市锦江区锦江城市
+      花园2期3栋3单元504室<br />
+电 话：13547046510<br />
+   QQ：635396689<br />
+网 址：www.shzxd.com<br />
+地 址：德阳市旌阳区永兴生活区
+    3栋5单元501室 
+
+        
+        </div>
+    </div>
+    
+    <div class="main_wrap">
+    	<div class="main">    	
+            <div class="common_tit">
+                <div class="common_tit_fillet_l">
+                    <div class="common_tit_fillet_r">
+                        <h1 class='about_tit'></h1>
+                        <span class="position">您当前所在位置：首页>><a href="#">公司简介</a>>><a href="#">关于我们</a></span> 
+                    </div>
+                </div>
+            </div>
+             <div class="index_msg feedback"> 
+             	<h2 style="font-size:14px; color:#2c4f89;  padding-top:10px; padding-left:15px;">成都最专业、最实惠的装修队——成都实惠装修队</h2>  	   	
+                <p style="padding-top:15px;">姓名：<input type="text"  class="msg_input"/><span style="color:red; padding-left:8px;">*</span></p>
+                <p>手机：<input type="text"  class="msg_input"/><span style="color:red; padding-left:8px;">*</span></p>
+                <p>小区：<input type="text"  class="msg_input"/><span style="color:red; padding-left:8px;">*</span></p>
+                <p><span style="vertical-align:top">备注：</span><textarea class="msg_area"></textarea></p>
+                <p style="padding-left:50px;"><input type="submit" value=""  class="msg_btn"/><span style="padding-left:5px;">我们将第一时间和您联第！</span></p>
+            </div>
+            <div class="feedback_top">
+                	<dl>
+                    	<dd>
+                        	<p>感觉不错</p>
+                        </dd>
+                        <dt>
+                        	<p>哈哈</p>
+                        </dt>
+                    </dl>
+                    <dl>
+                    	<dd>
+                        	<p>感觉不错</p>
+                        </dd>
+                        <dt>
+                        	<p>哈哈</p>
+                        </dt>
+                    </dl>
+                    <dl>
+                    	<dd>
+                        	<p>感觉不错</p>
+                        </dd>
+                        <dt>
+                        	<p>哈哈</p>
+                        </dt>
+                    </dl>
+          </div>
+         <div class="pages">
+            <a href="#">首页</a> <a href="#">上一页</a> <a href="#" class="page_active">1</a> <a href="#">2</a> <a href="#">下一页</a> <a href="#">尾页</a> 
+        </div>
+        </div>
+        <div class="mian_bottom"></div>      
+    	
+    </div>
+    <div class="clr"></div>
+</div>
+<div class="fill_bg"></div>
+
+</div>
+<!--container end-->
+
+<div class="footer">
+	成都实惠装修队 2012 版权所有 COPYRIGHT 2012 SHZXD.COM ALL RISERVED 蜀ICP备案：1020453号  技术支持：<a href="#">泊凡科技</a><br />
+联系电话：13678081376  18228078761  028-66917261  02866960701 地址：成都市锦江区锦江城市花园2期3栋3单元504室 网址：www.shzxd.com 
+</div>
+</div>
+<!--wrapper end-->
+
+</body>
+</html>

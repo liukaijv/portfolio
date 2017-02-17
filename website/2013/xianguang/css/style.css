@@ -1,0 +1,64 @@
+
+a{
+	text-decoration:none;
+}
+.index-splash-block {
+	width: 176px;
+	height: 107px;
+	font-size:12px;
+}
+.feature-slide-preview a{
+	color:#3b3b3b;
+}
+.slideName{
+	margin-bottom:5px;
+}
+.slideName a{
+	color:#000;
+}
+.slideName a:hover{
+	text-decoration:underline;
+}
+.index-splash-block .feature-slide-preview {
+    margin: 0 auto;
+    display: none;
+    width: 176px;
+    height: 85px;
+    overflow: hidden;
+	text-align:justify;
+}
+.index-splash-block .feature-slide-preview .screenshot {
+    display: block;
+    margin: auto;
+}
+.index-splash-block .feature-slide-list {
+    width: 176px;
+    height: 22px;
+    overflow: hidden;
+}
+.index-splash-block .feature-slide-list a {
+    float: left;
+    display: inline;
+	background:url(../img/gddiana.jpg) no-repeat;
+	width:8px;
+	height:8px;
+	margin:0 5px 0px 5px;
+}
+.index-splash-block .feature-slide-list a.current {
+	background:url(../img/gddian.jpg) no-repeat;
+	width:8px;
+	height:8px;
+}
+.index-splash-block  .feature-slide-list .feature-slide-list-items {
+    display: inline;
+}
+.index-splash-block  .feature-slide-list a.feature-slide-list-previous {
+    width: 7px;
+    height: 8px;
+    background: url(../img/jiantoua.jpg) no-repeat;
+}
+.index-splash-block  .feature-slide-list a.feature-slide-list-next {
+    width: 7px;
+    height: 8px;
+    background: url(../img/jiantou.jpg) no-repeat;
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>爱国韵</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="Author" content=" " />
+<meta name="copyright" content=" " />
+<meta name="description" content=" " />
+<meta name="keywords" content=" " />
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="js/iepngfix_tilebg.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+$(function(){
+		   
+	// 背景滚动
+	/*var pos=0;	
+	setInterval(function(){
+		$('.scroll_bg').css('backgroundPosition','-1px -'+pos+'px');		
+		pos++;		
+	},10);		*/
+	
+	//导航li背景控制
+	$('#nav>ul>li:first').css('background','url(images/li_first.gif) no-repeat');
+	$('#nav>ul>li:last').css('background','url(images/li_last.gif) no-repeat top right');	
+	/*$('#nav>ul>li>a').hover(function(){
+		$(this).parent('li').find('ul').show();							 
+	},function(){
+		$(this).parent('li').find('ul').hide();	
+	})*/
+	
+	//导航下拉
+	$('#nav ul li').hover(function(){
+		$(this).find('ul').show();
+		$(this).find('a:first').addClass('hover');		
+	},function(){
+		$(this).find('ul').hide();
+		$(this).find('a:first').removeClass('hover');
+	});
+	
+	//首页收索框
+	$('#select_div p span').click(function(){
+		$('#select_div ul').stop().slideDown();									
+	});
+	$('#select_div ul li').click(function(){
+		$('#select_div p span').html($(this).text());
+		$('#select_div ul').slideUp('fast');
+	});
+	$('#select_div').mouseleave(function(){
+		$(this).find('ul').delay(500).slideUp();										
+	})
+	
+	//首页列表布局
+	$('.search_text').blur();
+	$('.item1 ul li').eq(2).css('borderRight','none').end().eq(5).css('borderRight','none');
+	$('.item2 ul li').eq(2).css('borderRight','none').end().eq(5).css('borderRight','none');
+	$('.item3 ul li').eq(2).css('borderRight','none').end().eq(5).css('borderRight','none');
+	$('.item3 ul li:gt(2)').css('borderBottom','none');
+	
+});
+</script>
+
+</head>
+
+<body>
+<div id="up_wrap">
+
+<div class="contianer">
+
+<!--头部-->
+<div id="header">
+	<div class="top">
+    	<dl>
+        	<dd>欢迎来到爱国韵！</dd>
+            <dt>
+            	<a href="#">注册</a><span>|</span>
+            	<a href="#">帮助</a><span>|</span>
+                <a href="#">简体</a><span>|</span>
+                <a href="#">繁体</a>            	
+            </dt>
+            <div class="clr"></div>
+        </dl>
+    </div>
+    <div class="logo_wrap">
+    	<dl>
+        	<dd><a href="#"><img src="images/logo1.png" height="70" width="210" /></a></dd>
+            <dt>
+            	<table>
+                	<tr>
+                        <td>
+                        	<input type="text" class="search_text" maxlength="45" onfocus="if(this.value=='输入相关类别名称或关键词'){this.value=''}" onblur="if(this.value==''){this.value='输入相关类别名称或关键词'}" />
+                        </td>
+                        <td>
+                            <div id="select_div">
+                                <p><span>请选择</span></p>
+                                <ul>
+                                    <li>我是一</li>
+                                    <li>我是二</li>
+                                    <li>我是三</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                        	<input type="submit" value="" class="search_sub" />
+                        </td>
+                    </tr>
+                </table>
+            </dt>
+            <div class="clr"></div>
+        </dl>    	
+    </div>
+</div>
+
+<div class="sub_boder">
+
+<!--第一部分-->
+<div class="login_box">
+<div class="reg_done_tit"></div>	
+<div class="wrap">
+	<div class="reg_done">    	
+       <table>
+           <tr>
+            	<td width="20" ><img src="images/reg_down_ico1.jpg" height="22" width="16" /></td><td>欢迎加入爱国韵</td> 
+           </tr>                
+       		<tr>
+            	<td></td><td><strong>邮箱验证邮件已发出，进行验证后方可进入爱国韵</strong></td>
+            </tr>
+     			<td></td><td>你的注册邮箱为 <span style="color:red">236585333@qq.com</span> <a href="#">点击验证</a></td>
+            </tr>
+           
+            <tr>
+            	<td > <img src="images/reg_down_ico2.jpg" height="22" width="16" /></td><td>没收到邮件？ 注意：有可能被误识别为垃圾邮件       <a href="#">点此重发</a></td>
+            </tr>       
+      
+      </table>
+    </div>    
+</div>
+</div>
+</div>
+
+<div class="fill"></div>
+
+<!--友情-->
+<div id="link">
+	<h3>友情链接：</h3>
+    <a href="#">大连旅行社</a>
+    <a href="#">大连旅行社</a>
+    
+</div>
+</div>
+</div>
+<!--底部-->
+<div id="footer">
+Copyright © 2006-2012法律声明：本站所有图片 文字未经允许不得转载或镜像 违者将追究其法律责任　技术支持：<a href="#">泊凡科技</a>    
+</div>
+
+</body>
+</html>
+
+
+
+

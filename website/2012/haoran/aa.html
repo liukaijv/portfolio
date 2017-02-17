@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<script type="text/javascript">
+var c=0
+var t
+function timedCount()
+ {
+ document.getElementById('txt').value=c
+ c=c+1
+ t=setTimeout("timedCount()",1000)
+ }
+</script>
+</head>
+
+<body>
+<div id="nav">
+
+<ul>
+
+<li><a href="/index.shtml">首页</a></li>
+
+<li><a href="/layout/index.shtml">CSS版式布局</a></li>
+
+<li><a href="/div_css/index.shtml">DIV+CSS教程</a></li>
+
+<li><a href="/css_example/index.shtml">DIV+CSS实例</a></li>
+
+<li><a href="/code/index.shtml">常用代码</a></li>
+
+<li><a href="/web_master/index.shtml">站长杂谈</a></li>
+
+<li><a href="/Tech/index.shtml">技术文档</a></li>
+
+<li><a href="/download/index.shtml">资源下载</a></li>
+
+<li><a href="/photo_png/index.shtml">图片素材</a></li>
+
+</ul>
+
+</div>
+
+<script language="javascript" type="text/javascript">
+
+var obj=null;
+
+var As=document.getElementById('nav').getElementsByTagName('a');
+
+obj = As[0];
+
+for(i=1;i<As.length;i++){if(window.location.href.indexOf(As[i].href)>=0)
+
+obj=As[i];}
+
+obj.id='nav_current'
+
+</script>
+</body>
+
+</html>

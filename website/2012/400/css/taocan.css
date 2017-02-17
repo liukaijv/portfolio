@@ -1,0 +1,20 @@
+
+.imglist li{float:left; }
+.imglist li{display:block;position:relative;border:1px solid #e6e6e6;border-right:1px solid #fff;width:49px;background:#fff; height:305px;}
+.imglist .last{border-right:1px solid #e6e6e6; width:49px;}
+.selected .thumb{display:none;opacity:.0;filter:alpha(opacity=0);}
+.imglist .zoom{display:none;padding-left:50px;}
+.selected .zoom{display:block;width:590px;  height:295px; padding-left:50px; padding-top:8px;}
+.show .zoom{/*opacity:1;filter:alpha(opacity=100);*/}
+.imglist .bottomBlock{position:absolute;left:-9999px;width:640px;overflow:hidden; height:305px; top:0; border:1px solid #000;}
+.imglist .selected .bottomBlock{left:0;width:640px; }
+.imglist .selected{width:640px;}
+#aaa{ background: url(../images/bg_a.gif) repeat-x;}
+#bbb{ background: url(../images/bg_b.gif) repeat-x;}
+#ccc{ background: url(../images/bg_c.gif) repeat-x;}
+.zoom table{ border-left:1px solid #e5e5e5; border-top:1px solid #e5e5e5;}
+.zoom table th{ background:#f3f3f3;line-height:30px;border-bottom:1px solid #e5e5e5;border-right:1px solid #e5e5e5;}
+.zoom table td{ background:#f7f7f7; border-bottom:1px solid #e5e5e5;border-right:1px solid #e5e5e5; line-height:16px; padding:4px 10px;}
+.zoom table td table,.zoom table td table td{ border:none; padding:0;}
+.aplly_btn{ display:block; height:21px; width:72px; background:url(../images/aplly_btn.gif) no-repeat; position:absolute; bottom:10px ; right:20px; line-height:21px; text-align:center; color:#333;}
+img.thumb;hover{cursor:pointer;}

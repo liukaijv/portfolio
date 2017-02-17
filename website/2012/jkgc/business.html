@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery-1.7.2.min.js" type="text/javascript" language="javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.ulitem>li').first().css('backgroundImage','none');
+	$('.ulitem>li').mouseover(function(){
+		$(this).find('ul').eq(0).css('display','block');
+		$(this).find('span').eq(0).css('display','block');	
+	}).mouseout(function(){
+		$(this).find('ul').eq(0).css('display','none');
+		$(this).find('span').eq(0).css('display','none');	
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<!--容器-->
+<div id="container">
+<!--头部-->
+<div id="header">
+	<div class="logo"><a href="#"><img src="images/logo.gif" alt="#" /></a></div>
+    <div class="header_r">
+    	<div class="header_r_top">
+        	<a href="#"></a>
+        </div>
+    </div>   
+    <div class="clr"></div>
+</div>
+<!--导航-->
+<div id="menu">
+	<div class="nav">
+    	<ul class="ulitem">
+            <li><a href="#">网站首页<span>Home</span></a></li>
+            <li><a href="#">关于我们<span>About us</span></a></li>
+            <li><a href="#">新闻中心<span>News</span></a>
+                <ul>
+                    <li><a href="#">健康工程</a><span>|</span></li>
+                    <li><a href="#">健康工程</a><span>|</span></li>
+                    <li><a href="#">健康工程</a><span>|</span></li>
+                    <li><a href="#">健康工程</a></li>                
+                </ul>              
+            </li>
+            <li><a href="#">产品中心<span>Products</span></a>
+                <ul>
+                    <li><a href="#">健康工程</a><span>|</span></li>
+                    <li><a href="#">健康工程</a><span>|</span></li>
+                    <li><a href="#">健康工程</a><span>|</span></li>
+                    <li><a href="#">健康工程</a></li>                
+                </ul>              
+            </li>
+            <li><a href="#">健康养身<span>Health</span></a></li>
+            <li><a href="#">招商加盟<span>Business</span></a></li>
+            <li><a href="#">人才加盟<span>Join us</span></a></li>
+            <li><a href="#">联系我们<span>Contact us</span></a></li>
+        </ul>
+    </div>
+    <div class="sub_nav"></div>
+</div>
+<!--幻灯片-->
+<div class="slides">
+  <embed width="1002" height="320" src="images/in.swf" play="true" loop="true" quality="high"></embed>
+</div>
+<div class="fill"></div>
+<!--内容-->
+
+<div class="content_wrap">
+	<div class="bar">
+   	  <div class="bar_tit_5">招商加盟</div>
+        <div class="bar_nav">
+        	<ul>
+            	<li><a href="#" class="selected">加盟要求</a></li>
+                <li><a href="#">加盟支持</a></li>
+                <li><a href="#">加盟区域</a></li>                
+            </ul>
+      </div>
+        <div class="bar_comm">        	
+            <a href="#" class="contact">联系我们</a>
+            <a href="#" class="join">招商加盟</a>            
+        </div>
+    </div>
+    <div class="main">
+    	<div class="mian_tit">
+        	<div class="mian_tit_l">加盟要求<span> Join requirements</span></div>
+            <a href="#" class="more"></a>
+            <div class="clr"></div>
+        </div>
+        <div class="mian_content_word">
+        	   
+        </div>
+    </div>
+    <div class="clr"></div>
+</div>
+<div id="friend">
+	<a href="#">聪明点网上购物</a><span>|</span>
+    <a href="#">聪明点网上购物</a><span>|</span>
+    <a href="#">聪明点网上购物</a><span>|</span>
+    <a href="#">聪明点网上购物</a><span>|</span>
+    <a href="#">聪明点网上购物</a><span>|</span>
+    <a href="#">聪明点网上购物</a><span>|</span>       
+    <a href="#">聪明点网上购物</a>   	
+</div>
+</div>
+<!--容器-->
+
+<!--底部-->
+<div id="footer">
+	<div class="foot_content">
+    版权所有：四川三个一健康管理有限公司 蜀ICP备08009025号  邮编：610000    您是第 <strong>7500</strong> 位访客<br> 
+地址:成都市少陵路东街28号  电话：028-65312697  13880872688（汪先生） 电子邮件:SGYJKGL@163.com   网站建设：<a href="#">泊凡科技</a>
+    </div>
+</div>
+
+</body>
+</html>

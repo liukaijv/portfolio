@@ -1,0 +1,94 @@
+@charset "utf-8";
+/* CSS Document */
+.indexConter{
+	width:1100px;
+	margin:0 auto;
+	height:145px;
+	margin-top:22px;
+}
+.indexOne{
+	height:145px;
+	width:335px;
+	float:left;
+	display:inline-block;
+	_display:inline;
+}
+.indexOne{
+	height:145px;
+	width:335px;
+	margin-left:10px;
+}
+.indexOne15{
+	margin-left:25px;
+}
+.indexOneTop{
+	width:335px;
+	height:29px;
+	line-height:29px;
+	vertical-align:middle;
+	color:#1f1f1f;
+}
+.indexOneUnder{
+	width:335px;
+	height:107px;
+	margin-top:5px;
+}
+.OneUnderImg{
+	background:url(../img/indexbg.jpg) no-repeat;
+	width:126px;
+	height:107px;
+	text-align:center;
+	float:left;
+	margin-right:15px;
+	_margin-right:12px;
+	_display:inline;
+}
+.OneUnderImg img{
+	width:117px;
+	height:90px;
+	margin-top:5px;
+}
+.oneUnderTxt{
+	width:176px;
+	height:107px;
+	font-size:12px;
+	text-align:justify;
+	line-height:18px;
+	display:inline-block;
+}
+.oneUnderTxt a{
+	color:#5b5b5b;
+}
+
+/**/
+.indexTow{
+	background:url(../img/indexleft.jpg);
+	width:23px;
+	height:142px;
+	display:inline-block;
+	float:left;
+	_display:inline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
