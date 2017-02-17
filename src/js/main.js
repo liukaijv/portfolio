@@ -4,10 +4,11 @@ _.forEach(websites_data.children, function(catalog){
 	catalogs.push(catalog.name);	
 	if(catalog.children && catalog.children.length){
 		_.forEach(catalog.children, function(item){
+			var path = item.children.length?websites_data.name+'/'+catalog.name+'/'+item.name+'/index.html':'javascript:;';
 			items.push({
 				name: item.name,
 				catalog: catalog.name,
-				path: websites_data.name+'/'+catalog.name+'/'+item.name+'/index.html'
+				path: path
 			});
 		});
 	}

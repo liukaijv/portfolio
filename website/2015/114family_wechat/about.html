@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <title>预约服务</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="jz-place">
+        <a href="javascript:;" onClick="history.go(-1)">
+            <img src="images/arrow-left.png" class="header-icon">
+        </a>
+    </div>
+    <div class="header-search">
+        <span class="list-title">预约服务</span>
+    </div>
+    <div style="width: 50px;"></div>
+</header>
+<form action="" class="about-form">
+    <div class="form-row">
+        <input type="text">
+        <label>联系人</label>
+    </div>
+    <div class="form-row">
+        <input type="text">
+        <label>联系电话</label>
+    </div>
+    <div class="form-row">
+        <input type="text">
+        <label>联系地址</label>
+    </div>
+    <div class="order_need">
+        <p class="need_title">预约须知</p>
+        <div class="need_list">
+            <p>114家庭服务预订须知14家庭服务预订须知</p>
+            <p>14家庭服务预订须知14家庭服务预订须知</p>
+            <p>14家庭服务预订须知14家庭服务预订须知14</p>
+            <p>14家庭服务预订须知14家庭服务预订须知14</p>
+        </div>
+    </div>
+    <div class="form-row color-gray">
+        <input type="checkbox" class="jz-checkbox">
+        提交即同意并接受<a href="#" class="color-gray"> 《114家庭服务预订须知》</a>
+    </div>
+
+    <div class="details-null"></div>
+
+    <button class="btn btn-fill btn-primary lg about-submit" type="submit">
+        提交
+    </button>
+</form>
+</body>
+</html>
+<script>
+    $(function () {
+        $('input').each(function () {
+            var me = $(this);
+            me.focus(function () {
+                var _val = $.trim(me.val());
+                me.removeClass('active');
+                if (_val.length == 0) {
+                    me.next().addClass('active');
+                }
+            });
+            me.focusout(function () {
+                var _val = $.trim(me.val());
+                if (_val.length == 0) {
+                    me.addClass('active').end().next().removeClass('active');
+                }
+            })
+        });
+    })
+</script>

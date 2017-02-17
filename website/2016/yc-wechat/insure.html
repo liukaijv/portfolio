@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <title>untitled</title>
+    <link rel="stylesheet" href="css/yc-agile.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/app.min.css"/>
+</head>
+<body>
+
+<div id="section_container">
+    <section id="default-section" data-role="section" class="active">
+
+        <header>
+            <a href="#" class="header-btn float-left" data-toggle="back">
+                <i class="icon icon-chevron-left"></i>
+            </a>
+
+            <div class="title">裕承产品中心</div>
+        </header>
+
+        <nav class="yc-segment">
+            <a href="#basic-edition" data-toggle="article" data-role="tab" class="active">
+                基础版
+                <span>5%客户选择</span>
+            </a>
+            <a href="#public-edition" data-toggle="article" data-role="tab">
+                经济版
+                <span>60%客户选择</span>
+            </a>
+            <a href="#edition-edition" data-toggle="article" data-role="tab">
+                升级版
+                <span>35%客户选择</span>
+            </a>
+        </nav>
+        <article id="basic-edition" data-role="article" class="active" style="top:105px;">
+
+            <div class="list-block ">
+                <ul class="yc-list">
+                    <li class="list-header">
+                        <div class="list-inner">
+                            <div class="list-content">
+                                基本主险
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-link">
+                        <a href="#insure-aside" class="list-inner" data-toggle="aside">
+                            <div class="list-content">
+                                交强险、车船税
+                            </div>
+                            <div class="list-after">
+                                <span class="color-primary">车牌号码</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-link">
+                        <a class="list-inner">
+                            <div class="list-content">
+                                交强险、车船税
+                            </div>
+                            <div class="list-after">
+                                <span class="color-primary">车牌号码</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-header">
+                        <div class="list-inner">
+                            <div class="list-content">
+                                附加险
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-link">
+                        <a class="list-inner">
+                            <div class="list-content">
+                                交强险、车船税
+                            </div>
+                            <div class="list-after">
+                                <span class="color-primary">车牌号码</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="fixed-bottom">
+                <button type="button" class="btn btn-primary btn-fill lg">提交算价</button>
+            </div>
+            <div class="fixed-placeholder"></div>
+
+        </article>
+        <article id="public-edition" data-role="article" style="top:105px;">
+
+            2
+        </article>
+        <article id="edition-edition" data-role="article" style="top:105px;">
+            3
+        </article>
+
+    </section>
+
+    <div id="aside_container">
+        <aside id="insure-aside" class="bg-default" data-position="right" data-transition="overlay">
+            <div class="insure-aside-header">
+                <h2>
+                    三者险
+                    <small class="color-gray">
+                        <span class="color-primary">100%</span>
+                        三者险
+                    </small>
+                </h2>
+                <div class="insurance-description">
+                    一段关于三者险的描述文字，见word附
+                    加所示。见word附加所示
+                </div>
+            </div>
+            <div class="insure-aside-body">
+                <ul class="yc-list">
+                    <li>
+                        <label class="list-inner">
+                            <div class="list-content">
+                                不投保
+                            </div>
+                            <div class="list-after">
+                                <input type="radio" class="list-radio" name="insured" checked>
+                            </div>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="list-inner">
+                            <div class="list-content">
+                                10万
+                            </div>
+                            <div class="list-after">
+                                <input type="radio" class="list-radio" name="insured">
+                            </div>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="list-inner">
+                            <div class="list-content">
+                                10万
+                            </div>
+                            <div class="list-after">
+                                <input type="radio" class="list-radio" name="insured">
+                            </div>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="list-inner">
+                            <div class="list-content">
+                                10万
+                            </div>
+                            <div class="list-after">
+                                <input type="radio" class="list-radio" name="insured">
+                            </div>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="insure-aside-footer mt15">
+                <ul class="yc-list">
+                    <li>
+                        <div class="list-inner">
+                            <div class="list-content">不计免赔</div>
+                            <div class="list-after">
+                                <label>
+                                    <input type="checkbox" class="yc-toggle" name="full_pay">
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="m15">
+                    <button type="button" id="hide-aside" class="btn btn-primary btn-fill lg">确定</button>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+</div>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="js/yc-agile.min.js"></script>
+<script src="js/app.min.js"></script>
+
+<script>
+    $(function () {
+        $('#hide-aside').on('click', function () {
+            A.Aside.hide();
+            return false;
+        });
+
+    });
+</script>
+
+
+</body>
+</html>
