@@ -1,7 +1,0 @@
-node_modules
-bower_components
-*.zip
-.idea
-.sass-cache
-npm-debug.log
-dist
